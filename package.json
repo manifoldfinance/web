@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx next dev",
-    "build": "npx next build",
+    "build": "CI='' npx next build",
     "start": "npx next start",
     "prettier": "npx prettier --write ."
   },

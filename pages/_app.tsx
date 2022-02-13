@@ -1,8 +1,4 @@
-import {
-  DesignSystemProvider,
-  darkTheme,
-  globalCss,
-} from '@modulz/design-system';
+import { DesignSystemProvider, darkTheme, globalCss } from '@modulz/design-system';
 
 import { AppProps } from 'next/app';
 import { DocsPage } from '@components/DocsPage';
@@ -75,8 +71,8 @@ function App({ Component, pageProps }: AppProps) {
       <ThemeProvider
         disableTransitionOnChange
         attribute="class"
-        value={{ dark: 'dark-theme', dark: darkTheme.className }}
-        defaultTheme="dark"
+        value={{ light: 'light-theme', dark: darkTheme.className }}
+        defaultTheme="system"
       >
         {isDocs ? (
           <DocsPage>
