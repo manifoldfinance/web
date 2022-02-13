@@ -1,0 +1,94 @@
+import {
+  DesignSystemProvider,
+  darkTheme,
+  globalCss,
+} from '@modulz/design-system';
+
+import { AppProps } from 'next/app';
+import { DocsPage } from '@components/DocsPage';
+import { Footer } from '@components/Footer';
+import React from 'react';
+import { ThemeProvider } from 'next-themes';
+import { useAnalytics } from '@lib/analytics';
+import { useRouter } from 'next/router';
+
+const globalStyles = globalCss({
+  // Commenting out while we fix flashing issues
+  // '@font-face': [
+  //   {
+  //     fontFamily: 'Untitled Sans',
+  //     fontWeight: '400',
+  //     fontDisplay: 'swap',
+  //     src:
+  //       'url(/fonts/UntitledSansWeb-Regular.woff2) format("woff2"), url(/fonts/UntitledSansWeb-Regular.woff) format("woff")',
+  //   },
+  //   {
+  //     fontFamily: 'Untitled Sans',
+  //     fontWeight: '500',
+  //     fontDisplay: 'swap',
+  //     src:
+  //       'url(/fonts/UntitledSansWeb-Medium.woff2) format("woff2"), url(/fonts/UntitledSansWeb-Medium.woff) format("woff")',
+  //   },
+  //   {
+  //     fontFamily: 'Söhne Mono',
+  //     fontWeight: 'normal',
+  //     fontStyle: 'normal',
+  //     fontDisplay: 'swap',
+  //     src:
+  //       'url(/fonts/soehne-mono-web-buch.woff2) format("woff2"), url(/fonts/soehne-mono-web-buch.woff) format("woff")',
+  //   },
+  // ],
+
+  html: {
+    overflowX: 'hidden',
+  },
+
+  body: {
+    margin: 0,
+    backgroundColor: '$loContrast',
+  },
+
+  'body, button': {
+    fontFamily: '$untitled',
+  },
+
+  svg: { display: 'block' },
+
+  'pre, code': { margin: 0, fontFamily: '$mono' },
+
+  '::selection': {
+    backgroundColor: '$violet5',
+  },
+});
+
+function App({ Component, pageProps }: AppProps) {
+  globalStyles();
+
+  const router = useRouter();
+
+  useAnalytics();
+
+  const isDocs = router.pathname.includes('/docs');
+
+  return (
+    <DesignSystemProvider>
+      <ThemeProvider
+        disableTransitionOnChange
+        attribute="class"
+        value={{ dark: 'dark-theme', dark: darkTheme.className }}
+        defaultTheme="dark"
+      >
+        {isDocs ? (
+          <DocsPage>
+            <Component {...pageProps} />
+          </DocsPage>
+        ) : (
+          <Component {...pageProps} />
+        )}
+        {!isDocs && <Footer />}
+      </ThemeProvider>
+    </DesignSystemProvider>
+  );
+}
+
+export default App;
