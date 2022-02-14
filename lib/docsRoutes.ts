@@ -4,6 +4,7 @@ export const docsRoutes = [
     pages: [
       { title: 'Introduction', slug: 'docs/intro' },
       { title: 'Platform and Integrations', slug: 'docs/platform' },
+      { title: 'Comparison and Features', slug: 'docs/openmev/table' },
       { title: 'Use cases', slug: 'docs/examples' },
       { title: 'API', slug: 'docs/api' },
       { title: 'Frequently asked questions', slug: 'docs/faq' },
@@ -18,7 +19,7 @@ export const docsRoutes = [
       { title: 'Protocols', slug: 'docs/' },
       { title: 'Frontend', slug: 'docs/' },
       { title: 'Searchers', slug: 'docs/' },
-      { title: 'Traders', slug: 'docs/traders' },
+      { title: 'Traders', slug: 'docs/trader' },
       { title: 'Block Producers', slug: 'docs/' },
       { title: 'Gas Pricing API ', slug: 'docs/json-rpc' },
     ],
@@ -28,7 +29,6 @@ export const docsRoutes = [
     label: 'OpenMEV',
     pages: [
       { title: 'Installation', slug: 'docs/openmev/developers-overview' },
-      { title: 'Comparison and Features', slug: 'docs/openmev/compare' },
       { title: 'Ethers Provider', slug: 'docs/openmev/ethers-provider' },
       {
         title: 'Safe Send React Wallet',
