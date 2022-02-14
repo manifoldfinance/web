@@ -32,7 +32,10 @@ export const getAllFrontmatter = (fromPath) => {
 };
 
 export const getMdxBySlug = async (basePath, slug) => {
-  const source = fs.readFileSync(path.join(DATA_PATH, basePath, `${slug}.mdx`), 'utf8');
+  const source = fs.readFileSync(
+    path.join(DATA_PATH, basePath, `${slug}.mdx`),
+    'utf8',
+  );
   const { frontmatter, code } = await bundleMDX(source, {
     xdmOptions(input, options) {
       options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkSlug];

@@ -1,3 +1,8 @@
+/**
+ *
+ *
+ */
+
 import { Badge, Box, Container, Flex, Link, Text } from '@modulz/design-system';
 import { format, parseISO } from 'date-fns';
 
@@ -15,7 +20,6 @@ export default function Blog({ frontmatters }) {
         title="Primitives"
         description="Engineering and Author Blog"
       />
-
       <Header />
 
       <Container size="3" css={{ textAlign: 'center', mb: '$4' }}>

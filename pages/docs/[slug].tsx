@@ -1,3 +1,9 @@
+/**
+ *
+ *
+ *
+ */
+
 import { Box, Paragraph, Text } from '@modulz/design-system';
 import { getAllFrontmatter, getMdxBySlug } from '@lib/mdx';
 

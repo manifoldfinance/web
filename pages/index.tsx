@@ -24,6 +24,8 @@ import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 import { WallOfLove } from '@components/WallOfLove';
 
+//  extends React.HTMLAttributes<any>
+
 const variantsCode = `const Button = styled('button', {
   // base styles
 
@@ -426,8 +428,11 @@ export default function Home() {
                 Recapture arbitrage to your end users, seamlessly
               </Text>
               <Text size="4" css={{ lineHeight: '27px', '@bp2': { mb: '$6' } }}>
-              MEV: Maximal Extracted Value
-Maximal Extracted Value With improved transparency of profit opportunities and a reduction in information asymmetry, we connect with the leading Block Production pools to ensure efficient transaction protection and value maximization.
+                MEV: Maximal Extracted Value Maximal Extracted Value With
+                improved transparency of profit opportunities and a reduction in
+                information asymmetry, we connect with the leading Block
+                Production pools to ensure efficient transaction protection and
+                value maximization.
               </Text>
               <Box
                 css={{

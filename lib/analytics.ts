@@ -4,9 +4,9 @@ import { Router } from 'next/router';
 type WindowWithAnalytics = Window &
   typeof globalThis & {
     gtag: any;
- };
+  };
 
- // TODO - FIXME
+// TODO - FIXME
 const trackingID = 'UA-000000000-1';
 
 export const useAnalytics = () => {
