@@ -31,7 +31,7 @@
     "gray-matter": "4.0.2",
     "hast-util-to-html": "7.1.2",
     "hast-util-to-string": "1.0.4",
-    "imagemin-mozjpeg": "9.0.0",
+    "imagemin-mozjpeg": "10.0.0",
     "imagemin-optipng": "8.0.0",
     "lodash.debounce": "4.0.8",
     "mdx-bundler": "3.2.1",
