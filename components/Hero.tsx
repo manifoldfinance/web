@@ -57,8 +57,8 @@ export function Hero() {
             },
           }}
         >
-          Connecting you to <br />
-          DeFi Opportunities
+          Maximal <br />
+          Extractable Opportunities
         </Heading>
         <Paragraph
           size="2"

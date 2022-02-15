@@ -1,0 +1,7 @@
+/.yarn/releases/** binary
+/.yarn/plugins/** binary
+git-hash export-subst
+*.sh text eol=lf
+security.txt ident
+NEXT_PUBLIC_COMMIT export-subst
+date*.txt filter=dater

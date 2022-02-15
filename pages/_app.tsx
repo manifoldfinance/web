@@ -20,7 +20,7 @@ const globalStyles = globalCss({
   //     fontWeight: '400',
   //     fontDisplay: 'swap',
   //     src:
-  //       'url(/fonts/UntitledSansWeb-Regular.woff2) format("woff2"), url(/fonts/UntitledSansWeb-Regular.woff) format("woff")',
+  //       'url(/s/UntitledSansWeb-Regular.woff2) format("woff2"), url(/fonts/UntitledSansWeb-Regular.woff) format("woff")',
   //   },
   //   {
   //     fontFamily: 'Untitled Sans',
