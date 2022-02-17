@@ -97,6 +97,50 @@ export function Hero() {
         </Flex>
       </Container>
 
+      <Container
+        size={{ '@initial': '4', '@bp1': '1' }}
+        css={{
+          my: '$6',
+          position: 'relative',
+          zIndex: '1',
+          '@bp2': { my: '$8' },
+        }}
+      >
+        <Flex
+          css={{
+            boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08)',
+            borderRadius: '$pill',
+            fontFamily: '$mono',
+            fontSize: '$2',
+            lineHeight: 1,
+            ai: 'center',
+            height: '$7',
+            color: '$hiContrast',
+            backgroundColor: 'rgba(0,0,0,.01)',
+            px: '$4',
+            jc: 'space-between',
+            '.dark-theme &': {
+              backgroundColor: 'rgba(255,255,255,.04)',
+              boxShadow: 'none',
+            },
+          }}
+        >
+          <Box>wscat -c wss://api.sushirelay.com/v1</Box>
+          <Tooltip content="Copy to Clipboard">
+            <IconButton
+              css={{ color: '$slate11', mr: '-$1' }}
+              aria-label="Copy the websocket connection to Clipboard"
+              onClick={() => {
+                copy('wscat -c wss://api.sushirelay.com/v1');
+                setHasCopied(true);
+              }}
+            >
+              {hasCopied ? <CheckIcon /> : <CopyIcon />}
+            </IconButton>
+          </Tooltip>
+        </Flex>
+      </Container>
+
       <Container size="3">
         <Grid
           css={{

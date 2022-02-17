@@ -20,13 +20,15 @@ export const AdoptionSection = () => {
     <Section>
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>d</MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>
+            Continuously optimize fees and incentives in your protocol
+          </MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Adoption made easy
+            Data driven adoption
           </Heading>
-          <NextLink href="/docs/primitives" passHref>
+          <NextLink href="/docs" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
-              Go to docs
+              Contact
             </MarketingButton>
           </NextLink>
         </Box>
@@ -46,12 +48,11 @@ export const AdoptionSection = () => {
                 mb: '$2',
               }}
             >
-              Incremental adoption
+              Confidence in incentives
             </Text>
             <Paragraph>
-              Start off with simple MEV protection via RPC connection, then
-              expand to using strategies like Gas Rebating or your own
-              Incentives Programme.
+              Ensure your earned surplus is being allocated optimally to
+              maximize returns for Stakeholders and LPs.
             </Paragraph>
           </Box>
 

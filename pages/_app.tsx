@@ -76,7 +76,7 @@ function App({ Component, pageProps }: AppProps) {
         disableTransitionOnChange
         attribute="class"
         value={{ light: 'light-theme', dark: darkTheme.className }}
-        defaultTheme="system"
+        defaultTheme="dark"
       >
         {isDocs ? (
           <DocsPage>

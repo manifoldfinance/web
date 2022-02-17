@@ -26,40 +26,8 @@ import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 
 //  extends React.HTMLAttributes<any>
 
-const variantsCode = `const Button = styled('button', {
-  // base styles
-
-  variants: {
-    color: {
-      gray: {
-        backgroundColor: 'gainsboro',
-      },
-      blue: {
-        backgroundColor: 'dodgerblue',
-      },
-    },
-    size: {
-      md: {
-        height: '25px',
-      },
-      lg: {
-        height: '35px',
-      }
-    }
-  },
-
-  compoundVariants: [{
-    color: 'blue',
-    size: 'lg',
-    css: {
-      backgroundColor: 'purple',
-    }
-  }],
-
-  defaultVariants: {
-    color: 'gray',
-    size: 'md',
-  }
+const variantsCode = `
+{
 });`;
 
 const variantsCodeHighlights = {
@@ -91,21 +59,21 @@ const themingCodeHighlights = {
 };
 
 const tokensCode = `
-
-  SecureRPC {
-
-  function isSecureRPC() external view returns (bool) {
-    return false;
-  }
-
-AcknowledgeConnection {
-	string[] public ackMessages ;
-
-	function ack (string memory ackMsg)public
-	{
-		ackMessages.push(ackMsg);
-	}
-}`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
+        },
+      },
+    }),
+  ]
+};
+`;
 
 const tokensCodeHighlights = {
   one: '2-7',
@@ -113,18 +81,20 @@ const tokensCodeHighlights = {
 };
 
 const utilsCode = `
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-});`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
+        },
+      },
+    }),
+  ]
+};`;
 
 const utilsCodeHighlights = {
   one: '1-14',
@@ -133,18 +103,20 @@ const utilsCodeHighlights = {
 };
 
 const demoCode3 = `
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-;`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
+        },
+      },
+    }),
+  ]
+};`;
 
 const code3Highlights = {
   one: '1-23',
@@ -152,18 +124,20 @@ const code3Highlights = {
 };
 
 const demoCode4 = `
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-});`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
+        },
+      },
+    }),
+  ]
+};;`;
 
 export default function Home() {
   const [variantsCodeActiveHighlight, setVariantsCodeActiveHighlight] =
@@ -187,7 +161,7 @@ export default function Home() {
           position: 'absolute',
           zIndex: '-1',
           background:
-            'radial-gradient(circle at top left, $violet4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $cyan4, rgba(255, 255, 255, 0) 15%)',
+            'radial-gradient(circle at top left, $cyan4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $cyan4, rgba(255, 255, 255, 0) 15%)',
           '@bp2': {
             background:
               'radial-gradient(circle at 15% 50%, $violet4, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, $cyan4, rgba(255, 255, 255, 0) 25%)',
@@ -226,7 +200,7 @@ export default function Home() {
                 Bundle size (Sushi)
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                6.1
+                9.1
               </Text>
             </Box>
             <Box>
@@ -234,7 +208,7 @@ export default function Home() {
                 Bundle size (Total)
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                6.3
+                9.3
               </Text>
             </Box>
             <Box>
@@ -242,12 +216,12 @@ export default function Home() {
                 Bundles Rejected
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                3.2%
+                3.4%
               </Text>
             </Box>
             <Box>
               <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Variants
+                Staking Payouts
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
                 ∞
@@ -375,14 +349,13 @@ export default function Home() {
                 size="8"
                 css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}
               >
-                Recapture arbitrage to your end users, seamlessly
+                Rewards for community; Incentives for capital
               </Text>
               <Text size="4" css={{ lineHeight: '27px', '@bp2': { mb: '$6' } }}>
-                MEV: Maximal Extracted Value Maximal Extracted Value With
-                improved transparency of profit opportunities and a reduction in
-                information asymmetry, we connect with the leading Block
-                Production pools to ensure efficient transaction protection and
-                value maximization.
+                Continuously optimize fees and incentives in your protocol to
+                grow metrics important for your protocol. We also monitor
+                external transactions and grow organic volume in your LP pools
+                by providing additional incentives.
               </Text>
               <Box
                 css={{
