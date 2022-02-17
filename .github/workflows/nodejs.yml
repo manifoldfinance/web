@@ -9,9 +9,21 @@ defaults:
   run:
     shell: bash
 
+# ensure multiple CI processes are not running
+concurrency:
+  group:
+    ${{ github.workflow }}-${{ github.event_name == 'pull_request_target' &&
+    github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 env:
-  CI: true
+  CI: ''
+  COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+  PULL_NUMBER: ${{ github.event.pull_request.number }}
+  RUN_ID: ${{ github.run_id }}
   FORCE_COLOR: 2
+  NEXT_TELEMETRY_DISABLED: 1
+  NODE_ENV: production
 
 jobs:
   pipeline:
@@ -28,15 +40,25 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v2
 
+      - name: Get yarn cache directory path
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+            
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install npm dependencies
+      - name: Install dependencies
         run: |
           yarn install
-          echo "::set-output name=install::nodejs"
+          echo "::set-output name=install::yarn"
+          
       - name: Run build
         run: yarn run build
         id: build
