@@ -349,14 +349,13 @@ export default function Home() {
                 size="8"
                 css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}
               >
-                Recapture arbitrage to your end users, seamlessly
+                Rewards for community; Incentives for capital
               </Text>
               <Text size="4" css={{ lineHeight: '27px', '@bp2': { mb: '$6' } }}>
-                MEV: Maximal Extracted Value Maximal Extracted Value With
-                improved transparency of profit opportunities and a reduction in
-                information asymmetry, we connect with the leading Block
-                Production pools to ensure efficient transaction protection and
-                value maximization.
+                Continuously optimize fees and incentives in your protocol to
+                grow metrics important for your protocol. We also monitor
+                external transactions and grow organic volume in your LP pools
+                by providing additional incentives.
               </Text>
               <Box
                 css={{
