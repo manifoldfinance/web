@@ -49,7 +49,7 @@ export function Hero() {
               pr: 100,
             },
             '@bp2': {
-              ta: 'center',
+              ta: 'left',
               px: 180,
             },
             '@bp3': {
@@ -66,7 +66,7 @@ export function Hero() {
             mb: '$6',
             '@bp2': {
               mx: 230,
-              ta: 'center',
+              ta: 'left',
               mb: '$7',
             },
           }}

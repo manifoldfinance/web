@@ -45,20 +45,36 @@ const globalStyles = globalCss({
 
   body: {
     margin: 0,
+    color: '$hiContrast',
     backgroundColor: '$loContrast',
-  },
-
-  'body, button': {
     fontFamily: '$untitled',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    WebkitTextSizeAdjust: '100%',
+
+    '.dark-theme &': {
+      backgroundColor: '$mauve1',
+    },
   },
 
-  svg: { display: 'block' },
+  svg: {
+    display: 'block',
+    verticalAlign: 'middle',
+  },
 
   'pre, code': { margin: 0, fontFamily: '$mono' },
 
   '::selection': {
-    backgroundColor: '$violet5',
+    backgroundColor: '$violetA5',
+    color: '$violet12',
   },
+
+  '#__next': {
+    position: 'relative',
+    zIndex: 0,
+  },
+
+  'h1, h2, h3, h4, h5': { fontWeight: 500 },
 });
 
 function App({ Component, pageProps }: AppProps) {
@@ -76,7 +92,7 @@ function App({ Component, pageProps }: AppProps) {
         disableTransitionOnChange
         attribute="class"
         value={{ light: 'light-theme', dark: darkTheme.className }}
-        defaultTheme="system"
+        defaultTheme="dark"
       >
         {isDocs ? (
           <DocsPage>
