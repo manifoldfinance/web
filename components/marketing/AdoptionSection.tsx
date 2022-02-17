@@ -1,18 +1,19 @@
-import React from 'react';
-import NextLink from 'next/link';
 import {
   Box,
-  Grid,
-  Text,
   Container,
+  Grid,
   Heading,
   Paragraph,
   Section,
   Separator,
+  Text,
 } from '@modulz/design-system';
+
 import { ArrowRightIcon } from '@radix-ui/react-icons';
-import { MarketingCaption } from './MarketingCaption';
 import { MarketingButton } from './MarketingButton';
+import { MarketingCaption } from './MarketingCaption';
+import NextLink from 'next/link';
+import React from 'react';
 
 export const AdoptionSection = () => {
   return (
@@ -20,7 +21,7 @@ export const AdoptionSection = () => {
       <Container size="3">
         <Box css={{ mb: '$7' }}>
           <MarketingCaption css={{ mb: '$1' }}>
-            Transition to Radix Primitives
+            d
           </MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
             Adoption made easy
@@ -50,10 +51,7 @@ export const AdoptionSection = () => {
               Incremental adoption
             </Text>
             <Paragraph>
-              Each component is its own independently versioned package, so new
-              components can be added alongside your existing code. No need to
-              disrupt feature work with a huge rewrite{'\u2060'}—you can start
-              small and add more components one by one.
+              dd
             </Paragraph>
           </Box>
 
@@ -71,10 +69,7 @@ export const AdoptionSection = () => {
               Detailed docs and TypeScript support
             </Text>
             <Paragraph>
-              Radix documentation contains real-world examples, extensive API
-              references, accessibility details, and full TypeScript support.
-              All components share a similar API, creating a consistent
-              developer experience. You will love working with Radix Primitives.
+              dd
             </Paragraph>
           </Box>
         </Grid>

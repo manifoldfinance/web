@@ -14,6 +14,7 @@ import {
   theme,
 } from '@modulz/design-system';
 
+import { AccessibilitySection } from '@components/marketing/AccessibilitySection';
 import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
 import { FeaturesGrid } from '@components/FeaturesGrid';
@@ -577,6 +578,8 @@ export default function Home() {
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />
       </Flex>
+
+      <AccessibilitySection />
 
       <Community />
     </Box>
