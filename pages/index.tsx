@@ -26,40 +26,8 @@ import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 
 //  extends React.HTMLAttributes<any>
 
-const variantsCode = `const Button = styled('button', {
-  // base styles
-
-  variants: {
-    color: {
-      gray: {
-        backgroundColor: 'gainsboro',
-      },
-      blue: {
-        backgroundColor: 'dodgerblue',
-      },
-    },
-    size: {
-      md: {
-        height: '25px',
-      },
-      lg: {
-        height: '35px',
-      }
-    }
-  },
-
-  compoundVariants: [{
-    color: 'blue',
-    size: 'lg',
-    css: {
-      backgroundColor: 'purple',
-    }
-  }],
-
-  defaultVariants: {
-    color: 'gray',
-    size: 'md',
-  }
+const variantsCode = `
+{
 });`;
 
 const variantsCodeHighlights = {
@@ -91,21 +59,21 @@ const themingCodeHighlights = {
 };
 
 const tokensCode = `
-
-  SecureRPC {
-
-  function isSecureRPC() external view returns (bool) {
-    return false;
-  }
-
-AcknowledgeConnection {
-	string[] public ackMessages ;
-
-	function ack (string memory ackMsg)public
-	{
-		ackMessages.push(ackMsg);
-	}
-}`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+        },
+      },
+    }),
+  ]
+};
+`;
 
 const tokensCodeHighlights = {
   one: '2-7',
@@ -113,18 +81,20 @@ const tokensCodeHighlights = {
 };
 
 const utilsCode = `
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-});`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+        },
+      },
+    }),
+  ]
+};`;
 
 const utilsCodeHighlights = {
   one: '1-14',
@@ -133,18 +103,20 @@ const utilsCodeHighlights = {
 };
 
 const demoCode3 = `
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-;`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+        },
+      },
+    }),
+  ]
+};`;
 
 const code3Highlights = {
   one: '1-23',
@@ -152,18 +124,20 @@ const code3Highlights = {
 };
 
 const demoCode4 = `
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-});`;
+const connectors = ({ chainId }: { chainId?: number | undefined }) => {
+  return [
+    new InjectedConnector({ chains }),
+    new WalletConnectConnector({
+      chains,
+      options: {
+        qrcode: true,
+        rpc: {
+          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+        },
+      },
+    }),
+  ]
+};;`;
 
 export default function Home() {
   const [variantsCodeActiveHighlight, setVariantsCodeActiveHighlight] =
@@ -226,7 +200,7 @@ export default function Home() {
                 Bundle size (Sushi)
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                6.1
+                9.1
               </Text>
             </Box>
             <Box>
@@ -234,7 +208,7 @@ export default function Home() {
                 Bundle size (Total)
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                6.3
+                9.3
               </Text>
             </Box>
             <Box>
@@ -242,7 +216,7 @@ export default function Home() {
                 Bundles Rejected
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                3.2%
+                3.4%
               </Text>
             </Box>
             <Box>
