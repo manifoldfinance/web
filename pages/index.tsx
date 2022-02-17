@@ -67,7 +67,7 @@ const connectors = ({ chainId }: { chainId?: number | undefined }) => {
       options: {
         qrcode: true,
         rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
         },
       },
     }),
@@ -89,7 +89,7 @@ const connectors = ({ chainId }: { chainId?: number | undefined }) => {
       options: {
         qrcode: true,
         rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
         },
       },
     }),
@@ -111,7 +111,7 @@ const connectors = ({ chainId }: { chainId?: number | undefined }) => {
       options: {
         qrcode: true,
         rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
         },
       },
     }),
@@ -132,7 +132,7 @@ const connectors = ({ chainId }: { chainId?: number | undefined }) => {
       options: {
         qrcode: true,
         rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/${ApiKey}",
+          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
         },
       },
     }),
@@ -161,7 +161,7 @@ export default function Home() {
           position: 'absolute',
           zIndex: '-1',
           background:
-            'radial-gradient(circle at top left, $violet4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $cyan4, rgba(255, 255, 255, 0) 15%)',
+            'radial-gradient(circle at top left, $cyan4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $cyan4, rgba(255, 255, 255, 0) 15%)',
           '@bp2': {
             background:
               'radial-gradient(circle at 15% 50%, $violet4, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, $cyan4, rgba(255, 255, 255, 0) 25%)',
@@ -221,7 +221,7 @@ export default function Home() {
             </Box>
             <Box>
               <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Variants
+                Staking Payouts
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
                 ∞
