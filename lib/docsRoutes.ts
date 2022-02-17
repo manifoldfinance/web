@@ -4,14 +4,12 @@ export const docsRoutes = [
     pages: [
       { title: 'Introduction', slug: 'docs/intro' },
       { title: 'Platform and Integrations', slug: 'docs/platform' },
-      { title: 'Comparison and Features', slug: 'docs/openmev/table' },
-      { title: 'Use cases', slug: 'docs/examples' },
-      { title: 'API', slug: 'docs/api' },
+      { title: 'Comparison and Features', slug: 'docs/table' },
       { title: 'Frequently asked questions', slug: 'docs/faq' },
       { title: 'Support and Governance', slug: 'docs/help' },
     ],
   },
-
+  /**
   {
     label: 'Getting Started',
     pages: [
@@ -24,18 +22,12 @@ export const docsRoutes = [
       { title: 'Gas Pricing API ', slug: 'docs/json-rpc' },
     ],
   },
-
+ */
   {
     label: 'OpenMEV',
     pages: [
-      { title: 'Installation', slug: 'docs/openmev/developers-overview' },
+      { title: 'Overview', slug: 'docs/openmev/developers-overview' },
       { title: 'Ethers Provider', slug: 'docs/openmev/ethers-provider' },
-      {
-        title: 'Safe Send React Wallet',
-        slug: 'docs/openmev/safe-send-wallet',
-      },
-      { title: 'Searchers', slug: 'docs/' },
-      { title: 'Block Producers', slug: 'docs/' },
       { title: 'Supported RPC Methods', slug: 'docs/openmev-rpc-ref' },
     ],
   },
@@ -45,9 +37,6 @@ export const docsRoutes = [
     pages: [
       { title: 'Overview', slug: 'docs/manifold/overview' },
       { title: 'Protocol', slug: 'docs/manifold/protocol' },
-      { title: 'Bonding', slug: 'docs/manifold/bonding' },
-      { title: 'Parameters', slug: 'docs/manifold/pid' },
-      { title: 'Bundle Pool', slug: 'docs/manifold/bundle-pool' },
     ],
   },
 ];

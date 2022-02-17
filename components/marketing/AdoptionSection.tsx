@@ -24,11 +24,11 @@ export const AdoptionSection = () => {
             Continuously optimize fees and incentives in your protocol
           </MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Adoption made easy
+            Data driven adoption
           </Heading>
           <NextLink href="/docs" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
-              Go to docs
+              Contact
             </MarketingButton>
           </NextLink>
         </Box>
