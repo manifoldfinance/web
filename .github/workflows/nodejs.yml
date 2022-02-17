@@ -46,9 +46,8 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies
-        run: |
-          yarn install
-          echo "::set-output name=install::yarn"
+        run: yarn install
+        id: install
 
       - name: Run build
         run: yarn run build
