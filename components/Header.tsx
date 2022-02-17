@@ -40,13 +40,13 @@ export function Header() {
               border: 0,
             }}
           >
-            Manifold Finance homepage
+            Manifold Finance - Connect to MEV Opportunities
           </span>
           <ManifoldLogo />
         </Box>
       </NextLink>
       <Flex as="nav" css={{ ai: 'center' }}>
-        <NextLink href="/docs/installation" passHref>
+        <NextLink href="/docs/introduction" passHref>
           <Link variant="subtle" css={{ mr: '$5', '@bp2': { mr: '$7' } }}>
             <Text>Docs</Text>
           </Link>
@@ -56,6 +56,18 @@ export function Header() {
             <Text>Blog</Text>
           </Link>
         </NextLink>
+        <Link
+          href="https://forums.manifoldfinace.com"
+          variant="subtle"
+          css={{
+            mr: '$5',
+            display: 'none',
+            '@bp1': { display: 'block' },
+            '@bp2': { mr: '$7' },
+          }}
+        >
+          <Text>Governance</Text>
+        </Link>
         <Link
           href="https://github.com/manifoldfinance"
           variant="subtle"

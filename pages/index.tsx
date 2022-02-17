@@ -14,6 +14,7 @@ import {
   theme,
 } from '@modulz/design-system';
 
+import { AdoptionSection } from '@components/marketing/AdoptionSection';
 import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
 import { FeaturesGrid } from '@components/FeaturesGrid';
@@ -22,7 +23,6 @@ import { Hero } from '@components/Hero';
 import React from 'react';
 import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
-import { WallOfLove } from '@components/WallOfLove';
 
 //  extends React.HTMLAttributes<any>
 
@@ -68,41 +68,20 @@ const variantsCodeHighlights = {
   three: '31-34',
 };
 
-const themingCode = `    /// @notice Initializes contract, setting up initial contract permissions
-/// @param _version Version number of Dispatcher
-/// @param _queryEngine Address of query engine contract
-/// @param _roleManager Address allowed to manage contract roles
-/// @param _lpManager Address allowed to manage LP whitelist
-/// @param _withdrawer Address allowed to withdraw profit from contract
-/// @param _trader Address allowed to make trades via this contract
-/// @param _supplier Address allowed to send opportunities to this contract
-/// @param _initialMaxLiquidity Initial max liquidity allowed in contract
-/// @param _lpWhitelist List of addresses that are allowed to provide liquidity to this contract
-constructor(
-    uint8 _version,
-    address _queryEngine,
-    address _roleManager,
-    address _lpManager,
-    address _withdrawer,
-    address _trader,
-    address _supplier,
-    uint256 _initialMaxLiquidity,
-    address[] memory _lpWhitelist
-) {
-    version = _version;
-    queryEngine = IQueryEngine(_queryEngine);
-    _setupRole(MANAGE_LP_ROLE, _lpManager);
-    _setRoleAdmin(WHITELISTED_LP_ROLE, MANAGE_LP_ROLE);
-    _setupRole(WITHDRAW_ROLE, _withdrawer);
-    _setupRole(TRADER_ROLE, _trader);
-    _setupRole(APPROVER_ROLE, _supplier);
-    _setupRole(APPROVER_ROLE, _withdrawer);
-    _setupRole(DEFAULT_ADMIN_ROLE, _roleManager);
-    MAX_LIQUIDITY = _initialMaxLiquidity;
-    for(uint i; i < _lpWhitelist.length; i++) {
-        _setupRole(WHITELISTED_LP_ROLE, _lpWhitelist[i]);
-    }
+const themingCode = `
+
+function isSecureRPC() external view returns (bool) {
+  return false;
 }
+
+AcknowledgeConnection {
+string[] public ackMessages ;
+
+function ack (string memory ackMsg)public
+{
+  ackMessages.push(ackMsg);
+}
+
 });`;
 
 const themingCodeHighlights = {
@@ -111,7 +90,9 @@ const themingCodeHighlights = {
   three: '31-48',
 };
 
-const tokensCode = `SecureRPC {
+const tokensCode = `
+
+  SecureRPC {
 
   function isSecureRPC() external view returns (bool) {
     return false;
@@ -132,39 +113,17 @@ const tokensCodeHighlights = {
 };
 
 const utilsCode = `
-function totalBankrollRequested() public view returns (uint256 amount) {
-  address[] memory allDispatchers = dispatcherFactory.dispatchers();
-      for(uint i = 0; i < allDispatchers.length; i++) {
-    IDispatcher dispatcher = IDispatcher(allDispatchers[i]);
-      if (dispatcher.isWhitelistedLP(address(this))) {
-        amount = amount + bankrollRequested(dispatcher);
-        }
-    }
+function isSecureRPC() external view returns (bool) {
+  return false;
 }
-   
-function submitAsk(uint256 price, uint256 volume)
-       external
-        auctionAtStage(States.Open)
-       returns (bool)
+
+AcknowledgeConnection {
+string[] public ackMessages ;
+
+function ack (string memory ackMsg)public
 {
-   require(
-       (totalTokenBalance[msg.sender] -
-           unavailableTokenBalance[msg.sender]) >= volume,
-       "Token balance is not enough!"
-   );
-   uint256 _finalpriceUint;
-   string memory _finalpriceString;
-
-   OrderStruct memory removeObject = sellList[sellHead];
-   uint256 _price = removeObject.Price;
-   address _sender = removeObject.Sender;
-   uint256 _volume = removeObject.Volume;
-
-   if (sellTail == sellHead) {
-       sellHead = 0;
-       sellTail = 0;
-
-   );
+  ackMessages.push(ackMsg);
+}
 });`;
 
 const utilsCodeHighlights = {
@@ -173,46 +132,37 @@ const utilsCodeHighlights = {
   three: '29-31',
 };
 
-const demoCode3 = `const { theme } = createStitches({
+const demoCode3 = `
+function isSecureRPC() external view returns (bool) {
+  return false;
+}
 
-  /**
-   * @notice Total amount of bankroll requested by Executors
-   * @return amount Total bankroll requested
-   */
-   function totalBankrollRequested() public view returns (uint256 amount) {
-   address[] memory allDispatchers = dispatcherFactory.dispatchers();
-   for(uint i = 0; i < allDispatchers.length; i++) {
-       IDispatcher dispatcher = IDispatcher(allDispatchers[i]);
-       if (dispatcher.isWhitelistedLP(address(this))) {
-           amount = amount + bankrollRequested(dispatcher);
-           }
-       }
-   }
-   
-   function provideETHBankroll(address dispatcher) external payable {
-    require(amountAvailableToBankroll(tx.origin, dispatcher) >= msg.value, "amount exceeds max");
-    bankrollProvidedETH[tx.origin][dispatcher] = bankrollProvidedETH[tx.origin][dispatcher].add(msg.value);
-    amountDeposited[tx.origin] = amountDeposited[tx.origin].add(msg.value);
-    totalAmountDeposited = totalAmountDeposited.add(msg.value);
-    IDispatcher(dispatcher).provideETHLiquidity{value:msg.value}();
-    emit BankrollProvided(dispatcher, msg.sender, tx.origin, msg.value);
-   }
-});`;
+AcknowledgeConnection {
+string[] public ackMessages ;
+
+function ack (string memory ackMsg)public
+{
+  ackMessages.push(ackMsg);
+}
+;`;
 
 const code3Highlights = {
   one: '1-23',
   two: '20',
 };
 
-const demoCode4 = `const { theme } = createStitches({
-  theme: {
-    fonts: {},
-    space: {},
-    sizes: {},
-    fontSizes: {},
-    radii: {},
-    zIndices: {},
-  }
+const demoCode4 = `
+function isSecureRPC() external view returns (bool) {
+  return false;
+}
+
+AcknowledgeConnection {
+string[] public ackMessages ;
+
+function ack (string memory ackMsg)public
+{
+  ackMessages.push(ackMsg);
+}
 });`;
 
 export default function Home() {
@@ -273,26 +223,26 @@ export default function Home() {
           >
             <Box>
               <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Bundle size (Core)
+                Bundle size (Sushi)
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                6.1kb
+                6.1
               </Text>
             </Box>
             <Box>
               <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Bundle size (React)
+                Bundle size (Total)
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                6.3kb
+                6.3
               </Text>
             </Box>
             <Box>
               <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Runtime interpolations
+                Bundles Rejected
               </Text>
               <Text size="8" css={{ fontWeight: 500 }}>
-                Zero
+                3.2%
               </Text>
             </Box>
             <Box>
@@ -340,7 +290,7 @@ export default function Home() {
                     color: '$yellow11',
                   }}
                 >
-                  EDEN NETWORK/FLASHBOTS/ETHERMINE
+                  Supports: Flashbots, Eden Network, Ethermine + more
                 </Code>
               </Box>
               <Text
@@ -418,7 +368,7 @@ export default function Home() {
                     color: '$blue11',
                   }}
                 >
-                  TURBOMEV LFG
+                  Flashbots, Eden Network and Ethermine
                 </Code>
               </Box>
               <Text
@@ -578,6 +528,8 @@ export default function Home() {
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />
       </Flex>
+
+      <AdoptionSection />
 
       <Community />
     </Box>
