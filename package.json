@@ -14,7 +14,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --collectCoverage"
-
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.22",
@@ -54,7 +53,7 @@
     "remark-autolink-headings": "6.0.1",
     "remark-slug": "6.0.0",
     "seamless-scroll-polyfill": "1.2.3",
-    "unified": "9.2.1",
+    "unified": "10.1.1",
     "unist-util-visit": "2.0.3"
   },
   "devDependencies": {
