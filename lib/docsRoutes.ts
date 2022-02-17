@@ -2,7 +2,7 @@ export const docsRoutes = [
   {
     label: 'Overview',
     pages: [
-      { title: 'Introduction', slug: 'docs/intro' },
+      { title: 'Introduction', slug: 'docs/introduction' },
       { title: 'Platform and Integrations', slug: 'docs/platform' },
       { title: 'Comparison and Features', slug: 'docs/table' },
       { title: 'Frequently asked questions', slug: 'docs/faq' },
@@ -26,8 +26,8 @@ export const docsRoutes = [
   {
     label: 'OpenMEV',
     pages: [
-      { title: 'Overview', slug: 'docs/openmev/developers-overview' },
-      { title: 'Ethers Provider', slug: 'docs/openmev/ethers-provider' },
+      { title: 'Overview', slug: 'docs/developers-overview' },
+      { title: 'Ethers Provider', slug: 'docs/ethers-provider' },
       { title: 'Supported RPC Methods', slug: 'docs/openmev-rpc-ref' },
     ],
   },
