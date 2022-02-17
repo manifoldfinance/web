@@ -22,7 +22,6 @@ import { Hero } from '@components/Hero';
 import React from 'react';
 import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
-import { WallOfLove } from '@components/WallOfLove';
 
 //  extends React.HTMLAttributes<any>
 
@@ -141,7 +140,7 @@ function totalBankrollRequested() public view returns (uint256 amount) {
         }
     }
 }
-   
+
 function submitAsk(uint256 price, uint256 volume)
        external
         auctionAtStage(States.Open)
@@ -188,7 +187,7 @@ const demoCode3 = `const { theme } = createStitches({
            }
        }
    }
-   
+
    function provideETHBankroll(address dispatcher) external payable {
     require(amountAvailableToBankroll(tx.origin, dispatcher) >= msg.value, "amount exceeds max");
     bankrollProvidedETH[tx.origin][dispatcher] = bankrollProvidedETH[tx.origin][dispatcher].add(msg.value);
@@ -418,7 +417,7 @@ export default function Home() {
                     color: '$blue11',
                   }}
                 >
-                  TURBOMEV LFG
+                  Flashbots, Eden Network and Ethermine
                 </Code>
               </Box>
               <Text
