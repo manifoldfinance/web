@@ -49,7 +49,7 @@ jobs:
         run: |
           yarn install
           echo "::set-output name=install::yarn"
-          
+
       - name: Run build
         run: yarn run build
         id: build

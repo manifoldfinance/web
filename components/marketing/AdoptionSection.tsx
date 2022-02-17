@@ -48,7 +48,11 @@ export const AdoptionSection = () => {
             >
               Incremental adoption
             </Text>
-            <Paragraph>dd</Paragraph>
+            <Paragraph>
+              Start off with simple MEV protection via RPC connection, then
+              expand to using strategies like Gas Rebating or your own
+              Incentives Programme.
+            </Paragraph>
           </Box>
 
           <Box>
@@ -62,9 +66,12 @@ export const AdoptionSection = () => {
                 mb: '$2',
               }}
             >
-              Detailed docs and TypeScript support
+              Protocol driven optimization
             </Text>
-            <Paragraph>dd</Paragraph>
+            <Paragraph>
+              Use recaptured MEV to optimize protocol incentives and drive gains
+              to your most important metrics like TVL.
+            </Paragraph>
           </Box>
         </Grid>
       </Container>
