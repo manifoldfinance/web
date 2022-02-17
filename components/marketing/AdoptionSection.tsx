@@ -20,9 +20,7 @@ export const AdoptionSection = () => {
     <Section>
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>
-            d
-          </MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>d</MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
             Adoption made easy
           </Heading>
@@ -50,9 +48,7 @@ export const AdoptionSection = () => {
             >
               Incremental adoption
             </Text>
-            <Paragraph>
-              dd
-            </Paragraph>
+            <Paragraph>dd</Paragraph>
           </Box>
 
           <Box>
@@ -68,9 +64,7 @@ export const AdoptionSection = () => {
             >
               Detailed docs and TypeScript support
             </Text>
-            <Paragraph>
-              dd
-            </Paragraph>
+            <Paragraph>dd</Paragraph>
           </Box>
         </Grid>
       </Container>

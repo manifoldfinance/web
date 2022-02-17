@@ -97,8 +97,6 @@ export function Hero() {
         </Flex>
       </Container>
 
-
-
       <Container size="3">
         <Grid
           css={{
