@@ -1,7 +1,8 @@
+import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
+import { gtagUrl, renderSnippet } from '@lib/metrics';
+
 import React from 'react';
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 import { getCssText } from '@modulz/design-system';
-import { renderSnippet, gtagUrl } from '@lib/analytics';
 
 export default class Document extends NextDocument {
   render() {
