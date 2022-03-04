@@ -37,20 +37,7 @@ const variantsCodeHighlights = {
 };
 
 const themingCode = `
-
-function isSecureRPC() external view returns (bool) {
-  return false;
-}
-
-AcknowledgeConnection {
-string[] public ackMessages ;
-
-function ack (string memory ackMsg)public
-{
-  ackMessages.push(ackMsg);
-}
-
-});`;
+;`;
 
 const themingCodeHighlights = {
   one: '3-20',
@@ -103,19 +90,12 @@ const utilsCodeHighlights = {
 };
 
 const demoCode3 = `
-const connectors = ({ chainId }: { chainId?: number | undefined }) => {
-  return [
-    new InjectedConnector({ chains }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        qrcode: true,
-        rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
-        },
-      },
-    }),
-  ]
+(async () => {
+  const provider = new ethers.providers.JsonRpcProvider('https://api.sushirelay.com/v1');
+  const network = await provider.send('net_version');
+  console.log(network);
+})();
+
 };`;
 
 const code3Highlights = {
