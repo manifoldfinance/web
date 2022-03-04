@@ -176,7 +176,7 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://forums.manifoldfinance.com" passHref>
+                  <NextLink href="https://forums.manifoldfinance.com/" passHref>
                     <Link variant="subtle">Forums</Link>
                   </NextLink>
                 </Text>

@@ -125,13 +125,13 @@ export function Hero() {
             },
           }}
         >
-          <Box>wscat -c wss://api.sushirelay.com/v1</Box>
+          <Box>curl -sL install.securerpc.com | bash</Box>
           <Tooltip content="Copy to Clipboard">
             <IconButton
               css={{ color: '$slate11', mr: '-$1' }}
               aria-label="Copy the websocket connection to Clipboard"
               onClick={() => {
-                copy('wscat -c wss://api.sushirelay.com/v1');
+                copy('curl -sL install.securerpc.com | bash');
                 setHasCopied(true);
               }}
             >

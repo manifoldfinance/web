@@ -57,7 +57,7 @@ export function Header() {
           </Link>
         </NextLink>
         <Link
-          href="https://forums.manifoldfinace.com"
+          href="https://forums.manifoldfinance.com/"
           variant="subtle"
           css={{
             mr: '$5',
