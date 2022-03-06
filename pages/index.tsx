@@ -13,7 +13,7 @@ import {
   Text,
   theme,
 } from '@modulz/design-system';
-
+import { StatsSection } from '@components/marketing/StatsSection';
 import { AdoptionSection } from '@components/marketing/AdoptionSection';
 import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
@@ -23,6 +23,7 @@ import { Hero } from '@components/Hero';
 import React from 'react';
 import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
+import { BenefitsSection } from '@components/marketing/BenefitsSection';
 
 //  extends React.HTMLAttributes<any>
 
@@ -230,6 +231,12 @@ export default function Home() {
           </Grid>
         </Container>
       </Section>
+
+      {/** comment  */}
+      <Box css={{ overflow: 'hidden' }}>
+        <BenefitsSection />
+        <StatsSection />
+      </Box>
 
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />

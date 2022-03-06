@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Link, Text } from '@modulz/design-system';
 
-import { ManifoldLogo } from '@components/ManifoldLogo';
+import { ManifoldLogoIcon } from '@components/ManifoldLogoIcon';
 import NextLink from 'next/link';
 import { ThemeToggle } from '@components/ThemeToggle';
 
@@ -42,7 +42,7 @@ export function Header() {
           >
             Manifold Finance - Connect to MEV Opportunities
           </span>
-          <ManifoldLogo />
+          <ManifoldLogoIcon />
         </Box>
       </NextLink>
       <Flex as="nav" css={{ ai: 'center' }}>
