@@ -57,7 +57,7 @@ const globalStyles = globalCss({
   'pre, code': { margin: 0, fontFamily: '$mono' },
 
   '::selection': {
-    backgroundColor: '$violet5',
+    backgroundColor: '$grey5',
   },
 });
 
@@ -76,7 +76,7 @@ function App({ Component, pageProps }: AppProps) {
         disableTransitionOnChange
         attribute="class"
         value={{ light: 'light-theme', dark: darkTheme.className }}
-        defaultTheme="dark"
+        defaultTheme="light"
       >
         {isDocs ? (
           <DocsPage>

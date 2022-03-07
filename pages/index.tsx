@@ -162,10 +162,10 @@ export default function Home() {
           position: 'absolute',
           zIndex: '-1',
           background:
-            'radial-gradient(circle at top left, $cyan4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $cyan4, rgba(255, 255, 255, 0) 15%)',
+            'radial-gradient(circle at top left, $slate4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $sage4, rgba(255, 255, 255, 0) 15%)',
           '@bp2': {
             background:
-              'radial-gradient(circle at 15% 50%, $violet4, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, $cyan4, rgba(255, 255, 255, 0) 25%)',
+              'radial-gradient(circle at 15% 50%, $grey4, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, $sage4, rgba(255, 255, 255, 0) 25%)',
           },
         }}
       />
