@@ -58,7 +58,8 @@ export function Hero() {
           }}
         >
           Maximal <br />
-          Extractable Opportunities
+          Extractable <br />
+          Opportunities
         </Heading>
         <Paragraph
           size="2"

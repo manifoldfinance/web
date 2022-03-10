@@ -13,7 +13,7 @@ import {
   Text,
   theme,
 } from '@modulz/design-system';
-
+import { StatsSection } from '@components/marketing/StatsSection';
 import { AdoptionSection } from '@components/marketing/AdoptionSection';
 import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
@@ -23,6 +23,7 @@ import { Hero } from '@components/Hero';
 import React from 'react';
 import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
+import { BenefitsSection } from '@components/marketing/BenefitsSection';
 
 //  extends React.HTMLAttributes<any>
 
@@ -161,10 +162,10 @@ export default function Home() {
           position: 'absolute',
           zIndex: '-1',
           background:
-            'radial-gradient(circle at top left, $cyan4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $cyan4, rgba(255, 255, 255, 0) 15%)',
+            'radial-gradient(circle at top left, $slate4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $sage4, rgba(255, 255, 255, 0) 15%)',
           '@bp2': {
             background:
-              'radial-gradient(circle at 15% 50%, $violet4, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, $cyan4, rgba(255, 255, 255, 0) 25%)',
+              'radial-gradient(circle at 15% 50%, $grey4, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, $sage4, rgba(255, 255, 255, 0) 25%)',
           },
         }}
       />
@@ -230,6 +231,12 @@ export default function Home() {
           </Grid>
         </Container>
       </Section>
+
+      {/** comment  */}
+      <Box css={{ overflow: 'hidden' }}>
+        <BenefitsSection />
+        <StatsSection />
+      </Box>
 
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />
