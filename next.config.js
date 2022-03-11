@@ -6,8 +6,10 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
 
 module.exports = withPlugins(
   [withTM, withOptimizedImages],
-
   {
+  future: {
+    webpack5: true,
+  },
     // Next.js config
     poweredByHeader: false,
     async redirects() {
