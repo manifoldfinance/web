@@ -60,20 +60,16 @@ const themingCodeHighlights = {
 };
 
 const tokensCode = `
-const connectors = ({ chainId }: { chainId?: number | undefined }) => {
-  return [
-    new InjectedConnector({ chains }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        qrcode: true,
-        rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
-        },
-      },
-    }),
-  ]
-};
+import "@openmev/src/Sync.sol";
+
+address internal _syncAddress;
+function doMethod() external payable {
+  address to;
+  bytes memory data;
+  address tokenAddress;
+  uint256 tokenAmount;
+  ISync(_syncAddress).invoke(to, data, tokenAddress, tokenAmount);
+}
 `;
 
 const tokensCodeHighlights = {
@@ -82,20 +78,30 @@ const tokensCodeHighlights = {
 };
 
 const utilsCode = `
-const connectors = ({ chainId }: { chainId?: number | undefined }) => {
-  return [
-    new InjectedConnector({ chains }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        qrcode: true,
-        rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
-        },
-      },
-    }),
-  ]
-};`;
+interface IERC3156FlashLender {
+
+  /**
+   * @dev The amount of currency available to be lent.
+   * @param token The loan currency.
+   * @return The amount of %token% that can be borrowed.
+   */
+  function maxFlashLoan(
+      address token
+  ) external view returns (uint256);
+
+  function flashFee(
+      address token,
+      uint256 amount
+  ) external view returns (uint256);
+
+  function flashLoan(
+      IERC3156FlashBorrower receiver,
+      address token,
+      uint256 amount,
+      bytes calldata data
+  ) external returns (bool);
+}
+`;
 
 const utilsCodeHighlights = {
   one: '1-14',
@@ -104,20 +110,17 @@ const utilsCodeHighlights = {
 };
 
 const demoCode3 = `
-const connectors = ({ chainId }: { chainId?: number | undefined }) => {
-  return [
-    new InjectedConnector({ chains }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        qrcode: true,
-        rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
-        },
-      },
-    }),
-  ]
-};`;
+import "@openmev/src/Sync.sol";
+
+address internal _syncAddress;
+function doMethod() external payable {
+  address to;
+  bytes memory data;
+  address tokenAddress;
+  uint256 tokenAmount;
+  ISync(_syncAddress).invoke(to, data, tokenAddress, tokenAmount);
+}
+`;
 
 const code3Highlights = {
   one: '1-23',
@@ -125,20 +128,17 @@ const code3Highlights = {
 };
 
 const demoCode4 = `
-const connectors = ({ chainId }: { chainId?: number | undefined }) => {
-  return [
-    new InjectedConnector({ chains }),
-    new WalletConnectConnector({
-      chains,
-      options: {
-        qrcode: true,
-        rpc: {
-          1: "https://eth-mainnet.securerpc.com/v1/<apiKey>",
-        },
-      },
-    }),
-  ]
-};;`;
+import "@openmev/src/Sync.sol";
+
+address internal _syncAddress;
+function doMethod() external payable {
+  address to;
+  bytes memory data;
+  address tokenAddress;
+  uint256 tokenAmount;
+  ISync(_syncAddress).invoke(to, data, tokenAddress, tokenAmount);
+}
+`;
 
 export default function Home() {
   const [variantsCodeActiveHighlight, setVariantsCodeActiveHighlight] =
@@ -175,62 +175,6 @@ export default function Home() {
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />
       </Flex>
-
-      <Section size={{ '@initial': '2', '@bp1': '3' }}>
-        <Container size="3">
-          <Heading
-            as="h3"
-            size="3"
-            css={{ fontWeight: 500, ta: 'center', mb: '$8' }}
-          >
-            Stats at a glance
-          </Heading>
-          <Grid
-            css={{
-              ai: 'center',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '$7',
-              '@bp2': {
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: '$9',
-              },
-            }}
-          >
-            <Box>
-              <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Bundle size (Sushi)
-              </Text>
-              <Text size="8" css={{ fontWeight: 500 }}>
-                9.1
-              </Text>
-            </Box>
-            <Box>
-              <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Bundle size (Total)
-              </Text>
-              <Text size="8" css={{ fontWeight: 500 }}>
-                9.3
-              </Text>
-            </Box>
-            <Box>
-              <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Bundles Rejected
-              </Text>
-              <Text size="8" css={{ fontWeight: 500 }}>
-                3.4%
-              </Text>
-            </Box>
-            <Box>
-              <Text variant="gray" css={{ lineHeight: '20px', mb: '$3' }}>
-                Staking Payouts
-              </Text>
-              <Text size="8" css={{ fontWeight: 500 }}>
-                ∞
-              </Text>
-            </Box>
-          </Grid>
-        </Container>
-      </Section>
 
       {/** comment  */}
       <Box css={{ overflow: 'hidden' }}>
@@ -271,7 +215,7 @@ export default function Home() {
                     color: '$yellow11',
                   }}
                 >
-                  Supports: Flashbots, Eden Network, Ethermine + more
+                  Supports: Flashbots, Eden Network, Ethermine
                 </Code>
               </Box>
               <Text
@@ -349,7 +293,7 @@ export default function Home() {
                     color: '$blue11',
                   }}
                 >
-                  Flashbots, Eden Network and Ethermine
+                  Exclusive Validator Slashing Bonds
                 </Code>
               </Box>
               <Text
@@ -403,21 +347,6 @@ export default function Home() {
                     Call market opens twice daily for block producers to bid on
                   </Text>
                 </Card>
-                <Card
-                  as="button"
-                  onMouseDown={() => setUtilsCodeActiveHighlight('three')}
-                  variant={
-                    utilsCodeActiveHighlight === 'three' ? 'active' : 'ghost'
-                  }
-                  css={{ p: '$3', mb: '$2', width: '100%' }}
-                >
-                  <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    On chain protocol payments
-                  </Text>
-                  <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Withdraw weekly, or borrow against current holdings
-                  </Text>
-                </Card>
               </Box>
             </Box>
             <Box>
@@ -434,76 +363,11 @@ export default function Home() {
             </Box>
           </Grid>
         </Container>
-
-        {/* <Container size="3">
-          <Grid
-            css={{
-              gap: '$9',
-              ai: 'center',
-                '@initial': { gridTemplateColumns: 'repeat(1, minmax(0, 1fr))' },
-                '@bp2': { gridTemplateColumns: 'repeat(3, 1fr)' },
-            }}
-          >
-            <Box>
-              <Heading>Conditions</Heading>
-              <Paragraph>
-                Stitches avoids unnecessary prop interpolations at runtime, making it significantly
-                more performant than other styling libraries.
-              </Paragraph>
-              <Box>
-                <CodeDemo
-                  language="jsx"
-                  variant="light"
-                  css={{
-                    maxHeight: 700,
-                  }}
-                  value={demoCode4}
-                />
-              </Box>
-            </Box>
-            <Box>
-              <Heading>Override styles</Heading>
-              <Paragraph>
-                Stitches avoids unnecessary prop interpolations at runtime, making it significantly
-                more performant than other styling libraries.
-              </Paragraph>
-              <Box>
-                <CodeDemo
-                  language="jsx"
-                  variant="light"
-                  css={{
-                    maxHeight: 700,
-                  }}
-                  value={demoCode4}
-                />
-              </Box>
-            </Box>
-            <Box>
-              <Heading>Override styles</Heading>
-              <Paragraph>
-                Stitches avoids unnecessary prop interpolations at runtime, making it significantly
-                more performant than other styling libraries.
-              </Paragraph>
-              <Box>
-                <CodeDemo
-                  language="jsx"
-                  variant="light"
-                  css={{
-                    maxHeight: 700,
-                  }}
-                  value={demoCode4}
-                />
-              </Box>
-            </Box>
-          </Grid>
-        </Container> */}
       </Section>
 
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />
       </Flex>
-
-      <FeaturesGrid />
 
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />
