@@ -69,7 +69,7 @@ export default function Test() {
       <TitleAndMetaTags title="Test" />
 
       <Header />
-      <Com>oioi</Com>
+      <Com></Com>
       <Grid
         css={{
           gap: '$9',
@@ -82,7 +82,7 @@ export default function Test() {
         <CodeBlock language="jsx" value={demoCode} />
         <CodeBlock variant="blue" language="jsx" value={demoCode} />
         <CodeBlock variant="yellow" language="jsx" value={demoCode} />
-        <CodeBlock variant="cyanDark" language="jsx" value={demoCode} />
+        <CodeBlock variant="mint" language="jsx" value={demoCode} />
       </Grid>
     </Box>
   );
