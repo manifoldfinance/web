@@ -24,12 +24,12 @@ export const BenefitsSection = () => {
       <Container size="3">
         <Box css={{ mb: '$7' }}>
           <MarketingCaption css={{ mb: '$1' }}>
-            Why Radix Primitives
+            over 15% APY on staked deposits
           </MarketingCaption>
           <Heading as="h2" size="3">
-            Spend less time on
+            The highest paying APY
             <br />
-            undifferentiated work
+            for Eth2 Staking, period.
           </Heading>
         </Box>
 
@@ -48,14 +48,15 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              Save time. Ship faster.
+              Deposit FOLD/ETH. Earn Stablecoins.
             </Text>
             <Paragraph css={{ mb: '$5' }}>
               It takes a <em style={{ fontFamily: 'Georgia, serif' }}>lot</em>{' '}
-              of time to develop and maintain robust UI components, and it's
-              mostly undifferentiated work. Building on top of Radix components
-              will save you time and money, so you can ship a better product
-              faster.
+              of time to develop and maintain a robust distributed computing
+              platform. Building toward the next frontier in validator
+              infrastructure requires not only knowledge but operations
+              experience to be able to do it. Stake 80% ETH 20% FOLD earns like
+              its 100% ETH.
             </Paragraph>
           </Box>
 
@@ -70,13 +71,14 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              Focus on your product
+              Lido and Rocketpool: meet OpenMEV
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              It’s no secret that robust UI components are tricky to build.
-              Nailing accessibility details and complex logic sucks time away
-              from product feature development. With Radix, you can focus on
-              your unique engineering challenges instead.
+              The Lido and Rocketpool protocols are the premier ethereum2
+              staking pool providers. We provide hosting infrastructure under
+              these pools to offer Ethereum2 validator staking services.
+              Combined with OpenMEV, we are able to offer a high-performing,
+              low-cost, and secure solution for Ethereum2 staking.
             </Paragraph>
           </Box>
         </Grid>

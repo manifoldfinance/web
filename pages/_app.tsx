@@ -13,52 +13,46 @@ import { useAnalytics } from '@lib/analytics';
 import { useRouter } from 'next/router';
 
 const globalStyles = globalCss({
-  // Commenting out while we fix flashing issues
-  // '@font-face': [
-  //   {
-  //     fontFamily: 'Untitled Sans',
-  //     fontWeight: '400',
-  //     fontDisplay: 'swap',
-  //     src:
-  //       'url(/s/UntitledSansWeb-Regular.woff2) format("woff2"), url(/fonts/UntitledSansWeb-Regular.woff) format("woff")',
-  //   },
-  //   {
-  //     fontFamily: 'Untitled Sans',
-  //     fontWeight: '500',
-  //     fontDisplay: 'swap',
-  //     src:
-  //       'url(/fonts/UntitledSansWeb-Medium.woff2) format("woff2"), url(/fonts/UntitledSansWeb-Medium.woff) format("woff")',
-  //   },
-  //   {
-  //     fontFamily: 'Söhne Mono',
-  //     fontWeight: 'normal',
-  //     fontStyle: 'normal',
-  //     fontDisplay: 'swap',
-  //     src:
-  //       'url(/fonts/soehne-mono-web-buch.woff2) format("woff2"), url(/fonts/soehne-mono-web-buch.woff) format("woff")',
-  //   },
-  // ],
+  '*, *::before, *::after': {
+    boxSizing: 'border-box',
+  },
+
+  body: {
+    margin: 0,
+    color: '$hiContrast',
+    backgroundColor: '$loContrast',
+    fontFamily: '$untitled',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+    WebkitTextSizeAdjust: '100%',
+
+    '.dark-theme &': {
+      backgroundColor: '$grey5',
+    },
+  },
 
   html: {
     overflowX: 'hidden',
   },
 
-  body: {
-    margin: 0,
-    backgroundColor: '$loContrast',
+  svg: {
+    display: 'block',
+    verticalAlign: 'middle',
   },
-
-  'body, button': {
-    fontFamily: '$untitled',
-  },
-
-  svg: { display: 'block' },
 
   'pre, code': { margin: 0, fontFamily: '$mono' },
 
   '::selection': {
-    backgroundColor: '$grey5',
+    backgroundColor: '$violetA5',
+    color: '$violet12',
   },
+
+  '#__next': {
+    position: 'relative',
+    zIndex: 0,
+  },
+
+  'h1, h2, h3, h4, h5': { fontWeight: 500 },
 });
 
 function App({ Component, pageProps }: AppProps) {
