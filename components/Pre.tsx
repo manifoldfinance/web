@@ -172,14 +172,14 @@ export const Pre = styled('pre', {
   variants: {
     variant: {
       indigo: {
-        $$background: theme.colors.mauve12.value,
+        $$background: theme.colors.slate12.value,
         $$text: theme.colors.gray5.value,
         $$outline: 'none',
         $$syntax1: theme.colors.cyan8.value,
         $$syntax2: theme.colors.indigo8.value,
         $$syntax3: theme.colors.cyan8.value,
         $$syntax4: theme.colors.cyan8.value,
-        $$comment: theme.colors.mauve9.value,
+        $$comment: theme.colors.slate9.value,
         $$removed: '$colors$red9',
         $$added: '$colors$green9',
         $$lineNumbers: 'hsl(210 37% 35%)',
