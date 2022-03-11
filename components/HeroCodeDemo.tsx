@@ -77,7 +77,7 @@ export function HeroCodeDemo() {
     <Grid css={{ gridTemplateColumns: 'repeat(2, 1fr)', gap: '$5' }}>
       <CodeBlock
         css={{
-          backgroundImage: 'linear-gradient(to right, $cyan100, $violet100)',
+          backgroundImage: 'linear-gradient(to right, $cyan100, $indigo100)',
           boxShadow: 'none !important',
           backdropFilter: 'blur(72px)',
         }}
@@ -86,7 +86,7 @@ export function HeroCodeDemo() {
       />
       <CodeBlock
         css={{
-          backgroundImage: 'linear-gradient(to right, $violet100, $purple100)',
+          backgroundImage: 'linear-gradient(to right, $indigo100, $purple100)',
           boxShadow: 'none !important',
           backdropFilter: 'blur(72px)',
         }}
@@ -96,7 +96,7 @@ export function HeroCodeDemo() {
       />
       <CodeBlock
         css={{
-          backgroundImage: 'linear-gradient(to right, $cyan100, $violet100)',
+          backgroundImage: 'linear-gradient(to right, $cyan100, $indigo100)',
           boxShadow: 'none !important',
           backdropFilter: 'blur(72px)',
         }}
@@ -105,7 +105,7 @@ export function HeroCodeDemo() {
       />
       <CodeBlock
         css={{
-          backgroundImage: 'linear-gradient(to right, $violet100, $purple100)',
+          backgroundImage: 'linear-gradient(to right, $indigo100, $purple100)',
           boxShadow: 'none !important',
           backdropFilter: 'blur(72px)',
         }}

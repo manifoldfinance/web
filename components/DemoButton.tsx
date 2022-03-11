@@ -26,11 +26,11 @@ export const StyledButton = styled('button', {
         },
       },
 
-      violet: {
-        backgroundColor: '$violet10',
+      indigo: {
+        backgroundColor: '$indigo10',
         color: 'white',
         '&:hover': {
-          backgroundColor: '$violet11',
+          backgroundColor: '$indigo11',
         },
       },
     },
@@ -66,11 +66,11 @@ export const StyledButton = styled('button', {
       },
     },
     {
-      color: 'violet',
+      color: 'indigo',
       outlined: true,
       css: {
-        $$shadowColor: '$colors$violet11',
-        color: '$violet11',
+        $$shadowColor: '$colors$indigo11',
+        color: '$indigo11',
         '&:hover': {
           color: 'white',
         },
