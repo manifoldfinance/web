@@ -12,8 +12,8 @@ export const authors = {
   },
 
   maki: {
-    name: 'maki',
-    twitter: '0xmaki',
+    name: 'misterchef',
+    twitter: 'foldfinance',
     avatar: 'https://d.pr/i/29mBPu.jpg',
   },
 };
