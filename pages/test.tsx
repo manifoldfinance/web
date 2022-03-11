@@ -82,7 +82,7 @@ export default function Test() {
         <CodeBlock language="jsx" value={demoCode} />
         <CodeBlock variant="blue" language="jsx" value={demoCode} />
         <CodeBlock variant="yellow" language="jsx" value={demoCode} />
-        <CodeBlock variant="cyan" language="jsx" value={demoCode} />
+        <CodeBlock variant="cyanDark" language="jsx" value={demoCode} />
       </Grid>
     </Box>
   );

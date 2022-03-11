@@ -40,7 +40,7 @@ export const StatsSection = () => {
           right: -200,
           height: 700,
           backgroundImage:
-            'radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), $teal8 20%, $cyan3, $$transparent)',
+            'radial-gradient(ellipse 75% 700px at 35% calc(100% + 100px), $teal8 20%, $cyanDark3, $$transparent)',
           transform: 'rotate(-10deg)',
         }}
       />
