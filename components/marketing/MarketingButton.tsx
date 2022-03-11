@@ -54,7 +54,7 @@ export const StyledButton = styled('button', {
             0 0 0 2px $colors$plumA3,
             -15px 0 30px -15px $colors$orangeA8,
             0 0 30px -15px $colors$pinkA8,
-            15px 0 30px -15px $colors$violetA8
+            15px 0 30px -15px $colors$indigoA8
           `,
           color: '$hiContrast',
           bc: 'hsl(0 0% 6%)',

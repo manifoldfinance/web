@@ -13,9 +13,9 @@ export const Pre = styled('pre', {
   $$added: '$colors$green11',
   $$lineNumbers: '$colors$indigo5',
   $$fadedLines: '$colors$slate10',
-  $$highlightedWord1Bg: '$colors$violet4',
-  $$highlightedWord1BgActive: '$colors$violet6',
-  $$highlightedWord1Text: '$colors$violet11',
+  $$highlightedWord1Bg: '$colors$indigo4',
+  $$highlightedWord1BgActive: '$colors$indigo6',
+  $$highlightedWord1Text: '$colors$indigo11',
   $$highlightedWord2Bg: '$colors$red3',
   $$highlightedWord2BgActive: '$colors$red5',
   $$highlightedWord2Text: '$colors$red11',
@@ -171,12 +171,12 @@ export const Pre = styled('pre', {
 
   variants: {
     variant: {
-      violet: {
+      indigo: {
         $$background: theme.colors.mauve12.value,
         $$text: theme.colors.gray5.value,
         $$outline: 'none',
         $$syntax1: theme.colors.cyan8.value,
-        $$syntax2: theme.colors.violet8.value,
+        $$syntax2: theme.colors.indigo8.value,
         $$syntax3: theme.colors.cyan8.value,
         $$syntax4: theme.colors.cyan8.value,
         $$comment: theme.colors.mauve9.value,

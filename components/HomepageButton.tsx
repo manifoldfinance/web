@@ -31,18 +31,18 @@ export const HomepageButton = styled('button', {
         },
       },
 
-      violet: {
-        backgroundColor: '$violet4',
-        color: '$violet11',
+      indigo: {
+        backgroundColor: '$indigo4',
+        color: '$indigo11',
         '&:hover': {
-          backgroundColor: '$violet5',
+          backgroundColor: '$indigo5',
         },
         '&:active': {
-          backgroundColor: '$violet6',
+          backgroundColor: '$indigo6',
         },
         '&:focus': {
           boxShadow:
-            '0 0 0 1px $colors$violet8, inset 0 0 0 1px $colors$violet8',
+            '0 0 0 1px $colors$indigo8, inset 0 0 0 1px $colors$indigo8',
         },
       },
     },
