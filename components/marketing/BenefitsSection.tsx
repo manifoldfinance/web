@@ -24,12 +24,12 @@ export const BenefitsSection = () => {
       <Container size="3">
         <Box css={{ mb: '$7' }}>
           <MarketingCaption css={{ mb: '$1' }}>
-            over 15% APY on staked deposits
+            ETH, AVAX, and more
           </MarketingCaption>
           <Heading as="h2" size="3">
-            The highest paying APY
+            MEV Returns for Validators
             <br />
-            for Eth2 Staking, period.
+            Stablecoin payments
           </Heading>
         </Box>
 

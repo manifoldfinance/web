@@ -8,7 +8,7 @@ export const ThemeToggle = (props) => {
   return (
     <IconButton
       variant="ghost"
-      onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
+      onClick={() => (theme === 'light' ? setTheme('dark') : setTheme('light'))}
       {...props}
       aria-label="toggle a light and dark color scheme"
     >
