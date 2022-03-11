@@ -3,11 +3,11 @@ import { Box, Flex, Text } from '@modulz/design-system';
 const getBarColor = (name) => {
   switch (name) {
     case 'Stitches':
-      return '$violet9';
+      return '$indigo9';
     case 'Stitches 0.2.0':
-      return '$violet9';
+      return '$indigo9';
     case 'Stitches 0.1.9':
-      return '$violet4';
+      return '$indigo4';
     case 'styled-components':
       return '$amber9';
     case 'Emotion':

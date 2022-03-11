@@ -319,12 +319,12 @@ function NavItem({ children, active, href, ...props }: NavItemProps) {
           color: '$hiContrast',
           py: '$2',
           px: '$5',
-          backgroundColor: active ? '$violet5' : 'transparent',
+          backgroundColor: active ? '$indigo5' : 'transparent',
           userSelect: 'none',
           minHeight: '$6',
           transition: 'background-color 50ms linear',
           '&:hover': {
-            backgroundColor: active ? '$violet5' : '$violet4',
+            backgroundColor: active ? '$indigo5' : '$indigo4',
           },
         }}
       >
