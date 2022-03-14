@@ -1,5 +1,5 @@
 export const docsRoutes = [
-    /**
+  /**
   {
     label: 'Overview',
     pages: [
@@ -33,7 +33,7 @@ export const docsRoutes = [
       { title: 'Supported RPC Methods', slug: 'docs/openmev-rpc-ref' },
     ],
   },
-/*
+  /*
   {
     label: 'Manifold Protocol',
     pages: [

@@ -336,9 +336,6 @@ export default function Home() {
                 </Card>
               </Box>
             </Box>
-
-
-
           </Grid>
         </Container>
       </Section>
