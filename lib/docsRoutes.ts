@@ -1,4 +1,5 @@
 export const docsRoutes = [
+    /**
   {
     label: 'Overview',
     pages: [
@@ -9,7 +10,7 @@ export const docsRoutes = [
       { title: 'Support and Governance', slug: 'docs/help' },
     ],
   },
-  /**
+
   {
     label: 'Getting Started',
     pages: [
@@ -28,10 +29,11 @@ export const docsRoutes = [
     pages: [
       { title: 'Overview', slug: 'docs/developers-overview' },
       { title: 'Ethers Provider', slug: 'docs/ethers-provider' },
+      { title: 'Installation', slug: 'docs/installation' },
       { title: 'Supported RPC Methods', slug: 'docs/openmev-rpc-ref' },
     ],
   },
-
+/*
   {
     label: 'Manifold Protocol',
     pages: [
@@ -39,6 +41,7 @@ export const docsRoutes = [
       { title: 'Protocol', slug: 'docs/manifold/protocol' },
     ],
   },
+  */
 ];
 
 export const allDocsRoutes = docsRoutes.reduce((acc, curr) => {

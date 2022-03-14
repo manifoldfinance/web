@@ -15,13 +15,13 @@ import {
 } from '@modulz/design-system';
 import { StatsSection } from '@components/marketing/StatsSection';
 import { AdoptionSection } from '@components/marketing/AdoptionSection';
-import { CodeDemo } from '@components/CodeDemo';
+//import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
 import { FeaturesGrid } from '@components/FeaturesGrid';
 import { Header } from '@components/Header';
 import { Hero } from '@components/Hero';
 import React from 'react';
-import { StarFilledIcon } from '@modulz/radix-icons';
+//import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 import { BenefitsSection } from '@components/marketing/BenefitsSection';
 
@@ -270,19 +270,6 @@ export default function Home() {
               </Box>
             </Box>
             <Box>
-              <CodeDemo
-                language="jsx"
-                variant="yellow"
-                mode="interactive"
-                line={tokensCodeHighlights[tokensActiveHighlight]}
-                css={{
-                  maxHeight: 700,
-                }}
-                value={tokensCode}
-              />
-            </Box>
-
-            <Box>
               <Box css={{ mb: '$5' }}>
                 <Code
                   css={{
@@ -349,18 +336,9 @@ export default function Home() {
                 </Card>
               </Box>
             </Box>
-            <Box>
-              <CodeDemo
-                language="jsx"
-                variant="blue"
-                mode="interactive"
-                line={utilsCodeHighlights[utilsCodeActiveHighlight]}
-                css={{
-                  maxHeight: 700,
-                }}
-                value={utilsCode}
-              />
-            </Box>
+
+
+
           </Grid>
         </Container>
       </Section>

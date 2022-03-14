@@ -1,10 +1,4 @@
-# Develoepr Overview
-
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c4566fcdc50a49eba6e07264443bd5c0)](https://www.codacy.com/gh/manifoldfinance/openmev-sdk/dashboard?utm_source=github.com&utm_medium=referral&utm_content=manifoldfinance/openmev-sdk&utm_campaign=Badge_Grade)
-[![nodejs](https://github.com/manifoldfinance/openmev-sdk/workflows/nodejs/badge.svg)](https://github.com/manifoldfinance/openmev-sdk/actions?query=workflow:"nodejs")
-[![GitHub tag](https://img.shields.io/github/tag/manifoldfinance/openmev-sdk?include_prereleases=&sort=semver)](https://github.com/manifoldfinance/openmev-sdk/releases/)
-[![License](https://img.shields.io/badge/spdx-apache--2.0-informational)](#license)
-[![issues - openmev-sdk](https://img.shields.io/github/issues/manifoldfinance/openmev-sdk)](https://github.com/manifoldfinance/openmev-sdk/issues)
+# Developer Overview
 
 **Front-running protection:** transactions will not be seen by hungry sandwich
 bots in the public mempool. **No failed transactions:** transactions will only
@@ -14,36 +8,3 @@ the mempool, and then included on-chain. **Priority in blocks**: transactions
 sent via Flashbots are mined at the top of blocks, giving them priority.
 **Etherscan integration:** users can see the status of their transactions on
 Etherscan.
-
-## Specification
-
-## TransactionSimulationBase
-
-| name    | type     | optional | default | description |
-| ------- | -------- | -------- | ------- | ----------- |
-| txHash  | `string` | `false`  | `n/a`   |             |
-| gasUsed | `number` | `false`  | `n/a`   |             |
-
-## OpenMevBundle
-
-| name                      | type                            | optional | default | description |
-| ------------------------- | ------------------------------- | -------- | ------- | ----------- |
-| signedBundledTransactions | `string[]`                      | `false`  | `n/a`   |             |
-| blockTarget               | `number`                        | `false`  | `n/a`   |             |
-| options                   | `FlashbotsOptions \| undefined` | `true`   | `n/a`   |             |
-
-## FlashbotsBundleTransaction
-
-| name        | type                 | optional | default | description |
-| ----------- | -------------------- | -------- | ------- | ----------- |
-| transaction | `TransactionRequest` | `false`  | `n/a`   |             |
-| signer      | `Signer`             | `false`  | `n/a`   |             |
-
-## RpcParams
-
-| name               | type                                                                          | optional | default | description                                                                                                                                                                           |
-| ------------------ | ----------------------------------------------------------------------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| manifold_Relay     | `number`                                                                      | `false`  | `n/a`   | Relay simulates bundles before sending to miners which can take a small amount of time. The relay cannot determine which bundles are profitable without performing a full simulation. |
-| eth_sendMegaBundle | `Array[String], A list of signed transactions to execute in an atomic bundle` | `false`  | `n/a`   | ethSendMegaBundle can be used to send your bundles to the relay.                                                                                                                      |
-| eth_callBundle     | `Array[String], A list of signed transactions to execute in an atomic bundle` | `false`  | `n/a`   | eth_callBundle can be used to simulate a bundle against a specific block number, including simulating a bundle at the top of the next block.                                          |
-| eth_sendBundle     | `() => string \| number \| string[] \| Record<string, unknown> \| undefined`  | `false`  | `n/a`   | SendBundle can be used to send your bundles to the relay.                                                                                                                             |
