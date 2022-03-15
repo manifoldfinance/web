@@ -13,10 +13,10 @@ import { allDocsRoutes, docsRoutes } from '@lib/docsRoutes';
 
 import { ExternalIcon } from './ExternalIcon';
 import { HamburgerMenuIcon } from '@modulz/radix-icons';
-import { ManifoldLogo } from '@components/ManifoldLogo';
+import { ManifoldLogoIcon } from '@components/ManifoldLogoIcon';
 import NextLink from 'next/link';
 import { ScrollArea } from '@components/ScrollArea';
-import { ThemeToggle } from '@components/ThemeToggle';
+//import { ThemeToggle } from '@components/ThemeToggle';
 import { useRouter } from 'next/router';
 
 export function DocsPage({ children }: { children: React.ReactNode }) {
@@ -107,13 +107,12 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
                     border: 0,
                   }}
                 >
-                  Manifold Finance homepage
+                  Manifold Finance
                 </span>
-                <ManifoldLogo />
+                <ManifoldLogoIcon />
               </Box>
             </NextLink>
 
-            <ThemeToggle css={{ ml: 'auto' }} />
             <Box css={{ ml: '$2', '@bp2': { display: 'none' } }}>
               <IconButton
                 variant="ghost"

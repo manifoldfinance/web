@@ -12,7 +12,7 @@
         "data/*"
       ]
     },
-    "target": "es6",
+    "target": "es2018",
     "lib": [
       "dom",
       "dom.iterable",
@@ -31,6 +31,7 @@
     "jsx": "preserve"
   },
   "include": [
+    "stitches.config.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

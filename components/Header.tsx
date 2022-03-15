@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Link, Text } from '@modulz/design-system';
 
 import { ManifoldLogoIcon } from '@components/ManifoldLogoIcon';
 import NextLink from 'next/link';
-import { ThemeToggle } from '@components/ThemeToggle';
+//import { ThemeToggle } from '@components/ThemeToggle';
 
 export function Header() {
   return (
@@ -87,7 +87,6 @@ export function Header() {
         >
           <Text>Telegram</Text>
         </Link>
-        <ThemeToggle />
       </Flex>
     </Flex>
   );

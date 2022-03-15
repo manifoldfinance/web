@@ -9,7 +9,7 @@ import {
 } from '@modulz/design-system';
 
 import { ExternalIcon } from './ExternalIcon';
-import { ManifoldLogo } from '@components/ManifoldLogo';
+import { ManifoldLogoIcon } from '@components/ManifoldLogoIcon';
 import NextLink from 'next/link';
 import React from 'react';
 
@@ -66,7 +66,7 @@ export const Footer = () => {
                 >
                   Manifold Finance homepage
                 </span>
-                <ManifoldLogo />
+                <ManifoldLogoIcon />
               </Box>
             </NextLink>
             <Text
@@ -98,28 +98,28 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
-                    <Link variant="subtle">Introduction</Link>
+                  <NextLink href="https://docs.openmev.org" passHref>
+                    <Link variant="subtle">OpenMEV</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
-                    <Link variant="subtle">Tutorials</Link>
+                  <NextLink href="#" passHref>
+                    <Link variant="subtle">FOLD Vault</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
+                  <NextLink href="#" passHref>
                     <Link variant="subtle">API</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
+                  <NextLink href="#" passHref>
                     <Link variant="subtle">FAQ</Link>
                   </NextLink>
                 </Text>
@@ -137,28 +137,28 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
-                    <Link variant="subtle">Installation</Link>
+                  <NextLink href="#" passHref>
+                    <Link variant="subtle">SecureRPC</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
+                  <NextLink href="https://status.manifoldfinance.com/" passHref>
                     <Link variant="subtle">Network Status</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
+                  <NextLink href="#" passHref>
                     <Link variant="subtle">Partners</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="/docs/" passHref>
+                  <NextLink href="#" passHref>
                     <Link variant="subtle">Helpdesk</Link>
                   </NextLink>
                 </Text>
