@@ -11,7 +11,7 @@ import {
 } from '@modulz/design-system';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 import { Header } from '@components/Header';
-import { CodeDemo } from '@components/CodeDemo';
+//import { CodeDemo } from '@components/CodeDemo';
 import { CodeBlock } from '@components/CodeBlock';
 
 const demoCode = `const Button = styled('button', {

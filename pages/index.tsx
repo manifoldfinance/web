@@ -246,11 +246,13 @@ export default function Home() {
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Smart error reporting
+                    Blockspace Futures
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Rejections and errors automatically populated back to the
-                    user.
+                    Blockspace futures reduce operational risks and provide an
+                    additional source of profits. Combined with exclusive MEV
+                    profits and hedging slashing risk means higher APY's with
+                    reduced risk and exposure.
                   </Text>
                 </Card>
                 <Card
@@ -260,11 +262,12 @@ export default function Home() {
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Account abstraction support
+                    OpenMEV enabled APY
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Offer transaction parallelism through our API for
-                    interacting with accounts.
+                    Validator rewards also include additional MEV rewards not
+                    available to the public mempool through our OpenMEV
+                    strategy.
                   </Text>
                 </Card>
               </Box>
@@ -280,20 +283,23 @@ export default function Home() {
                     color: '$blue11',
                   }}
                 >
-                  Exclusive Validator Slashing Bonds
+                  Seamless slashing, volatility and uptime hedge
                 </Code>
               </Box>
               <Text
                 size="8"
                 css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}
               >
-                Rewards for community; Incentives for capital
+                Block Optionality makes slashing risk nearly zero.
               </Text>
               <Text size="4" css={{ lineHeight: '27px', '@bp2': { mb: '$6' } }}>
-                Continuously optimize fees and incentives in your protocol to
-                grow metrics important for your protocol. We also monitor
-                external transactions and grow organic volume in your LP pools
-                by providing additional incentives.
+                Block Optionality means a portion of all blocks produced by
+                Manifold are auctioned off as a forward deliverable contract to
+                end-users like MEV Searchers, Traders, Institutions, etc.
+                Delivery is taken in the form of transaction inclusion in the
+                Ethereum blockchain. Should the block window be unable to be
+                exercised, a cash-settlement mechanism is exercised via an
+                embedded option.
               </Text>
               <Box
                 css={{
@@ -313,10 +319,10 @@ export default function Home() {
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Gas Pricing API
+                    Standardized Roll over dates
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Researched and proven in production to be the most accurate.
+                    Roll over dates of 3d, 7d, 30d, 90d, 180d.
                   </Text>
                 </Card>
                 <Card
