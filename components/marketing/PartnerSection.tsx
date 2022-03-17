@@ -47,13 +47,11 @@ export const PartnerSection = () => {
         overflow: 'hidden',
       }}
     >
-
       <Container size="3">
         <Box css={{ mb: '$7' }}>
           <MarketingCaption css={{ mb: '$1' }}>
-           Incentive aligned partnerships
+            Incentive aligned partnerships
           </MarketingCaption>
-
 
           <Heading as="h2" size="3">
             Sushiswap
@@ -62,7 +60,7 @@ export const PartnerSection = () => {
           </Heading>
         </Box>
 
-{/**
+        {/**
         <Avatar>
   <AvatarImage
     src="https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-64x64.png"
@@ -74,7 +72,6 @@ export const PartnerSection = () => {
           columns={{ '@initial': 1, '@bp1': 2 }}
           gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}
         >
-
           <Box>
             <Text
               as="h3"
@@ -89,12 +86,12 @@ export const PartnerSection = () => {
               OpenMEV enables Sushiswap to capture MEV back
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-            The SushiSwap integration provides a service that realizes profit by transaction
-             batching for the purposes of arbitrage by controlling transaction ordering.
-            OpenMEV provides a credibly neutral platform that enables aggregation
-            of transactions (batching) for the purposes of extracting MEV profits
-            and returning them back to the traders.
-
+              The SushiSwap integration provides a service that realizes profit
+              by transaction batching for the purposes of arbitrage by
+              controlling transaction ordering. OpenMEV provides a credibly
+              neutral platform that enables aggregation of transactions
+              (batching) for the purposes of extracting MEV profits and
+              returning them back to the traders.
             </Paragraph>
           </Box>
 
@@ -123,5 +120,4 @@ export const PartnerSection = () => {
       </Container>
     </Section>
   );
-
 };

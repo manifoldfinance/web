@@ -241,22 +241,6 @@ export default function Home() {
               >
                 <Card
                   as="button"
-                  onMouseDown={() => setTokensCodeActiveHighlight('one')}
-                  variant={tokensActiveHighlight === 'one' ? 'active' : 'ghost'}
-                  css={{ p: '$3', mb: '$2', width: '100%' }}
-                >
-                  <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Blockspace Futures
-                  </Text>
-                  <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Blockspace futures reduce operational risks and provide an
-                    additional source of profits. Combined with exclusive MEV
-                    profits and hedging slashing risk means higher APY's with
-                    reduced risk and exposure.
-                  </Text>
-                </Card>
-                <Card
-                  as="button"
                   onMouseDown={() => setTokensCodeActiveHighlight('two')}
                   variant={tokensActiveHighlight === 'two' ? 'active' : 'ghost'}
                   css={{ p: '$3', mb: '$2', width: '100%' }}
@@ -296,10 +280,6 @@ export default function Home() {
                 Block Optionality means a portion of all blocks produced by
                 Manifold are auctioned off as a forward deliverable contract to
                 end-users like MEV Searchers, Traders, Institutions, etc.
-                Delivery is taken in the form of transaction inclusion in the
-                Ethereum blockchain. Should the block window be unable to be
-                exercised, a cash-settlement mechanism is exercised via an
-                embedded option.
               </Text>
               <Box
                 css={{
@@ -312,21 +292,6 @@ export default function Home() {
               >
                 <Card
                   as="button"
-                  onMouseDown={() => setUtilsCodeActiveHighlight('one')}
-                  variant={
-                    utilsCodeActiveHighlight === 'one' ? 'active' : 'ghost'
-                  }
-                  css={{ p: '$3', mb: '$2', width: '100%' }}
-                >
-                  <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Standardized Roll over dates
-                  </Text>
-                  <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Roll over dates of 3d, 7d, 30d, 90d, 180d.
-                  </Text>
-                </Card>
-                <Card
-                  as="button"
                   onMouseDown={() => setUtilsCodeActiveHighlight('two')}
                   variant={
                     utilsCodeActiveHighlight === 'two' ? 'active' : 'ghost'
@@ -334,10 +299,13 @@ export default function Home() {
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Auction access twice daily
+                    Blockspace Futures provide additional hedge
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Call market opens twice daily for block producers to bid on
+                    Blockspace futures reduce operational risks and provide an
+                    additional source of profits. Combined with exclusive MEV
+                    profits and hedging slashing risk means higher APY's with
+                    reduced risk and exposure.
                   </Text>
                 </Card>
               </Box>
