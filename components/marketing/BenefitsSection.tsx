@@ -29,7 +29,6 @@ export const BenefitsSection = () => {
           <Heading as="h2" size="3">
             MEV Returns for Validators
             <br />
-            Stablecoin payments
           </Heading>
         </Box>
 
@@ -71,7 +70,7 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              Lido and Rocketpool: meet OpenMEV
+              Lido & Rocketpool
             </Text>
             <Paragraph css={{ mb: '$5' }}>
               The Lido and Rocketpool protocols are the premier ethereum2

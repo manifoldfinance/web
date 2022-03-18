@@ -74,7 +74,6 @@ export const PartnerSection = () => {
           columns={{ '@initial': 1, '@bp1': 2 }}
           gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}
         >
-
           <Box>
             <Text
               as="h3"
@@ -123,5 +122,4 @@ export const PartnerSection = () => {
       </Container>
     </Section>
   );
-
 };

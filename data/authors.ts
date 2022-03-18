@@ -11,7 +11,7 @@ export const authors = {
     avatar: 'https://d.pr/i/29mBPu.jpg',
   },
 
-  maki: {
+  chef: {
     name: 'misterchef',
     twitter: 'foldfinance',
     avatar: 'https://d.pr/i/29mBPu.jpg',

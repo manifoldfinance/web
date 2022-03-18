@@ -148,7 +148,7 @@ export function Hero() {
               </svg>
             </Flex>
             <Heading as="h4" css={{ mb: '$2' }}>
-              Performant
+              Seamless Integration
             </Heading>
             <Text
               as="p"
@@ -161,8 +161,8 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              Zero-configuration for end users: works without having to change
-              any settings
+              From Sushiswap to OlympusDAO, some of the biggest names in DeFi
+              are already using Manifold to leverage MEV to their advantage.
             </Text>
           </Box>
           <Box>
@@ -249,7 +249,7 @@ export function Hero() {
               </svg>
             </Flex>
             <Heading as="h4" css={{ mb: '$2' }}>
-              Aggregation
+              SecureRPC
             </Heading>
             <Text
               as="p"
@@ -262,7 +262,7 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              Aggregated transactions are routed directly to endpoints like{' '}
+              SecureRPC provides an aggregated connection to endpoints like{' '}
               <Code>Flashbots</Code>, <Code>Eden Network</Code>, etc.
             </Text>
           </Box>
@@ -320,7 +320,7 @@ export function Hero() {
               </svg>
             </Flex>
             <Heading as="h4" css={{ mb: '$2' }}>
-              Incentives
+              Eth2 Validators
             </Heading>
             <Text
               as="p"
@@ -333,8 +333,8 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              End users can get rebated their transaction cost or Protocol can
-              direct funds to expand incentive programs.
+              With our newly upgraded staking protocol we now provide ETH2
+              Validators with a direct source of MEV profits.
             </Text>
           </Box>
           <Box>
@@ -388,7 +388,7 @@ export function Hero() {
               </svg>
             </Flex>
             <Heading as="h4" css={{ mb: '$2' }}>
-              Seamless
+              Credible Neutrality
             </Heading>
             <Text
               as="p"
@@ -401,8 +401,8 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              Protection from MEV to trade optimization, SecureRPC is more than
-              an ordinary web3 provider - its a web3 enabler.
+              OpenMEV operates its mechanisms so that it does not discriminate
+              for or against any specific user.
             </Text>
           </Box>
         </Grid>

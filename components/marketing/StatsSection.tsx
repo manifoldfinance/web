@@ -65,10 +65,10 @@ export const StatsSection = () => {
                 mb: '$2',
               }}
             >
-              ~14% APY
+              15% APY*
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              FOLD Token Vault for Eth2
+              See our Documentation for breakdown
             </Text>
           </Box>
           <Box css={{ backgroundColor: '$slateA5', width: 1 }} />
@@ -86,7 +86,7 @@ export const StatsSection = () => {
                 mb: '$2',
               }}
             >
-              90%
+              96%
               <Box as="span" css={{ fontSize: '75%', ml: '0.25em' }}>
                 +
               </Box>
@@ -110,13 +110,13 @@ export const StatsSection = () => {
                 mb: '$2',
               }}
             >
-              500+mil
+              100m
               <Box as="span" css={{ fontSize: '75%', ml: '0.25em' }}>
                 +
               </Box>
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              24hr USD Volume
+              24hr USD Trade Volume
             </Text>
           </Box>
         </Grid>

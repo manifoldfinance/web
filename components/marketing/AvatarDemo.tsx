@@ -46,7 +46,6 @@ const Flex = styled('div', { display: 'flex' });
 
 const AvatarDemo = () => (
   <Flex css={{ gap: 20 }}>
-
     <Avatar>
       <AvatarImage
         src="https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-64x64.png"
@@ -57,4 +56,4 @@ const AvatarDemo = () => (
     </Flex>
     );
 
-    export default AvatarDemo;
+export default AvatarDemo;
