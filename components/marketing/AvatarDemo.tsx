@@ -52,7 +52,8 @@ const AvatarDemo = () => (
         alt="Sushi"
       />
     </Avatar>
-  </Flex>
-);
+
+    </Flex>
+    );
 
 export default AvatarDemo;
