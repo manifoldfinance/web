@@ -52,7 +52,7 @@ export default function Doc({ frontmatter, code }: Doc) {
         // https://github.com/theKashey/react-remove-scroll#positionfixed-elements
         className={RemoveScroll.classNames.zeroRight}
         css={{
-          display: 'none',
+          'display': 'none',
           '@bp3': {
             display: 'block',
             width: 250,

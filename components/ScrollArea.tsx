@@ -146,12 +146,12 @@ export const ScrollArea = (props: ScrollAreaProps) => {
     <Flex
       ref={wrapperRef}
       css={{
-        display: 'flex',
-        flex: 1,
-        flexDirection: 'column',
-        minHeight: 0,
-        maxHeight: '100%',
-        position: 'relative',
+        'display': 'flex',
+        'flex': 1,
+        'flexDirection': 'column',
+        'minHeight': 0,
+        'maxHeight': '100%',
+        'position': 'relative',
         // This bit shows the thumb when you hover the wrapper
         '&:hover': {
           '& [data-scroll-thumb]': {
@@ -160,7 +160,7 @@ export const ScrollArea = (props: ScrollAreaProps) => {
         },
         '&.modulz-is-dragging': {
           // Need to keep pointer events when scrolling so thumb isn't hidden immediately after scroll
-          pointerEvents: 'auto',
+          'pointerEvents': 'auto',
           // But still remove pointer events from content
           '& [data-scroll-content]': {
             pointerEvents: 'none',
@@ -177,11 +177,11 @@ export const ScrollArea = (props: ScrollAreaProps) => {
         data-scroll-content
         ref={contentRef}
         css={{
-          position: 'relative',
-          overflow: 'scroll',
-          scrollbarWidth: 'none',
-          zIndex: 1,
-          WebkitOverflowScrolling: 'touch',
+          'position': 'relative',
+          'overflow': 'scroll',
+          'scrollbarWidth': 'none',
+          'zIndex': 1,
+          'WebkitOverflowScrolling': 'touch',
           '&::-webkit-scrollbar': { display: 'none' },
         }}
       >
@@ -192,12 +192,12 @@ export const ScrollArea = (props: ScrollAreaProps) => {
         ref={thumbRef}
         data-scroll-thumb
         css={{
-          opacity: 0,
-          zIndex: 2,
-          position: 'absolute',
-          top: 0,
-          right: 0,
-          width: '8px',
+          'opacity': 0,
+          'zIndex': 2,
+          'position': 'absolute',
+          'top': 0,
+          'right': 0,
+          'width': '8px',
           // Fill in the thumb color
           '&::after': {
             content: '""',

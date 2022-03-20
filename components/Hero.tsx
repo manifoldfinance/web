@@ -34,7 +34,7 @@ export function Hero() {
         '@bp1': '3',
       }}
       css={{
-        pt: '$3',
+        'pt': '$3',
         '@bp2': {
           pt: '$6',
         },
@@ -44,7 +44,7 @@ export function Hero() {
         <Heading
           size="4"
           css={{
-            mb: '$3',
+            'mb': '$3',
             '@bp1': {
               pr: 100,
             },
@@ -64,7 +64,7 @@ export function Hero() {
         <Paragraph
           size="2"
           css={{
-            mb: '$6',
+            'mb': '$6',
             '@bp2': {
               mx: 230,
               ta: 'center',
@@ -101,8 +101,8 @@ export function Hero() {
       <Container size="3">
         <Grid
           css={{
-            gap: '$6',
-            gridTemplateColumns: '1fr',
+            'gap': '$6',
+            'gridTemplateColumns': '1fr',
             '@bp1': {
               gap: '$7',
               gridTemplateColumns: '1fr 1fr',

@@ -17,25 +17,25 @@ const globalStyles = globalCss({
     boxSizing: 'border-box',
   },
 
-  body: {
-    margin: 0,
-    color: '$hiContrast',
-    backgroundColor: '$loContrast',
-    fontFamily: '$untitled',
-    WebkitFontSmoothing: 'antialiased',
-    MozOsxFontSmoothing: 'grayscale',
-    WebkitTextSizeAdjust: '100%',
+  'body': {
+    'margin': 0,
+    'color': '$hiContrast',
+    'backgroundColor': '$loContrast',
+    'fontFamily': '$untitled',
+    'WebkitFontSmoothing': 'antialiased',
+    'MozOsxFontSmoothing': 'grayscale',
+    'WebkitTextSizeAdjust': '100%',
 
     '.dark-theme &': {
       backgroundColor: '$grey5',
     },
   },
 
-  html: {
+  'html': {
     overflowX: 'hidden',
   },
 
-  svg: {
+  'svg': {
     display: 'block',
     verticalAlign: 'middle',
   },

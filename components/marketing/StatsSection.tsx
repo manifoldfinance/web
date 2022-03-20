@@ -56,13 +56,13 @@ export const StatsSection = () => {
           <Box>
             <Text
               css={{
-                fontSize: '$9',
+                'fontSize': '$9',
                 '@bp1': { fontSize: '$8' },
                 '@bp2': { fontSize: '$9' },
-                fontWeight: 400,
-                fontVariantNumeric: 'proportional-nums',
-                letterSpacing: '-.031em',
-                mb: '$2',
+                'fontWeight': 400,
+                'fontVariantNumeric': 'proportional-nums',
+                'letterSpacing': '-.031em',
+                'mb': '$2',
               }}
             >
               15% APY*
@@ -75,15 +75,15 @@ export const StatsSection = () => {
           <Box>
             <Text
               css={{
-                fontSize: '$9',
+                'fontSize': '$9',
                 '@bp1': { fontSize: '$8' },
                 '@bp2': { fontSize: '$9' },
-                fontWeight: 500,
-                fontVariantNumeric: 'proportional-nums',
-                letterSpacing: '-.031em',
-                display: 'flex',
-                alignItems: 'center',
-                mb: '$2',
+                'fontWeight': 500,
+                'fontVariantNumeric': 'proportional-nums',
+                'letterSpacing': '-.031em',
+                'display': 'flex',
+                'alignItems': 'center',
+                'mb': '$2',
               }}
             >
               96%
@@ -99,15 +99,15 @@ export const StatsSection = () => {
           <Box>
             <Text
               css={{
-                fontSize: '$9',
+                'fontSize': '$9',
                 '@bp1': { fontSize: '$8' },
                 '@bp2': { fontSize: '$9' },
-                fontWeight: 500,
-                fontVariantNumeric: 'proportional-nums',
-                letterSpacing: '-.031em',
-                display: 'flex',
-                alignItems: 'center',
-                mb: '$2',
+                'fontWeight': 500,
+                'fontVariantNumeric': 'proportional-nums',
+                'letterSpacing': '-.031em',
+                'display': 'flex',
+                'alignItems': 'center',
+                'mb': '$2',
               }}
             >
               100m
@@ -134,11 +134,11 @@ const FancyBackgroundChart = () => {
       <Box
         css={{
           // This is the left-hand line that connects to the chart
-          height: 1,
-          background:
+          'height': 1,
+          'background':
             'linear-gradient(to right, $$transparent, $$chartLineStartColor)',
-          flex: '0 0 auto',
-          maxWidth: 1400,
+          'flex': '0 0 auto',
+          'maxWidth': 1400,
           '@bp2': {
             flexGrow: 1,
           },
@@ -150,10 +150,10 @@ const FancyBackgroundChart = () => {
       <Box
         css={{
           // This is the chart wrapper
-          flex: 'none',
-          width: '100vw',
-          height: 250,
-          mr: '-20%',
+          'flex': 'none',
+          'width': '100vw',
+          'height': 250,
+          'mr': '-20%',
           '@bp1': {
             height: 150,
           },
@@ -167,7 +167,7 @@ const FancyBackgroundChart = () => {
             width: 960,
             height: 320,
           },
-          svg: {
+          'svg': {
             overflow: 'visible',
             width: '100%',
             height: '100%',
@@ -179,10 +179,10 @@ const FancyBackgroundChart = () => {
       <Box
         css={{
           // This is free space to the right
-          height: 310,
-          position: 'relative',
-          flex: '0 1 auto',
-          flexGrow: 0,
+          'height': 310,
+          'position': 'relative',
+          'flex': '0 1 auto',
+          'flexGrow': 0,
 
           '@bp1': {
             height: 150,

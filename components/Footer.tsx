@@ -22,8 +22,8 @@ export const Footer = () => {
       <Container size="3">
         <Grid
           css={{
-            gridTemplateColumns: 'repeat(1, 1fr)',
-            gap: '$6',
+            'gridTemplateColumns': 'repeat(1, 1fr)',
+            'gap': '$6',
             '& ul': { listStyle: 'none', margin: '0', padding: '0' },
             '@bp2': {
               gridTemplateColumns: 'repeat(4, 1fr)',
@@ -33,7 +33,7 @@ export const Footer = () => {
         >
           <Flex
             css={{
-              alignItems: 'center',
+              'alignItems': 'center',
               '@bp2': {
                 flexDirection: 'column',
                 alignItems: 'start',
@@ -44,8 +44,8 @@ export const Footer = () => {
               <Box
                 as="a"
                 css={{
-                  color: '$hiContrast',
-                  display: 'inline-flex',
+                  'color': '$hiContrast',
+                  'display': 'inline-flex',
                   '&:focus': {
                     boxShadow: 'none',
                   },
@@ -73,10 +73,10 @@ export const Footer = () => {
               as="h6"
               size="2"
               css={{
-                lineHeight: '20px',
-                ml: '$4',
-                color: '$slate11',
-                pr: '$8',
+                'lineHeight': '20px',
+                'ml': '$4',
+                'color': '$slate11',
+                'pr': '$8',
                 '@bp2': { mt: '$5', ml: '0' },
               }}
             >

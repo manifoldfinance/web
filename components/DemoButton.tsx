@@ -19,16 +19,16 @@ export const StyledButton = styled('button', {
   variants: {
     color: {
       gray: {
-        backgroundColor: '$slate5',
-        color: '$hiContrast',
+        'backgroundColor': '$slate5',
+        'color': '$hiContrast',
         '&:hover': {
           backgroundColor: '$slate7',
         },
       },
 
       indigo: {
-        backgroundColor: '$indigo10',
-        color: 'white',
+        'backgroundColor': '$indigo10',
+        'color': 'white',
         '&:hover': {
           backgroundColor: '$indigo11',
         },
@@ -69,8 +69,8 @@ export const StyledButton = styled('button', {
       color: 'indigo',
       outlined: true,
       css: {
-        $$shadowColor: '$colors$indigo11',
-        color: '$indigo11',
+        '$$shadowColor': '$colors$indigo11',
+        'color': '$indigo11',
         '&:hover': {
           color: 'white',
         },

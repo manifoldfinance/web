@@ -25,10 +25,10 @@ export const Tweet = ({
       rel="noopener noreferrer"
       href={url}
       css={{
-        width: '80vw',
-        maxWidth: 400,
-        p: '$4',
-        mr: '$3',
+        'width': '80vw',
+        'maxWidth': 400,
+        'p': '$4',
+        'mr': '$3',
         '@media (hover: hover)': {
           '& .icon-toggle': {
             opacity: '0',

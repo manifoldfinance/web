@@ -92,7 +92,7 @@ export function CodeDemo({ css, line, ...props }: CodeDemoProps) {
       </Box>
       <Box
         css={{
-          display: 'none',
+          'display': 'none',
           '@bp2': {
             display: 'block',
           },

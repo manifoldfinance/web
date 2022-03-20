@@ -59,9 +59,9 @@ export default function BlogPost({
             size="2"
             ghost
             css={{
-              color: '$slate11',
-              mb: '$4',
-              ml: '-$3',
+              'color': '$slate11',
+              'mb': '$4',
+              'ml': '-$3',
               '@bp2': {
                 ml: '-40px',
               },
@@ -115,8 +115,8 @@ export default function BlogPost({
           </Text>
           <Flex
             css={{
-              alignItems: 'center',
-              display: 'none',
+              'alignItems': 'center',
+              'display': 'none',
               '@bp2': { display: 'flex' },
             }}
           >

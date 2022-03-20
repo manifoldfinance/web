@@ -56,7 +56,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
   return (
     <Flex
       css={{
-        flexDirection: 'column',
+        'flexDirection': 'column',
         '@bp2': {
           flexDirection: 'row',
         },
@@ -64,12 +64,12 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
     >
       <Box
         css={{
-          width: '100%',
-          maxHeight: 'auto',
-          borderBottom: '1px solid',
-          borderColor: '$slate6',
-          WebkitOverflowScrolling: 'touch',
-          overflowX: 'hidden',
+          'width': '100%',
+          'maxHeight': 'auto',
+          'borderBottom': '1px solid',
+          'borderColor': '$slate6',
+          'WebkitOverflowScrolling': 'touch',
+          'overflowX': 'hidden',
 
           '@bp2': {
             position: 'fixed',
@@ -89,8 +89,8 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
               <Box
                 as="a"
                 css={{
-                  color: '$hiContrast',
-                  display: 'inline-flex',
+                  'color': '$hiContrast',
+                  'display': 'inline-flex',
                   '&:focus': { boxShadow: 'none' },
                 }}
               >
@@ -113,7 +113,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
               </Box>
             </NextLink>
 
-            <Box css={{ ml: '$2', '@bp2': { display: 'none' } }}>
+            <Box css={{ 'ml': '$2', '@bp2': { display: 'none' } }}>
               <IconButton
                 variant="ghost"
                 onClick={() => setIsOpen(!isOpen)}
@@ -126,7 +126,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
 
           <Box
             css={{
-              display: isOpen ? 'block' : 'none',
+              'display': isOpen ? 'block' : 'none',
               '@bp2': {
                 display: 'block',
               },
@@ -172,16 +172,16 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
               </Box>
             </NavItem>
 
-            <Box css={{ height: '$5', '@bp2': { height: '$8' } }} />
+            <Box css={{ 'height': '$5', '@bp2': { height: '$8' } }} />
           </Box>
         </ScrollArea>
       </Box>
 
       <Box
         css={{
-          maxWidth: '100%',
-          flex: 1,
-          py: '$5',
+          'maxWidth': '100%',
+          'flex': 1,
+          'py': '$5',
           '@bp2': { pt: '$8', pb: '$9', pl: '250px' },
           '@bp3': { pr: '250px' },
         }}
@@ -305,16 +305,16 @@ function NavItem({ children, active, href, ...props }: NavItemProps) {
           : {})}
         as="a"
         css={{
-          display: 'flex',
-          alignItems: 'center',
-          textDecoration: 'none',
-          color: '$hiContrast',
-          py: '$2',
-          px: '$5',
-          backgroundColor: active ? '$indigo5' : 'transparent',
-          userSelect: 'none',
-          minHeight: '$6',
-          transition: 'background-color 50ms linear',
+          'display': 'flex',
+          'alignItems': 'center',
+          'textDecoration': 'none',
+          'color': '$hiContrast',
+          'py': '$2',
+          'px': '$5',
+          'backgroundColor': active ? '$indigo5' : 'transparent',
+          'userSelect': 'none',
+          'minHeight': '$6',
+          'transition': 'background-color 50ms linear',
           '&:hover': {
             backgroundColor: active ? '$indigo5' : '$indigo4',
           },

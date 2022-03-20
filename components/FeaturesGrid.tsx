@@ -23,8 +23,8 @@ export function FeaturesGrid() {
 
         <Grid
           css={{
-            gap: '$6',
-            gridTemplateColumns: '1fr',
+            'gap': '$6',
+            'gridTemplateColumns': '1fr',
             '@bp2': {
               gap: '$8',
               gridTemplateColumns: '1fr 1fr',

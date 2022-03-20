@@ -3,21 +3,21 @@ import { Box, darkTheme, styled } from '@modulz/design-system';
 import React from 'react';
 
 export const StyledButton = styled('button', {
-  all: 'unset',
-  alignItems: 'center',
-  boxSizing: 'border-box',
-  userSelect: 'none',
-  display: 'inline-flex',
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  'all': 'unset',
+  'alignItems': 'center',
+  'boxSizing': 'border-box',
+  'userSelect': 'none',
+  'display': 'inline-flex',
+  'WebkitTapHighlightColor': 'rgba(0,0,0,0)',
 
   // Custom
-  height: '$7',
-  px: '$4',
-  fontFamily: '$untitled',
-  fontWeight: 500,
-  borderRadius: '$2',
-  fontSize: '$3',
-  lineHeight: '$sizes$7',
+  'height': '$7',
+  'px': '$4',
+  'fontFamily': '$untitled',
+  'fontWeight': 500,
+  'borderRadius': '$2',
+  'fontSize': '$3',
+  'lineHeight': '$sizes$7',
 
   '&:disabled': {
     bc: '$slate2',
@@ -30,11 +30,11 @@ export const StyledButton = styled('button', {
     cursor: 'pointer',
   },
 
-  variants: {
+  'variants': {
     variant: {
       contrast: {
-        bc: '$hiContrast',
-        color: '$loContrast',
+        'bc': '$hiContrast',
+        'color': '$loContrast',
         '@hover': {
           '&:hover': {
             opacity: 0.9,
@@ -50,15 +50,15 @@ export const StyledButton = styled('button', {
           boxShadow: 'none',
         },
         [`.${darkTheme} &`]: {
-          $$backlight: `
+          '$$backlight': `
             0 0 0 2px $colors$plumA3,
             -15px 0 30px -15px $colors$orangeA8,
             0 0 30px -15px $colors$pinkA8,
             15px 0 30px -15px $colors$indigoA8
           `,
-          color: '$hiContrast',
-          bc: 'hsl(0 0% 6%)',
-          boxShadow: '$$backlight',
+          'color': '$hiContrast',
+          'bc': 'hsl(0 0% 6%)',
+          'boxShadow': '$$backlight',
           '&:focus': {
             boxShadow: '$$backlight, 0 0 0 2px $colors$blueA8',
           },
@@ -69,7 +69,7 @@ export const StyledButton = styled('button', {
       },
     },
   },
-  defaultVariants: {
+  'defaultVariants': {
     variant: 'contrast',
   },
 });

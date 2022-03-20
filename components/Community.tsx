@@ -23,9 +23,9 @@ export function Community() {
 
         <Grid
           css={{
-            gap: '$3',
-            gridTemplateColumns: '1fr',
-            mx: '-$3',
+            'gap': '$3',
+            'gridTemplateColumns': '1fr',
+            'mx': '-$3',
             '@bp2': {
               gap: '$4',
               gridTemplateColumns: '1fr 1fr 1fr',
