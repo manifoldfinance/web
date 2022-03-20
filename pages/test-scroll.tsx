@@ -87,9 +87,9 @@ export default function TestScroll() {
       <Container size="3" css={{ py: '$8' }}>
         <Grid
           css={{
-            gap: '$9',
-            ai: 'center',
-            gridTemplateColumns: 'repeat(1, 1fr)',
+            'gap': '$9',
+            'ai': 'center',
+            'gridTemplateColumns': 'repeat(1, 1fr)',
             '@bp2': { gridTemplateColumns: 'repeat(2, 1fr)' },
           }}
         >

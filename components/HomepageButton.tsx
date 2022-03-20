@@ -22,7 +22,7 @@ export const HomepageButton = styled('button', {
   variants: {
     color: {
       gray: {
-        color: '$slate11',
+        'color': '$slate11',
         '&:hover': {
           backgroundColor: '$slate5',
         },
@@ -32,8 +32,8 @@ export const HomepageButton = styled('button', {
       },
 
       indigo: {
-        backgroundColor: '$indigo4',
-        color: '$indigo11',
+        'backgroundColor': '$indigo4',
+        'color': '$indigo11',
         '&:hover': {
           backgroundColor: '$indigo5',
         },

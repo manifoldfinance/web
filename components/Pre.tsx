@@ -1,40 +1,40 @@
 import { styled, theme } from '@modulz/design-system';
 
 export const Pre = styled('pre', {
-  $$background: '$loContrast',
-  $$text: '$colors$hiContrast',
-  $$outline: '0 0 0 1px $colors$slate6',
-  $$syntax1: '$colors$blue11',
-  $$syntax2: '$colors$cyan11',
-  $$syntax3: '$colors$blue11',
-  $$syntax4: '$colors$blue11',
-  $$comment: '$colors$slate10',
-  $$removed: '$colors$red11',
-  $$added: '$colors$green11',
-  $$lineNumbers: '$colors$indigo5',
-  $$fadedLines: '$colors$slate10',
-  $$highlightedWord1Bg: '$colors$indigo4',
-  $$highlightedWord1BgActive: '$colors$indigo6',
-  $$highlightedWord1Text: '$colors$indigo11',
-  $$highlightedWord2Bg: '$colors$red3',
-  $$highlightedWord2BgActive: '$colors$red5',
-  $$highlightedWord2Text: '$colors$red11',
-  $$highlightedWord3Bg: '$colors$green3',
-  $$highlightedWord3BgActive: '$colors$green5',
-  $$highlightedWord3Text: '$colors$green11',
+  '$$background': '$loContrast',
+  '$$text': '$colors$hiContrast',
+  '$$outline': '0 0 0 1px $colors$slate6',
+  '$$syntax1': '$colors$blue11',
+  '$$syntax2': '$colors$cyan11',
+  '$$syntax3': '$colors$blue11',
+  '$$syntax4': '$colors$blue11',
+  '$$comment': '$colors$slate10',
+  '$$removed': '$colors$red11',
+  '$$added': '$colors$green11',
+  '$$lineNumbers': '$colors$indigo5',
+  '$$fadedLines': '$colors$slate10',
+  '$$highlightedWord1Bg': '$colors$indigo4',
+  '$$highlightedWord1BgActive': '$colors$indigo6',
+  '$$highlightedWord1Text': '$colors$indigo11',
+  '$$highlightedWord2Bg': '$colors$red3',
+  '$$highlightedWord2BgActive': '$colors$red5',
+  '$$highlightedWord2Text': '$colors$red11',
+  '$$highlightedWord3Bg': '$colors$green3',
+  '$$highlightedWord3BgActive': '$colors$green5',
+  '$$highlightedWord3Text': '$colors$green11',
 
-  boxSizing: 'border-box',
-  borderRadius: '$3',
-  padding: '$3',
-  overflow: 'auto',
-  fontFamily: '$mono',
-  fontSize: '$2',
-  lineHeight: '21px',
-  whiteSpace: 'pre',
-  position: 'relative',
-  backgroundColor: '$$background',
-  color: '$$text',
-  boxShadow: '$$outline',
+  'boxSizing': 'border-box',
+  'borderRadius': '$3',
+  'padding': '$3',
+  'overflow': 'auto',
+  'fontFamily': '$mono',
+  'fontSize': '$2',
+  'lineHeight': '21px',
+  'whiteSpace': 'pre',
+  'position': 'relative',
+  'backgroundColor': '$$background',
+  'color': '$$text',
+  'boxShadow': '$$outline',
 
   '& > code': {
     display: 'block',
@@ -99,12 +99,13 @@ export const Pre = styled('pre', {
 
   // Styles for highlighted word
   '.highlight-word': {
-    $$bgAndShadow: '$$highlightedWord1Bg',
-    $$xOffset: '1px',
-    color: '$$highlightedWord1Text',
-    backgroundColor: '$$bgAndShadow',
-    display: 'inline-block',
-    boxShadow: '$$xOffset 0 0 0 $$bgAndShadow, -$$xOffset 0 0 0 $$bgAndShadow',
+    '$$bgAndShadow': '$$highlightedWord1Bg',
+    '$$xOffset': '1px',
+    'color': '$$highlightedWord1Text',
+    'backgroundColor': '$$bgAndShadow',
+    'display': 'inline-block',
+    'boxShadow':
+      '$$xOffset 0 0 0 $$bgAndShadow, -$$xOffset 0 0 0 $$bgAndShadow',
 
     // reset the color for tokens inside highlighted words
     '.token': {
@@ -119,8 +120,8 @@ export const Pre = styled('pre', {
   },
 
   '.token.deleted .highlight-word': {
-    $$bgAndShadow: '$$highlightedWord2Bg',
-    color: '$$highlightedWord2Text',
+    '$$bgAndShadow': '$$highlightedWord2Bg',
+    'color': '$$highlightedWord2Text',
 
     '&.on': {
       $$bgAndShadow: '$$highlightedWord2BgActive',
@@ -128,8 +129,8 @@ export const Pre = styled('pre', {
   },
 
   '.token.inserted .highlight-word': {
-    $$bgAndShadow: '$$highlightedWord3Bg',
-    color: '$$highlightedWord3Text',
+    '$$bgAndShadow': '$$highlightedWord3Bg',
+    'color': '$$highlightedWord3Text',
 
     '&.on': {
       $$bgAndShadow: '$$highlightedWord3BgActive',
@@ -139,8 +140,8 @@ export const Pre = styled('pre', {
   // Line numbers
   '&[data-line-numbers=true]': {
     '.highlight-line': {
-      position: 'relative',
-      paddingLeft: '$4',
+      'position': 'relative',
+      'paddingLeft': '$4',
 
       '&::before': {
         content: 'attr(data-line)',
@@ -169,7 +170,7 @@ export const Pre = styled('pre', {
     opacity: 0,
   },
 
-  variants: {
+  'variants': {
     variant: {
       indigo: {
         $$background: theme.colors.mauve12.value,

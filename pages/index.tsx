@@ -155,13 +155,13 @@ export default function Home() {
       <TitleAndMetaTags title="Manifold Finance - Connect to better opportunities" />
       <Box
         css={{
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0,
-          position: 'absolute',
-          zIndex: '-1',
-          background:
+          'top': 0,
+          'right': 0,
+          'bottom': 0,
+          'left': 0,
+          'position': 'absolute',
+          'zIndex': '-1',
+          'background':
             'radial-gradient(circle at top left, $slate4, rgba(255, 255, 255, 0) 15%), radial-gradient(circle at 80% 20%, $sage4, rgba(255, 255, 255, 0) 15%)',
           '@bp2': {
             background:
@@ -198,9 +198,9 @@ export default function Home() {
         <Container size="3">
           <Grid
             css={{
-              gap: '$6',
-              ai: 'center',
-              gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+              'gap': '$6',
+              'ai': 'center',
+              'gridTemplateColumns': 'repeat(1, minmax(0, 1fr))',
               '@bp2': { gridTemplateColumns: 'repeat(2, 1fr)', gap: '$9' },
             }}
           >
@@ -224,7 +224,10 @@ export default function Home() {
               >
                 Recapture MEV back to your end users, seamlessly
               </Text>
-              <Text size="4" css={{ lineHeight: '27px', '@bp2': { mb: '$6' } }}>
+              <Text
+                size="4"
+                css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}
+              >
                 Protection from arbitrage to trade optimization. Privacy,
                 throughput, uptime, and unique features like Account Abstraction
                 support makes SecureRPC more than an ordinary web3 provider -
@@ -232,7 +235,7 @@ export default function Home() {
               </Text>
               <Box
                 css={{
-                  display: 'none',
+                  'display': 'none',
                   '@bp2': {
                     display: 'block',
                     mx: '-$3',
@@ -276,14 +279,17 @@ export default function Home() {
               >
                 Block Optionality makes slashing risk nearly zero.
               </Text>
-              <Text size="4" css={{ lineHeight: '27px', '@bp2': { mb: '$6' } }}>
+              <Text
+                size="4"
+                css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}
+              >
                 Block Optionality means a portion of all blocks produced by
                 Manifold are auctioned off as a forward deliverable contract to
                 end-users like MEV Searchers, Traders, Institutions, etc.
               </Text>
               <Box
                 css={{
-                  display: 'none',
+                  'display': 'none',
                   '@bp2': {
                     display: 'block',
                     mx: '-$3',

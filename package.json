@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx next dev",
+    "prod": "npx next build && npx next-sitemap",
     "build": "CI='' npx next build",
     "start": "npx next start",
     "fmt": "npx prettier --write '**/*.{ts,tsx}'",
@@ -29,7 +30,7 @@
     "copy-to-clipboard": "3.3.1",
     "date-fns": "2.19.0",
     "glob": "7.1.6",
-    "gray-matter": "4.0.2",
+    "gray-matter": "^4.0.3",
     "hast-util-to-html": "7.1.2",
     "hast-util-to-string": "1.0.4",
     "imagemin-mozjpeg": "9.0.0",
@@ -45,6 +46,7 @@
     "next-videos": "1.4.0",
     "nextra-theme-docs": "2.0.0-alpha.24",
     "parse-numeric-range": "1.2.0",
+    "pino-logflare": "^0.3.12",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-remove-scroll": "2.4.1",
@@ -60,9 +62,12 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.0.10",
+    "@next/eslint-plugin-next": "10.2.3",
     "@types/node": "^14",
     "@types/react": "17.0.3",
     "@types/react-dom": "^17.0.13",
+    "globby": "11.1.0",
+    "next-sitemap": "^2.5.10",
     "prettier": "^2.5.1",
     "typescript": "4.4.4"
   }

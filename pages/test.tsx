@@ -55,7 +55,7 @@ const highlightMap = {
 };
 
 const Com = styled('div', {
-  color: 'red',
+  'color': 'red',
   '@media (min-width: 500px) &': {
     color: 'blue',
   },
@@ -72,9 +72,9 @@ export default function Test() {
       <Com>Test Com</Com>
       <Grid
         css={{
-          gap: '$9',
-          ai: 'center',
-          p: '$9',
+          'gap': '$9',
+          'ai': 'center',
+          'p': '$9',
           '@initial': { gridTemplateColumns: 'repeat(1, 1fr)' },
           '@bp2': { gridTemplateColumns: 'repeat(4, 1fr)' },
         }}

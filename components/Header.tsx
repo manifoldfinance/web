@@ -20,8 +20,8 @@ export function Header() {
         <Box
           as="a"
           css={{
-            color: '$hiContrast',
-            display: 'inline-flex',
+            'color': '$hiContrast',
+            'display': 'inline-flex',
             '&:focus': {
               boxShadow: 'none',
             },
@@ -47,12 +47,12 @@ export function Header() {
       </NextLink>
       <Flex as="nav" css={{ ai: 'center' }}>
         <NextLink href="/docs/introduction" passHref>
-          <Link variant="subtle" css={{ mr: '$5', '@bp2': { mr: '$7' } }}>
+          <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
             <Text>Docs</Text>
           </Link>
         </NextLink>
         <NextLink href="/blog" passHref>
-          <Link variant="subtle" css={{ mr: '$5', '@bp2': { mr: '$7' } }}>
+          <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
             <Text>Blog</Text>
           </Link>
         </NextLink>
@@ -60,8 +60,8 @@ export function Header() {
           href="https://forums.manifoldfinace.com"
           variant="subtle"
           css={{
-            mr: '$5',
-            display: 'none',
+            'mr': '$5',
+            'display': 'none',
             '@bp1': { display: 'block' },
             '@bp2': { mr: '$7' },
           }}
@@ -72,8 +72,8 @@ export function Header() {
           href="https://github.com/manifoldfinance"
           variant="subtle"
           css={{
-            mr: '$5',
-            display: 'none',
+            'mr': '$5',
+            'display': 'none',
             '@bp1': { display: 'block' },
             '@bp2': { mr: '$7' },
           }}
@@ -83,7 +83,7 @@ export function Header() {
         <Link
           href="https://t.me/manifoldfinance"
           variant="subtle"
-          css={{ mr: '$5', '@bp2': { mr: '$7' } }}
+          css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}
         >
           <Text>Telegram</Text>
         </Link>

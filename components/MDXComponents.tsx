@@ -121,8 +121,8 @@ export const components = {
 
     const [isCollapsed, setIsCollapsed] = React.useState(collapsed);
     const collapsedStyles = {
-      height: '100px',
-      position: 'relative',
+      'height': '100px',
+      'position': 'relative',
       '&::after': {
         content: `''`,
         position: 'absolute',
@@ -137,7 +137,7 @@ export const components = {
       <Pre
         as="pre"
         css={{
-          my: '$5',
+          'my': '$5',
           ...(isCollapsed ? (collapsedStyles as any) : {}),
           '[data-preview] + &': {
             marginTop: 1,
@@ -233,11 +233,11 @@ export const components = {
   blockquote: (props) => (
     <DS.Box
       css={{
-        mt: '$6',
-        mb: '$5',
-        pl: '$4',
-        borderLeft: `1px solid ${DS.theme.colors.gray6}`,
-        color: 'orange',
+        'mt': '$6',
+        'mb': '$5',
+        'pl': '$4',
+        'borderLeft': `1px solid ${DS.theme.colors.gray6}`,
+        'color': 'orange',
         '& p': {
           fontSize: '$3',
           color: '$slate11',
@@ -314,11 +314,11 @@ const OffsetBox = DS.styled('div', {
   variants: {
     size: {
       wide: {
-        mx: '-$5',
+        'mx': '-$5',
         '@bp4': { mx: '-$8' },
       },
       hero: {
-        mx: '-35px',
+        'mx': '-35px',
         '@bp2': {
           mx: '-90px',
         },
@@ -348,11 +348,11 @@ const LinkHeading = ({
       // and that is not a valid css selector
       data-id={id}
       css={{
-        textDecoration: 'none',
-        color: 'inherit',
-        display: 'inline-flex',
-        alignItems: 'center',
-        svg: {
+        'textDecoration': 'none',
+        'color': 'inherit',
+        'display': 'inline-flex',
+        'alignItems': 'center',
+        'svg': {
           opacity: 0,
         },
         '&:hover svg': {
