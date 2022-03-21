@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://manifoldfinance.com/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://manifoldfinance.com</loc>
+  </url>
+
+  <url>
+    <loc>https://manifoldfinance.com/test-scroll</loc>
+  </url>
+
+  <url>
+    <loc>https://manifoldfinance.com/test</loc>
+  </url>
+
+  <url>
+    <loc>https://manifoldfinance.com/blog/introducing-openmev</loc>
+  </url>
+
+  <url>
+    <loc>https://manifoldfinance.com/blog/openmev-1.0.0</loc>
+  </url>
+</urlset>

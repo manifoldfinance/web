@@ -25,7 +25,7 @@ import React from 'react';
 //import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 import { BenefitsSection } from '@components/marketing/BenefitsSection';
-import { usePlausible } from 'next-plausible'
+import { usePlausible } from 'next-plausible';
 //  extends React.HTMLAttributes<any>
 
 const variantsCode = `

@@ -112,14 +112,20 @@ export const Footer = () => {
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md" passHref>
+                  <NextLink
+                    href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md"
+                    passHref
+                  >
                     <Link variant="subtle">API</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md" passHref>
+                  <NextLink
+                    href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md"
+                    passHref
+                  >
                     <Link variant="subtle">FAQ</Link>
                   </NextLink>
                 </Text>
@@ -151,14 +157,20 @@ export const Footer = () => {
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://notionforms.io/forms/46b2a6bb-ac53-467c-ac3d-73623986c74f" passHref>
+                  <NextLink
+                    href="https://notionforms.io/forms/46b2a6bb-ac53-467c-ac3d-73623986c74f"
+                    passHref
+                  >
                     <Link variant="subtle">Partner Inquiry</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://github.com/manifoldfinance/support" passHref>
+                  <NextLink
+                    href="https://github.com/manifoldfinance/support"
+                    passHref
+                  >
                     <Link variant="subtle">Helpdesk</Link>
                   </NextLink>
                 </Text>
