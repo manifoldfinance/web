@@ -15,6 +15,7 @@ import {
 } from '@modulz/design-system';
 import { StatsSection } from '@components/marketing/StatsSection';
 import { AdoptionSection } from '@components/marketing/AdoptionSection';
+import { IntroSection } from '@components/marketing/IntroSection';
 //import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
 import { FeaturesGrid } from '@components/FeaturesGrid';
@@ -171,6 +172,8 @@ export default function Home() {
       />
       <Header />
       <Hero />
+
+      <IntroSection />
 
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />

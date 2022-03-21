@@ -11,6 +11,7 @@ import React from 'react';
 import { ThemeProvider } from 'next-themes';
 import { useAnalytics } from '@lib/analytics';
 import { useRouter } from 'next/router';
+import PlausibleProvider from 'next-plausible';
 
 const globalStyles = globalCss({
   '*, *::before, *::after': {
@@ -65,23 +66,25 @@ function App({ Component, pageProps }: AppProps) {
   const isDocs = router.pathname.includes('/docs');
 
   return (
-    <DesignSystemProvider>
-      <ThemeProvider
-        disableTransitionOnChange
-        attribute="class"
-        value={{ light: 'light-theme', dark: darkTheme.className }}
-        defaultTheme="light"
-      >
-        {isDocs ? (
-          <DocsPage>
+    <PlausibleProvider domain="manifoldfinance.com">
+      <DesignSystemProvider>
+        <ThemeProvider
+          disableTransitionOnChange
+          attribute="class"
+          value={{ light: 'light-theme', dark: darkTheme.className }}
+          defaultTheme="light"
+        >
+          {isDocs ? (
+            <DocsPage>
+              <Component {...pageProps} />
+            </DocsPage>
+          ) : (
             <Component {...pageProps} />
-          </DocsPage>
-        ) : (
-          <Component {...pageProps} />
-        )}
-        {!isDocs && <Footer />}
-      </ThemeProvider>
-    </DesignSystemProvider>
+          )}
+          {!isDocs && <Footer />}
+        </ThemeProvider>
+      </DesignSystemProvider>
+    </PlausibleProvider>
   );
 }
 

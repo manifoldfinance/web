@@ -3,6 +3,7 @@ import {
   Container,
   Grid,
   Heading,
+  Link,
   Paragraph,
   Section,
   Separator,
@@ -15,20 +16,21 @@ import { MarketingCaption } from './MarketingCaption';
 import NextLink from 'next/link';
 import React from 'react';
 
-export const AdoptionSection = () => {
+export const IntroSection = () => {
   return (
     <Section>
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>
-            Continuously optimize fees and incentives in your protocol
-          </MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>Market Leading</MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Data driven adoption
+            Bespoke Opportunities
           </Heading>
-          <NextLink href="/docs" passHref>
+          <NextLink
+            href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f"
+            passHref
+          >
             <MarketingButton as="a" icon={ArrowRightIcon}>
-              Contact
+              Learn More
             </MarketingButton>
           </NextLink>
         </Box>
@@ -48,11 +50,12 @@ export const AdoptionSection = () => {
                 mb: '$2',
               }}
             >
-              Confidence in incentives
+              OpenMEV: MEV Profits for Everyone
             </Text>
             <Paragraph>
-              Ensure your earned surplus is being allocated optimally to
-              maximize returns for Stakeholders and LPs.
+              OpenMEV enables protocols to not only protect their users it also
+              maximizes returns by recapturing arbitrage profit back to the
+              protocol.
             </Paragraph>
           </Box>
 
@@ -67,13 +70,18 @@ export const AdoptionSection = () => {
                 mb: '$2',
               }}
             >
-              Protocol driven optimization
+              Spotlight: Sushiswap
             </Text>
             <Paragraph>
-              Use recaptured MEV to optimize protocol incentives and drive gains
-              to your most important metrics. Always incentive aligned to
-              protocol.
+              Sushiswap recently launched its SushiGuard program to protect and
+              incentivize the Sushi Protocol through additional profits by using
+              OpenMEV.
             </Paragraph>
+            <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
+              <NextLink href="https://docs.openmev.org" passHref>
+                <Link variant="subtle">Find out more</Link>
+              </NextLink>
+            </Text>
           </Box>
         </Grid>
       </Container>
