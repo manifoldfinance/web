@@ -11,7 +11,6 @@ import {
   Flex,
   Grid,
   Heading,
-  IconButton,
   Paragraph,
   Section,
   Text,
@@ -22,7 +21,7 @@ import {
 import { HomepageButton } from '@components/HomepageButton';
 import NextLink from 'next/link';
 import React from 'react';
-import copy from 'copy-to-clipboard';
+//import copy from 'copy-to-clipboard';
 
 export function Hero() {
   const [hasCopied, setHasCopied] = React.useState(false);
@@ -72,8 +71,7 @@ export function Hero() {
             },
           }}
         >
-          Manifold enables capital to capitalize on opportunity in decentralized
-          financial markets.
+          Making the connections to protocols and people for DeFi opportunities.
         </Paragraph>
         <Flex css={{ '@bp2': { jc: 'center', my: '$7' } }}>
           <NextLink href="/docs" passHref>
@@ -86,11 +84,11 @@ export function Hero() {
           </NextLink>
           <HomepageButton
             as="a"
-            href="https://github.com/manifoldfinance"
+            href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub
+            Request information
             <Box css={{ ml: '$1' }}>
               <ExternalLinkIcon />
             </Box>

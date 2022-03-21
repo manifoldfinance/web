@@ -84,8 +84,7 @@ export function Community() {
                 size="3"
                 css={{ lineHeight: '23px', color: '$slate11' }}
               >
-                For announcements, blog posts, and general information about the
-                project.
+                Warning: alpha leaks here. Founder manages this account.
               </Text>
             </Card>
           </Box>
@@ -93,7 +92,7 @@ export function Community() {
             <Card
               variant="ghost"
               as="a"
-              href="https://discord.com/invite"
+              href="https://forums.manifoldfinance.com"
               target="_blank"
               rel="noopener noreferrer"
               css={{
@@ -146,7 +145,7 @@ export function Community() {
                 size="3"
                 css={{ lineHeight: '23px', color: '$slate11' }}
               >
-                To get involved in the community, ask questions, and share tips.
+                Governance and community forums.
               </Text>
             </Card>
           </Box>
