@@ -1,18 +1,18 @@
 export const authors = {
-  Janitor: {
+  janitor: {
     name: 'foldfinance',
     twitter: 'foldfinance',
     avatar: 'https://d.pr/i/29mBPu.jpg',
   },
 
-  Sambacha: {
+  sambacha: {
     name: 'sambacha',
     twitter: 'foldfinance',
     avatar: 'https://d.pr/i/29mBPu.jpg',
   },
 
-  OxMaki: {
-    name: 'misterchef',
+  maki: {
+    name: 'maki-khan',
     twitter: '0xMaki',
     avatar: 'https://d.pr/i/29mBPu.jpg',
   },
