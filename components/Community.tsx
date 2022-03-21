@@ -154,7 +154,7 @@ export function Community() {
             <Card
               variant="ghost"
               as="a"
-              href="https://github.com/modulz/manifoldfinance"
+              href="https://github.com/manifoldfinance"
               target="_blank"
               rel="noopener noreferrer"
               css={{
@@ -191,7 +191,7 @@ export function Community() {
                 css={{ lineHeight: '23px', color: '$slate11' }}
               >
                 To file issues, request features, and contribute, check out our
-                GitHub.
+                GitHub. Grants and bounties available.
               </Text>
             </Card>
           </Box>
