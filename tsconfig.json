@@ -34,7 +34,8 @@
     "stitches.config.ts",
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "index.d.ts"
   ],
   "exclude": [
     "node_modules",
