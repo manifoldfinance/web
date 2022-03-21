@@ -15,6 +15,7 @@ import {
 } from '@modulz/design-system';
 import { StatsSection } from '@components/marketing/StatsSection';
 import { AdoptionSection } from '@components/marketing/AdoptionSection';
+import { IntroSection } from '@components/marketing/IntroSection';
 //import { CodeDemo } from '@components/CodeDemo';
 import { Community } from '@components/Community';
 import { FeaturesGrid } from '@components/FeaturesGrid';
@@ -24,7 +25,7 @@ import React from 'react';
 //import { StarFilledIcon } from '@modulz/radix-icons';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 import { BenefitsSection } from '@components/marketing/BenefitsSection';
-
+import { usePlausible } from 'next-plausible';
 //  extends React.HTMLAttributes<any>
 
 const variantsCode = `
@@ -171,6 +172,8 @@ export default function Home() {
       />
       <Header />
       <Hero />
+
+      <IntroSection />
 
       <Flex css={{ justifyContent: 'center' }}>
         <Separator size="2" />

@@ -10,6 +10,9 @@ import { Footer } from '@components/Footer';
 import React from 'react';
 import { ThemeProvider } from 'next-themes';
 import { useAnalytics } from '@lib/analytics';
+import { useEffect } from 'react';
+
+import * as Fathom from 'fathom-client';
 import { useRouter } from 'next/router';
 
 const globalStyles = globalCss({
@@ -57,13 +60,29 @@ const globalStyles = globalCss({
 
 function App({ Component, pageProps }: AppProps) {
   globalStyles();
-
   const router = useRouter();
 
+  // @dev internal module
   useAnalytics();
 
   const isDocs = router.pathname.includes('/docs');
+  // const { trackPageView } = useAnalytics();
+  useEffect(() => {
+    Fathom.load('MLAHBHHX', {
+      includedDomains: ['manifoldfinance.com'],
+    });
 
+    function onRouteChangeComplete() {
+      Fathom.trackPageview();
+    }
+    // Record a pageview when route changes
+    router.events.on('routeChangeComplete', onRouteChangeComplete);
+
+    // Unassign event listener
+    return () => {
+      router.events.off('routeChangeComplete', onRouteChangeComplete);
+    };
+  }, []);
   return (
     <DesignSystemProvider>
       <ThemeProvider

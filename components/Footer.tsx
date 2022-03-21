@@ -80,9 +80,9 @@ export const Footer = () => {
                 '@bp2': { mt: '$5', ml: '0' },
               }}
             >
-              Copyright 2022 <br />
+              Copyright 2021 <br />
               <Link href="https://manifoldfinance.com">
-                Manifold Finance, Inc.
+                Commodity Stream, LLC
               </Link>
               .
             </Text>
@@ -112,14 +112,20 @@ export const Footer = () => {
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="#" passHref>
+                  <NextLink
+                    href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md"
+                    passHref
+                  >
                     <Link variant="subtle">API</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="#" passHref>
+                  <NextLink
+                    href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md"
+                    passHref
+                  >
                     <Link variant="subtle">FAQ</Link>
                   </NextLink>
                 </Text>
@@ -137,7 +143,7 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="#" passHref>
+                  <NextLink href="https://securerpc.com" passHref>
                     <Link variant="subtle">SecureRPC</Link>
                   </NextLink>
                 </Text>
@@ -151,14 +157,20 @@ export const Footer = () => {
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="#" passHref>
-                    <Link variant="subtle">Partners</Link>
+                  <NextLink
+                    href="https://notionforms.io/forms/46b2a6bb-ac53-467c-ac3d-73623986c74f"
+                    passHref
+                  >
+                    <Link variant="subtle">Partner Inquiry</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="#" passHref>
+                  <NextLink
+                    href="https://github.com/manifoldfinance/support"
+                    passHref
+                  >
                     <Link variant="subtle">Helpdesk</Link>
                   </NextLink>
                 </Text>
