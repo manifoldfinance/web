@@ -68,7 +68,9 @@ function App({ Component, pageProps }: AppProps) {
   const isDocs = router.pathname.includes('/docs');
   // const { trackPageView } = useAnalytics();
   useEffect(() => {
+    // <script src="https://jean-genie-kangaroo.manifoldfinance.com/script.js" data-site="MLAHBHHX" defer></script>
     Fathom.load('MLAHBHHX', {
+      url: 'https://jean-genie-kangaroo.manifoldfinance.com/script.js',
       includedDomains: ['manifoldfinance.com'],
     });
 
