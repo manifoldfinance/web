@@ -1,0 +1,88 @@
+---
+title: March 2022 Report
+publishedAt: '2022-02-12'
+description: March 2022 update
+by: sambacha
+type: changelog
+---
+
+
+## Milestones
+
+- SecureRPC has now started accepting bundles from external parties. These are not bundles for OpenMEV, rather these are external searchers sending
+bundles through our base RPC infrastructure (SecureRPC is what this is called). Submitting transactions through this does not get processed through OpenMEV
+arbitrage logic: it gets sent to multiple aggregated downstream endpoints including Eden Network, Flashbots, Ethermine, etc.
+
+- Improvements to the OpenMEV integration are pending approval for Sushiswap: [see github.com/sushiswap/sushiswap-interface/pull/719](https://github.com/sushiswap/sushiswap-interface/pull/719)
+
+- New SDK that is completely re-written in a functional-style approach is being planned [see preliminary outline at github.com/manifoldfinance/libmev](https://github.com/manifoldfinance/libmev)
+
+## Breaking changes
+
+This next release includes the following breaking changes.
+
+- OpenMEV Integration for Sushiswap will be changed going forward to 'Sushi Guard'. OpenMEV continues to be the underlying platform for this. Protocol integrations are encouraged
+to brand the solution to make it relevant and consistent with their branding identity.
+
+- Support for `eth_sendPrivateTransaction` is slated for the next release of SecureRPC/OpenMEV
+
+- Support for `eth_sendMevBlock` is slated for the next release of OpenMEV
+
+
+- Transaction States are now classified under the following scheme
+    - UNCHECKED -> Tx status has not been checked and there's no information about it.
+    - PROCESSING -> Tx checks are in place until a resolution happens: OK, INDETERMINATE, ERROR.
+    - OK -> Relay received the Tx && all downstream miners accepted without complains && tx mined successfully
+    - INDETERMINATE -> Relay received correctly the Tx && at least one miner accepted the TX && TX potentially mineable
+    - ERROR -> Relay haven't received the TX || none of the miners accepted the Tx || Tx was not mined successfully
+[see more at githubgithub.com/manifoldfinance/libmev/blob/master/src/SecureRpc/OpenMevState.ts](https://github.com/manifoldfinance/libmev/blob/master/src/SecureRpc/OpenMevState.ts)
+
+## Bug fixes and improvements
+
+### OpenMEV
+
+Fair amount of sandwiches made it on-chain over the weekend
+
+- We are hitting nonce collisions for multiple bundles per block (good problem)
+- Multi DEX arbitrage are now being submitted. We are investigating if they were all relayed as there seems to be no signed bundle topic
+
+- Filling now and the new relayed_v2 topic now passing our simulator.
+
+- You can track the account now at this address [etherscan.io/address/0x4F680254517617C175e223b37C8e40c473623647](https://etherscan.io/address/0x4F680254517617C175e223b37C8e40c473623647)
+
+> NOTE: This does not yet utilize the new OpenMEV Router contract, we expect testing this weekend to start in earnest
+
+> NOTE: Addresses will be changing soon, we will maintain the list of addresses through our new ChainLog service which is being tested now on Goerli test network. ee [github.com/manifoldfinance/dslog](https://github.com/manifoldfinance/dslog)
+
+### ETH2 Staking Service
+
+- Finalized ETH2 Network Topology
+
+ > `attnets` attribute is a property of SSZ ENR
+
+ This crawls the devp2p layer, until it finds a  node with `attnets` attribute. This indicates that it found a node which is alive and there is an `attnets` attribute in its `ENR`. In addition, we record the value of the `attnets` attribute. The value of the `attnets` attribute is a *bitvector* showing what subnet the node is subscribed to. We look for a the distribution of numbers of nodes to `attnets` they are subscribed to, to get the number of nodes subscribed to the subnet as % of all alive nodes as recorded in scanning. This in essence provides us with the intersection of most reliable Eth2 Validators for connectivity.
+
+ > see [github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md#bitvectorn](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md#bitvectorn)
+
+
+
+### FOLD Staking v2
+
+-  EIP-4626: Tokenized Vault Standard is moved to Final in the Ethereum Improvement Proposal process. This means its now recognized as a standard.
+    This standard is key as it will enable trading of your staked position/hedging of lent assets.
+
+> [Reference to last call pr can be found here](https://github.com/ethereum/EIPs/pull/4924)
+
+---
+
+## Community
+
+- GitHub Statics Overview can now be found on the main page for our organization. Below is an example.
+
+![](https://d.pr/i/oi1Gqk.jpeg)
+
+---
+
+## Credits
+
+We're grateful for everyone who contributed and provided feedback along the way.
