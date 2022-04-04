@@ -240,7 +240,7 @@ export default function Home() {
                 css={{
                   'display': 'none',
                   '@bp2': {
-                    display: 'block',
+                    display: 'flex',
                     mx: '-$3',
                   },
                 }}
