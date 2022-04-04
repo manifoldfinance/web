@@ -175,9 +175,7 @@ export default function Home() {
 
       <IntroSection />
 
-      <Flex css={{ justifyContent: 'center' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center' }}></Flex>
 
       {/** comment  */}
       <Box css={{ overflow: 'hidden' }}>
@@ -185,17 +183,11 @@ export default function Home() {
         <StatsSection />
       </Box>
 
-      <Flex css={{ justifyContent: 'center' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center' }}></Flex>
 
-      <Flex css={{ justifyContent: 'center' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center' }}></Flex>
 
-      <Flex css={{ justifyContent: 'center' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center' }}></Flex>
 
       <Section size={{ '@initial': '2', '@bp1': '3' }}>
         <Container size="3">
@@ -240,7 +232,7 @@ export default function Home() {
                 css={{
                   'display': 'none',
                   '@bp2': {
-                    display: 'block',
+                    display: 'flex',
                     mx: '-$3',
                   },
                 }}
@@ -323,13 +315,9 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Flex css={{ justifyContent: 'center' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center' }}></Flex>
 
-      <Flex css={{ justifyContent: 'center' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center' }}></Flex>
 
       <AdoptionSection />
 

@@ -8,7 +8,6 @@ import {
   Heading,
   Paragraph,
   Section,
-  Separator,
   darkTheme,
 } from '@modulz/design-system';
 import { MarketingCaption } from './MarketingCaption';

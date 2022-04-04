@@ -16,9 +16,7 @@ import React from 'react';
 export const Footer = () => {
   return (
     <Box as="footer" css={{ py: '$9' }}>
-      <Flex css={{ justifyContent: 'center', mb: '$9' }}>
-        <Separator size="2" />
-      </Flex>
+      <Flex css={{ justifyContent: 'center', mb: '$9' }}></Flex>
       <Container size="3">
         <Grid
           css={{
