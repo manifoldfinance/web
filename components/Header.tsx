@@ -40,7 +40,7 @@ export function Header() {
               border: 0,
             }}
           >
-            Manifold Finance - Connect to MEV Opportunities
+            Manifold Finance - Connect to DeFi Opportunities
           </span>
           <ManifoldLogoIcon />
         </Box>

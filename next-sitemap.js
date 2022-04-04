@@ -20,11 +20,9 @@ module.exports = {
       priority: config.priority,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
       alternateRefs: config.alternateRefs ?? [],
-    }
+    };
   },
-  additionalPaths: async (config) => [
-    await config.transform(config, '/docs'),
-  ],
+  additionalPaths: async (config) => [await config.transform(config, '/docs')],
   robotsTxtOptions: {
     policies: [
       {
@@ -40,7 +38,6 @@ module.exports = {
         disallow: ['/sub-path-1', '/path-2'],
       },
     ],
-    additionalSitemaps: [
-    ],
+    additionalSitemaps: [],
   },
-}
+};
