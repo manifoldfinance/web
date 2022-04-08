@@ -1,92 +1,85 @@
 # OpenMEV Transaction and Pricing API
 
-> 🚧 Work in Progress Section
 
-> OpenMEV exposes a JSON-RPC protocol to send transactions/bundles, get
-> transaction status updates, cancel transactions, and retrieve ETH network gas
-> fees through its backbone platform providing connectivity to providers like
-> Flashbots and Eden Network.
+Transactions that you submit to OpenMEV won't be observable in the public mempool. 
+We provide a flashbots-compatible status api endpoint for both end-users and integrators to use to 
+populate / query user submissions for both transactions and bundles.
 
-## `api.txprice.com`
+## Potential statuses
 
-### Usage
+* `PENDING` - The transaction was received and is currently being submitted to miners
+* `INCLUDED` - The transaction was included on-chain
+* `FAILED` - The transaction was submitted for 25 blocks and failed to be included on-chain
+* `CANCELLED` - The transaction was cancelled by the user and not included on-chain
+* `UNKNOWN` - The transaction was not received
 
-#### Get Ethereum Transaction Pricing
+## Privacy
+In order to receive a response from the status API you must provide a valid transaction hash to look up.
 
-```bash
-curl -L api.txprice.com
-```
+## Response Message 
 
-#### Get Pricing at 95% confidence interval
+OpenMEV Status API is flashbots compatible, meaning it covers at least version 0.6+ of Flashbots API.  
 
-```bash
-curl -s -L api.txprice.com | jq .blockPrices[0].estimatedPrices[1]
-```
+To check the status of your transactions query the OpenMEV API Endpoint. Response messages are formatted as follows:
+
 
 ```json
 {
-  "confidence": 95,
-  "price": 107,
-  "maxPriorityFeePerGas": 2.52,
-  "maxFeePerGas": 212.92
+    "status": "PENDING",
+    "hash": "YOUR_TX_HASH",
+    "maxBlockNumber": 'latest',
+    "transaction": {
+        "from": "<SENDER>",
+        "to": "<RECEIVER>",
+        "gasLimit": "23000",
+        "maxFeePerGas": "300",
+        "maxPriorityFeePerGas": "10",
+        "nonce": "42",
+        "value": "1333333333337",
+    }
 }
 ```
 
-## Transaction Pricing API (api.txprice.com)
+## Typescript Library
 
-Returns a range of confidence intervals for gas prices needed to qualify a
-transaction for inclusion in the next block. Order of confidence intervals is
-subject to change.
+```typescript
 
-##### Response
+// @see {@link https://github.com/manifoldfinance/libsushi/blob/master/src/SushiGuard/index.ts}
+/**
+ * @package OpenMevTxState
+ * @version 2022.04
+ * @see {@link docs.openmev.org}
+ * @notice This is a flashbots-api compatible interface ( ~v0.6 )
+ *
+ * - UNCHECKED -> Tx status has not been checked and there's no information about it.
+ * - PROCESSING -> Tx checks are in place until a resolution happens: OK, INDETERMINATE, ERROR.
+ * - OK -> Relay received the Tx && all downstream miners accepted without complains && tx mined successfully
+ * - INDETERMINATE -> Relay received correctly the Tx && at least one miner accepted the TX && TX potentially mineable
+ * - ERROR -> Relay hasn't received the TX || none of the miners accepted the Tx || Tx was not mined successfully
+ *
+ */
 
-```json
-{
-  "system": "ethereum",
-  "network": "main",
-  "unit": "gwei",
-  "maxPrice": 123,
-  "currentBlockNumber": 13005095,
-  "msSinceLastBlock": 3793,
-  "blockPrices": [
-    {
-      "blockNumber": 13005096,
-      "baseFeePerGas": 94.647990462,
-      "estimatedTransactionCount": 137,
-      "estimatedPrices": [
-        // json.blockPrices[0].estimatedPrices[0]
-        {
-          "confidence": 99, // json.blockPrices[0].estimatedPrices[0].confidence
-          "price": 104, // json.blockPrices[0].estimatedPrices[0].price
-          "maxPriorityFeePerGas": 9.86, // json.blockPrices[0].estimatedPrices[0].maxFeePerGas
-          "maxFeePerGas": 199.16 // json.blockPrices[0].estimatedPrices[0].maxFeePerGas
-        },
-        {
-          "confidence": 95,
-          "price": 99,
-          "maxPriorityFeePerGas": 5.06,
-          "maxFeePerGas": 194.35
-        },
-        {
-          "confidence": 90,
-          "price": 98,
-          "maxPriorityFeePerGas": 4.16,
-          "maxFeePerGas": 193.45
-        },
-        {
-          "confidence": 80,
-          "price": 97,
-          "maxPriorityFeePerGas": 2.97,
-          "maxFeePerGas": 192.27
-        },
-        {
-          "confidence": 70,
-          "price": 96,
-          "maxPriorityFeePerGas": 1.74,
-          "maxFeePerGas": 191.04
-        }
-      ]
-    }
-  ]
+export enum PrivateTxState {
+  UNCHECKED = 'UNCHECKED',
+  PROCESSING = 'PROCESSING',
+  OK = 'OK',
+  INDETERMINATE = 'INDETERMINATE',
+  ERROR = 'ERROR',
+}
+
+export type RelayResponses = Record<string, RelayResponse>;
+
+export interface RelayResponse {
+  response: JsonRpcResponse<any>;
+  error?: string;
+}
+
+export interface PrivateTxStatus {
+  transactionHash: string;
+  receivedAt: string;
+  relayedAt?: string;
+  minedAt?: string;
+  relayFailure?: boolean;
+  relayResponses?: RelayResponses;
 }
 ```
