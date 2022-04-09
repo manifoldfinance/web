@@ -9,23 +9,25 @@ type: changelog
 
 # Q1 Summary
 
-In the first quarter of 2022 can be summarized 
+Q1 Summary Report is published before our Q2 Guidnace report in which we will outline key objectives and milestones that ought to be realized within that fiscal quarter. 
 
+In the first quarter of 2022 two major actions were taken that impacted us the most, these actions where:
 
-- Rewrite of the Internal Virtual Mempool, Trade Engine and Executor from 0
+- Rewriting the entire Internal Virtual Mempool, Trade Engine and Executor from 0
 
 - Restructuring of orginzational structure and operations
 
-- Q2 Expectations
+
+### Junk it: OpenMEV inital core logic
 
 
-### Junk it: rewriting our core business logic from 0
+I originally proposed this as a way of us being able to compare our existing implemtnation against a less 'bespoke' solution. Our original implemtaiton utilized kdb+, a highly-performant in-memory database engine with a APL langague called 'q' that is used for querying, transforming, executing, etc against the database. The issue really with kdb+ was its lack of open source developer community (we had rationalized this away by having support from First Derivatvies, the company behind kdb+ and q), and (at the time) its lack of external language support 
 
-I originally proposed this as a way of us being able to compare our existing implemtnation against a less 'bespoke' solution. Our original implemtaiton utilized kdb+, a highly-performant in-memory database engine with a APL langague called 'q' that is used for querying, transforming, executing, etc against the database. The issue really with kdb+ was its lack of open source developer community (we had rationalized this away by having support from First Derivatvies, the company behind kdb+ and q), and (at the time) its lack of external language support (NOTE: kdb+ and q now support Python without performance loss, this only came out in March 2022). Furthermore we of course had to develop our own toolin for EVM specifics, below are three libraries written in C and q specifically for making the EVM play nice with kdb+
+(NOTE: kdb+ and q now support Python without performance loss, this only came out in March 2022). Furthermore we of course had to develop our own toolin for EVM specifics, below are three libraries written in C and q specifically for making the EVM play nice with kdb+
 
-- https://github.com/manifoldfinance/qQuarticRoots
-- https://github.com/manifoldfinance/qBigInt
-- https://github.com/manifoldfinance/qAbiEncode
+- [https://github.com/manifoldfinance/qQuarticRoots](https://github.com/manifoldfinance/qQuarticRoots)
+- [https://github.com/manifoldfinance/qBigInt](https://github.com/manifoldfinance/qBigInt)
+- [https://github.com/manifoldfinance/qAbiEncode](https://github.com/manifoldfinance/qAbiEncode)
 
 By framing the 'rewrite' as a way to benchmark our existing solution it wouldn't be seen as a timesink, rather an important piece of kit that we could use in negotations vis a vie the licenses for kdb+.
 
@@ -35,6 +37,7 @@ By framing the 'rewrite' as a way to benchmark our existing solution it wouldn't
 ### Reorg the Org: are we CEOing yet?
 
 In December I decided to step-down as CEO because of two reasons:
+
 
 1: The role of CEO at the scaling phase is much different than at the founding/incubation phase. It is much more bizdev oriented.
 2: With a high-profile CEO we could have an easier time finding talent, integrations, investors, etc. A social media presence is a must ontop of having industry 'clout'.
