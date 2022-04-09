@@ -20,38 +20,34 @@ In the first quarter of 2022 two major actions were taken that impacted us the m
 
 ### Junk it: OpenMEV inital core logic
 
+I originally proposed this as a way of us being able to compare our existing implementation against a less 'bespoke' solution. Our original implementation utilized kdb+, a highly-performant in-memory database engine with a APL language called 'q' that is used for querying, transforming, executing, etc against the database. The issue really with kdb+ was its lack of open source developer community (we had rationalized this away by having support from First Derivatives, the company behind kdb+ and q), and (at the time) its lack of external language support (NOTE: kdb+ and q now support Python without performance loss, this only came out in March 2022). Furthermore, we of course had to develop our own toolin for EVM specifics, below are three libraries written in C and q specifically for making the EVM play nice with kdb+
 
-I originally proposed this as a way of us being able to compare our existing implemtnation against a less 'bespoke' solution. Our original implemtaiton utilized kdb+, a highly-performant in-memory database engine with a APL langague called 'q' that is used for querying, transforming, executing, etc against the database. The issue really with kdb+ was its lack of open source developer community (we had rationalized this away by having support from First Derivatvies, the company behind kdb+ and q), and (at the time) its lack of external language support 
+- https://github.com/manifoldfinance/qQuarticRoots
+- https://github.com/manifoldfinance/qBigInt
+- https://github.com/manifoldfinance/qAbiEncode
 
-(NOTE: kdb+ and q now support Python without performance loss, this only came out in March 2022). Furthermore we of course had to develop our own toolin for EVM specifics, below are three libraries written in C and q specifically for making the EVM play nice with kdb+
+By framing the 'rewrite' as a way to benchmark our existing solution it wouldn't be seen as a time sink, rather an important piece of kit that we could use in negotiations vis a vie the licenses for kdb+.
 
-- [https://github.com/manifoldfinance/qQuarticRoots](https://github.com/manifoldfinance/qQuarticRoots)
-- [https://github.com/manifoldfinance/qBigInt](https://github.com/manifoldfinance/qBigInt)
-- [https://github.com/manifoldfinance/qAbiEncode](https://github.com/manifoldfinance/qAbiEncode)
-
-By framing the 'rewrite' as a way to benchmark our existing solution it wouldn't be seen as a timesink, rather an important piece of kit that we could use in negotations vis a vie the licenses for kdb+.
-
-6 weeks later, the changes are unambigious. The original reason we had chosen to go with kdb+ is because we had seen it more as a liquidation engine than an arbitrage engine. We are also grateful for our new engineering peers, Antony and Jörg for without them it would not have been made to look so easy.
+6 weeks later, the changes are unambiguous. The original reason we had chosen to go with kdb+ is because we had seen it more as a liquidation engine than an arbitrage engine. We are also grateful for our new engineering peers, Antony and Jörg for without them, it would not have been made to look so easy.
 
 
 ### Reorg the Org: are we CEOing yet?
 
-In December I decided to step-down as CEO because of two reasons:
+In December, I decided to step-down as CEO because of two reasons:
 
-
-1: The role of CEO at the scaling phase is much different than at the founding/incubation phase. It is much more bizdev oriented.
+1: The role of CEO at the scaling phase is much different from at the founding/incubation phase. It is much more bizdev oriented.
 2: With a high-profile CEO we could have an easier time finding talent, integrations, investors, etc. A social media presence is a must ontop of having industry 'clout'.
 
 
-The first reason is really informed by the fact that Ethereum Proof of Stake would be coming in late 2022 early 2023, and if we were to position ourselves such that we can leverage the impending 'triple halvening' and other PoS effects, having a dedicated technical point person would be neessary. These types of roles are also hard to fill as the payoff very far in the future, which may or maynot be realized in the end. 
+The first reason is really informed by the fact that Ethereum Proof of Stake would be coming in late 2022 early 2023, and if we were to position ourselves such that we can leverage the impending 'triple halvening' and other PoS effects, having a dedicated technical point person would be necessary. These types of roles are also hard to fill as the payoff very far in the future, which may or may not be realized in the end. 
 
-The second reason really speaks volumes of the state of head hunting and our industry as a whole. Talented engineers are not strictly motivated by monetary compensation. Interesting problems, condusivive work environments can go a long way, but in the end I have seen that associations with popular people really do matter. Yes, what I really am saying is it is, in fact, more important to be liked than to be right. Also, working with well known people gives a certain prestige and more importantly, provides a much greater surface area for networking. 
+The second reason really speaks volumes of the state of head-hunting and our industry as a whole. Talented engineers are not strictly motivated by monetary compensation. Interesting problems, conducive work environments can go a long way, but in the end I have seen that associations with popular people really do matter. Yes, what I really am saying is it is, in fact, more important to be liked than to be right. Also, working with well known people give a certain prestige and more importantly, provides a much greater surface area for networking. 
 
-However, the only way to attract these types of high-value and high-impact people are only at the senior most roles. Also, it can not be seen that they are not in control: the reigns have to be given to them, wholehartedly. So, stepping down as the CEO as founder is a non-trivial ask, but at the end of the day the success of the orginization must come before any percevied ego. I know this was the right dececision because within a week of making it we had found the 'missing link'.
+However, the only way to attract these types of high-value and high-impact people are only at the senior most roles. Also, it can not be seen that they are not in control: the reigns have to be given to them, wholeheartedly. So, stepping down as the CEO as founder is a non-trivial ask, but at the end of the day the success of the organization must come before any perceived ego. I know this was the right decision because within a week of making it we had found the 'missing link'.
 
-There is no more CEO role, and its important to be recognizing that. We are in a particular moment in time, witnessing a new area of computer science blossom before our eyes in real time. We can't expect that the well-established parts of operational management and theory will be the key ingredidents (again) in making a firm sucessful. 
+There is no more CEO role, and its important to be recognizing that. We are in a particular moment in time, witnessing a new area of computer science blossom before our eyes in real time. We can't expect that the well-established parts of operational management and theory will be the key ingredients (again) in making a firm successful. 
 
-Future generations of computer scientists, engineers, traders, etc, will be jealous of the opportunity we have to get in on the ground floor of this new area—analogous to getting into the Internet and the Web in the early 1990s. It only makes sense that we take this opportunity and go with it.
+Future generations of computer scientists, engineers, traders, etc, will be jealous of the opportunity we have to get in on the first floor of this new area—analogous to getting into the Internet and the Web in the early 1990s. It only makes sense that we take this opportunity and go with it.
 
 
 ### Q2 Expectations
