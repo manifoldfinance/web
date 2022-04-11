@@ -7,18 +7,20 @@ type: changelog
 ---
 
 
+
+
 # Q1 Summary
 
-Q1 Summary Report is published before our Q2 Guidnace report in which we will outline key objectives and milestones that ought to be realized within that fiscal quarter. 
+Q1 Summary Report is published before our Q2 Guidance report in which we will outline key objectives and milestones that ought to be realized within that fiscal quarter. 
 
 In the first quarter of 2022 two major actions were taken that impacted us the most, these actions where:
 
 - Rewriting the entire Internal Virtual Mempool, Trade Engine and Executor from 0
 
-- Restructuring of orginzational structure and operations
+- Restructuring of organizational structure and operations
 
 
-### Junk it: OpenMEV inital core logic
+### Junk it: OpenMEV core logic
 
 I originally proposed this as a way of us being able to compare our existing implementation against a less 'bespoke' solution. Our original implementation utilized kdb+, a highly-performant in-memory database engine with a APL language called 'q' that is used for querying, transforming, executing, etc against the database. The issue really with kdb+ was its lack of open source developer community (we had rationalized this away by having support from First Derivatives, the company behind kdb+ and q), and (at the time) its lack of external language support (NOTE: kdb+ and q now support Python without performance loss, this only came out in March 2022). Furthermore, we of course had to develop our own toolin for EVM specifics, below are three libraries written in C and q specifically for making the EVM play nice with kdb+
 
@@ -61,17 +63,17 @@ SecureRPC offers transaction routing to selected mining pools, all flashbots ena
 
 #### SushiSwap 
 
-Over the last 2 weeks we have solidified and fixed numerous issues with Sushi's frontend. These issues were preventing Sushi from actually running SushiGuard on the application by default. That is no longer the case anymore. SushiGuard is now on-by-default. Alot of these issues fell into two catagories:
+Over the last 2 weeks we have solidified and fixed numerous issues with Sushi's frontend. These issues were preventing Sushi from actually running SushiGuard on the application by default. That is no longer the case anymore. SushiGuard is now on-by-default. Alot of these issues fell into two categories:
 
 - Poor gas pricing on the user-side leading to too low of priced transactions. This is fixed, with a more substantive solution being finalized within the next week.
 
-- Poor error reporting and the inability to provide meanginful error messages back to end users.
+- Poor error reporting and the inability to provide meaningful error messages back to end users.
 
-For the error reporting issues, part of this was infrastructure and part was frontend. We are now able to populate error messages from whereever the transaction is having an issue, meaning directly from the mining pool gateway that is rejecting the submitted transactions. 
+For the error reporting issues, part of this was infrastructure and part was frontend. We are now able to populate error messages from wherever the transaction is having an issue, meaning directly from the mining pool gateway that is rejecting the submitted transactions. 
 
 > see https://github.com/manifoldfinance/libsushi/blob/master/src/core/isTransactionState.ts
 
-Our Transaction State status messages are derived from the flashbots status API specifciation.
+Our Transaction State status messages are derived from the flashbots status API specification.
 
  * UNCHECKED -> Tx status has not been checked and there's no information about it.
  * PROCESSING -> Tx checks are in place until a resolution happens: OK, INDETERMINATE, ERROR.
@@ -80,9 +82,9 @@ Our Transaction State status messages are derived from the flashbots status API 
  * ERROR -> Relay haven't received the TX || none of the miners accepted the Tx || Tx was not mined successfully
 
 
-We are also redesigning our inital SDK and libraries. For a example, a reference library, `libsushi` exists. The preliminary code can be found via [https://github.com/manifoldfinance/libsushi](https://github.com/manifoldfinance/libsushi)
+We are also redesigning our initial SDK and libraries. For a example, a reference library, `libsushi` exists. The preliminary code can be found via [https://github.com/manifoldfinance/libsushi](https://github.com/manifoldfinance/libsushi)
 
-On the strategy side, we are developing in tandem with StakingV2 (we need a better name) BentoVault stratagies. These revenue sharing stratagies will be porting existing Yearn stratagies to BentoVault that utilize $SUSHI. The reason for this specific focus first is so that when protocols like Yearn go to harvest, they typically are dumping this tokens over only a few blocks. 
+On the strategy side, we are developing in tandem with StakingV2 (we need a better name) BentoVault strategies. These revenue sharing strategies will be porting existing Yearn strategies to BentoVault that utilize $SUSHI. The reason for this specific focus first is so that when protocols like Yearn go to harvest, they typically are dumping this tokens over only a few blocks. 
 
 For more context on 'BentoVault' see **Sushiswap is Omakase**; for the OpenMEV Router, see **SushiGuard Router Contract Proposal**
 
@@ -93,7 +95,6 @@ Sushiswap is Omakase
 
 SushiGuard Router Contract
 [see this *PROPOSED* forum post on sushi's forums](https://forum.sushi.com/t/proposal-sushiguard-router-contract/9931/2)
-
 
 
 #### Disclaimer and Legal Notice
