@@ -33,3 +33,21 @@ jobs:
       - name: Run build
         run: yarn run build
         id: build
+
+      - name: Check Coverage
+        id: coverage
+        shell: bash
+        run: |
+          npm install -g markdown-link-check
+          config_filepath="$(mktemp)"
+          cat \<< EOF > "${config_filepath}"
+          <<parameters.markdown-link-check-config-json>>
+          EOF
+          has_no_errors=true
+          # Inspired by https://github.com/open-telemetry/opentelemetry-collector/pull/1156/files/2244e61f4dd0378deffc00d939edf6f800687dcf
+          for filepath in $(find . -iname '*.md' | sort); do
+              markdown-link-check --config "${config_filepath}" -qv "${filepath}" || has_no_errors=false
+              # Wait to scan files so that we don't overload github with requests which may result in 429 responses
+              sleep 2
+          done
+          "${has_no_errors}"
