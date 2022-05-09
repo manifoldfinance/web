@@ -20,6 +20,18 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "name": "Manifold Finance",
+              "@type": ["SoftwareApplication","FinanceApplication", "MobileApplication", "BrowserApplication"],
+              "applicationCategory": "FinanceApplication",
+              "offers": {
+                "@type": "Offer",
+                "price": "0"
+              },
+            }
+          </script>
           <style
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssAndReset() }}
