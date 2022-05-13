@@ -17,9 +17,11 @@
     "test:ci": "jest --ci --collectCoverage"
   },
   "dependencies": {
-    "@mdx-js/loader": "1.6.22",
+    "@mdx-js/loader": "^2.1.1",
+    "@mdx-js/react": "^2.1.1",
     "@modulz/design-system": "0.6.2",
     "@modulz/radix-icons": "4.0.0",
+    "@next/mdx": "^12.1.6",
     "@radix-ui/primitive": "0.1.0",
     "@radix-ui/react-accessible-icon": "^0.1.4",
     "@radix-ui/react-compose-refs": "0.1.0",
