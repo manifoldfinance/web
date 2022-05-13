@@ -3,54 +3,16 @@ title: Manifold Finance
 description: Platform and API overview
 ---
 
-### Platform Documentation
 
-- Strategy and Implementation details
-- End User information
-- Help Desk and Troubleshooting
-- Searcher Integration
-- Formulas and Proofs
-- Technical: Technical overview on specific category
+## Motivation
 
-### What is OpenMEV?
+Manifold Finance enables and provides access to high-value transaction pools on EVM compatible chains, through our infrastructure: *SecureRPC*. We aggregate multiple endpoints along with maintaining direct access to disparate mining pools/validator nodes.
 
-OpenMEV provides a trading proxy engine that is used to protect your
-transactions and maximize profits on the blockchain network. It aims to provide
-traders, arbitrageurs and block producers with an accessible, convenient and
-secure infrastructure for transactions.
+> In short, we believe that access to transaction sets will be **the defining advantage for block builders** in Ethereum2. The **ultimate goal for a block builder is to build the highest-value block that it can**. To do this, it needs to build from high-value transactions. **The combined value of MEV opportunities at any point in time will in general outweigh any delta that could be obtained by smart block building algorithms, so access to a high-value transaction pool will be the defining advantage for block builders**. The only logical choice is to send it to the single builder that already has the highest-value transaction pool. And as searchers are financially driven, they are all likely to make the same choice.
 
-- More accessible: allow ordinary users to easily discover the trading risk and
-  value on the blockchain network
+This appears to create a positive feedback situation, leading to the end result of a single large high-value transaction pool, and a single major builder. Smaller transaction pools may survive if backed by validators willing to sacrifice financial rewards for some other value, however for validators that are monetarily-driven they will end up taking the block from the single major builder.
 
-- More convenient: enable the arbitrage traders more opportunities to increase
-  profits at a low cost More secure: make transactions on the blockchain network
-  more secure and private.
-
-### What public services does OpenMEV provide?
-
-**Trading Proxy**: A private trading proxy that supports private communication
-between traders and block producers, can be used for efficient transaction
-protection and value maximization.
-
-**OpenMEV Explorer**: A set of tools used to improve the transparency of profit
-opportunities on the blockchain network and reduce information asymmetry.
-
-## Status of Services
-
-[Check our statuspage via status.manifoldfinance.com](https://status.manifoldfinance.com/)
-
-## SushiSwap
-
-The SushiSwap integration provides a service that realizes profit by transaction
-batching for the purposes of arbitrage by controlling transaction ordering.
-
-Right now every user sends a transaction directly to the network mempool and
-thus give away the arbitrage, front-running, back-running opportunities to
-miners(or random bots).
-
-OpenMEV provides a credibly neutral platform that enables aggregation of
-transactions (batching) for the purposes of extracting MEV profits and returning
-them back to the traders.
+**OpenMEV** is built and operated by Manifold Finance. We are working towards the goal of creating a *credibly neutral* block builder such that there won't be a single major builder that *will* threaten consensus on-chain. 
 
 ### What is `credible neutrality`?
 
@@ -70,26 +32,40 @@ processes that work in legacy markets may not be applicable in adversarial
 environments such as permissionless blockchains. With that understanding it is
 important not to rely soley on such systems and mechanics long term.
 
-Discuss this and more on our
-[discourse forums](https://forums.manifoldfinance.com)
 
-### Acknowledgements
+### Network Status
 
-> Not an exhaustive list
+[status.manifoldfinance.com](https://status.manifoldfinance.com/)
 
-- Robert Miller (@bertmiller)
-- Edgar Arout (@fxfactorial)
-- Alex Obadia
-- Nathan (@CodeForcer)
-- 0xMaki
-- Joseph Delong (@dangerousfood)
-- Alexey Akhunov (@AlexeyAkhunov)
-- Igor Barinov (@igorbarinov)
-- bokkypoobah (@bokkypoobah)
-- x48 (@x48-crypto)
-- Jonas Chevalier (@zimbatm)
-- BMG (@brianmcgee)
-- Aldo Borrero (@aldoborrero)
-- Sandy Bradley (@sandybradley)
-- Connor Gervin (@Connor-Gervin)
-- Ramin (@chillichelli)
+### SecureRPC/OpenMEV Documentation
+
+[Visit docs.openmev.org for full documentation](https://docs.openmev.org)
+
+### Community Hub
+
+[![telegram - manifold finance](https://img.shields.io/badge/telegram-manifold_finance-blue?logo=telegram&logoColor=white)](https://t.me/manifoldfinance)
+[![twitter - @foldfinance](https://img.shields.io/static/v1?label=twitter&message=%40foldfinance&color=blue&logo=twitter&logoColor=white)](https://twitter.com/foldfinance)
+![Discord](https://img.shields.io/discord/833691260472393729?color=%237289DA&label=Manifold%20Community&logo=discord)
+![Discourse Forums](https://img.shields.io/discourse/posts?label=Community%20Forums&logo=discourse&server=https%3A%2F%2Fforums.manifoldfinance.com)
+
+Cant find what you are looking for?
+[Open an issue on GitHub](https://github.com/manifoldfinance/web/issues) or
+[Ask a question on our forums](https://forums.manifoldfinance.com)
+
+#### Code of Conduct
+
+[Please read our brief and sensible code of conduct](https://github.com/manifoldfinance/.github/blob/master/CODE_OF_CONDUCT.md)
+
+#### Support and Help
+
+[manifoldfinance/support](https://github.com/manifoldfinance/support)
+
+#### Software Defects
+
+[Defect Policy](https://github.com/manifoldfinance/.github/blob/master/SECURITY.adoc)
+
+At Manifold Finance, Inc, security is a priority. But regardless of how much
+effort we put into system security, there may still be vulnerabilities present.
+If you discover a vulnerability, we want to know about it, so we can take steps
+to address it as quickly as possible. We would like to ask you to help us better
+protect our clients and our systems.
