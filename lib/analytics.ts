@@ -1,3 +1,14 @@
+/** 
+ * @export useAnalytics
+ * @type WindowWithAnalytics
+ * 
+ * ```javascript
+ * import { renderSnippet, gtagUrl } from '@lib/analytics';
+ * 
+ * <script async src={gtagUrl} />
+ * ```
+ * 
+ */
 import React from 'react';
 import { Router } from 'next/router';
 
@@ -6,8 +17,8 @@ type WindowWithAnalytics = Window &
     gtag: any;
   };
 
-// TODO - FIXME
-const trackingID = 'UA-000000000-1';
+// G-77Y42XWKC1
+const trackingID = 'G-77Y42XWKC1';
 
 export const useAnalytics = () => {
   React.useEffect(() => {
@@ -35,4 +46,4 @@ export function renderSnippet() {
     gtag('config', '${trackingID}');
     `;
   }
-}
+};
