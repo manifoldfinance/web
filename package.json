@@ -1,11 +1,11 @@
 {
   "name": "@manifoldfinance/www",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "scripts": {
     "dev": "npx next dev",
-    "prod": "npx next build && npx next-sitemap",
-    "build": "CI='' npx next build",
+    "prod": "NODE_ENV=production npx next build && npx next-sitemap",
+    "build": "CI='' npx next build && npx next-sitemap",
     "start": "npx next start",
     "fmt": "npx prettier --write '**/*.{ts,tsx}'",
     "analyze": "ANALYZE=true yarn build && serve .next -n",
