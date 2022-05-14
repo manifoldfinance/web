@@ -12,37 +12,11 @@ export const ThemeToggle = (props) => {
       {...props}
       aria-label="toggle a light and dark color scheme"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="15"
-        height="15"
-        viewBox="0 0 15 15"
-        fill="none"
-      >
-        <path
-          d="M7.5 0.5V2.5"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M0.5 7.5H2.5"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12.5 7.5H14.5"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M7.5 12.5V14.5"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+        <path d="M7.5 0.5V2.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M0.5 7.5H2.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12.5 7.5H14.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7.5 12.5V14.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
         <path
           fillRule="evenodd"
           clipRule="evenodd"

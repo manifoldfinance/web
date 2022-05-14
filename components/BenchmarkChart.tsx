@@ -32,10 +32,7 @@ export function BenchmarkChart({ data }) {
               lineHeight: '$sizes$5',
               whiteSpace: 'nowrap',
               ta: 'right',
-              fontWeight:
-                result.name === 'Stitches' || result.name === 'Stitches 0.2.0'
-                  ? '500'
-                  : '400',
+              fontWeight: result.name === 'Stitches' || result.name === 'Stitches 0.2.0' ? '500' : '400',
             }}
           >
             {result.name}

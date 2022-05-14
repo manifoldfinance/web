@@ -16,25 +16,14 @@ import { getAllFrontmatter } from '@lib/mdx';
 export default function Blog({ frontmatters }) {
   return (
     <Box>
-      <TitleAndMetaTags
-        title="Primitives"
-        description="Engineering and Author Blog"
-      />
+      <TitleAndMetaTags title="Primitives" description="Engineering and Author Blog" />
       <Header />
 
       <Container size="3" css={{ textAlign: 'center', mb: '$4' }}>
-        <Text
-          as="h1"
-          size={{ '@initial': '6', '@bp2': '7' }}
-          css={{ mb: '$4', fontWeight: 500 }}
-        >
+        <Text as="h1" size={{ '@initial': '6', '@bp2': '7' }} css={{ mb: '$4', fontWeight: 500 }}>
           Primitives
         </Text>
-        <Text
-          as="h2"
-          size={{ '@initial': '4', '@bp2': '6' }}
-          css={{ color: '$slate11', mb: '$4' }}
-        >
+        <Text as="h2" size={{ '@initial': '4', '@bp2': '6' }} css={{ color: '$slate11', mb: '$4' }}>
           Engineering and Author perspectives
         </Text>
       </Container>
@@ -71,15 +60,9 @@ export default function Blog({ frontmatters }) {
                 <Text size="2" css={{ color: '$slate11' }}>
                   &nbsp;by {authors[frontmatter.by].name}
                 </Text>
-                {frontmatter.type === 'changelog' && (
-                  <Badge css={{ ml: '$2' }}>Changelog</Badge>
-                )}
+                {frontmatter.type === 'changelog' && <Badge css={{ ml: '$2' }}>Changelog</Badge>}
               </Flex>
-              <Text
-                as="p"
-                size="4"
-                css={{ lineHeight: '25px', mt: '$2', color: '$slate11' }}
-              >
+              <Text as="p" size="4" css={{ lineHeight: '25px', mt: '$2', color: '$slate11' }}>
                 {frontmatter.description}
               </Text>
             </Box>

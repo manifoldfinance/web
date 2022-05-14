@@ -84,6 +84,4 @@ export const StyledButton = styled('button', {
   },
 });
 
-export const DemoButton = (props) => (
-  <StyledButton children="Button" {...props} />
-);
+export const DemoButton = (props) => <StyledButton children="Button" {...props} />;

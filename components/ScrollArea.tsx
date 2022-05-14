@@ -2,16 +2,10 @@ import React from 'react';
 import { Flex, Box } from '@modulz/design-system';
 
 function canUseDOM() {
-  return !!(
-    typeof window !== 'undefined' &&
-    window.document &&
-    window.document.createElement
-  );
+  return !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 }
 
-const useIsomorphicLayoutEffect = canUseDOM()
-  ? React.useLayoutEffect
-  : React.useEffect;
+const useIsomorphicLayoutEffect = canUseDOM() ? React.useLayoutEffect : React.useEffect;
 
 type Point = {
   x: number;

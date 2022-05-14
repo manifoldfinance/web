@@ -49,9 +49,7 @@ export const PartnerSection = () => {
     >
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>
-            Incentive aligned partnerships
-          </MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>Incentive aligned partnerships</MarketingCaption>
 
           <Heading as="h2" size="3">
             Sushiswap
@@ -68,10 +66,7 @@ export const PartnerSection = () => {
   />
 </Avatar>
  */}
-        <Grid
-          columns={{ '@initial': 1, '@bp1': 2 }}
-          gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}
-        >
+        <Grid columns={{ '@initial': 1, '@bp1': 2 }} gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}>
           <Box>
             <Text
               as="h3"
@@ -86,12 +81,10 @@ export const PartnerSection = () => {
               OpenMEV enables Sushiswap to capture MEV back
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              The SushiSwap integration provides a service that realizes profit
-              by transaction batching for the purposes of arbitrage by
-              controlling transaction ordering. OpenMEV provides a credibly
-              neutral platform that enables aggregation of transactions
-              (batching) for the purposes of extracting MEV profits and
-              returning them back to the traders.
+              The SushiSwap integration provides a service that realizes profit by transaction batching for the purposes
+              of arbitrage by controlling transaction ordering. OpenMEV provides a credibly neutral platform that
+              enables aggregation of transactions (batching) for the purposes of extracting MEV profits and returning
+              them back to the traders.
             </Paragraph>
           </Box>
 
@@ -109,11 +102,9 @@ export const PartnerSection = () => {
               Rebate Gas costs to users + Incentivize Liquidity
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              The Lido and Rocketpool protocols are the premier ethereum2
-              staking pool providers. We provide hosting infrastructure under
-              these pools to offer Ethereum2 validator staking services.
-              Combined with OpenMEV, we are able to offer a high-performing,
-              low-cost, and secure solution for Ethereum2 staking.
+              The Lido and Rocketpool protocols are the premier ethereum2 staking pool providers. We provide hosting
+              infrastructure under these pools to offer Ethereum2 validator staking services. Combined with OpenMEV, we
+              are able to offer a high-performing, low-cost, and secure solution for Ethereum2 staking.
             </Paragraph>
           </Box>
         </Grid>

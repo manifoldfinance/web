@@ -33,6 +33,14 @@ export const docsRoutes = [
       { title: 'Supported RPC Methods', slug: 'docs/openmev-rpc-ref' },
     ],
   },
+  {
+    label: 'OpenMEV API',
+    pages: [
+      { title: 'eth_call.mdx', slug: 'docs/securerpc/api/post/eth_call' },
+     { title: 'eth_estimateGas.mdx', slug: 'docs/securerpc/api/post/eth_estimateGas' },
+      {title: 'eth_sendRawTransaction.mdx', slug: 'docs/securerpc/api/post/eth_sendRawTransaction'}
+    ]
+  }
   /*
   {
     label: 'Manifold Protocol',
@@ -48,3 +56,5 @@ export const allDocsRoutes = docsRoutes.reduce((acc, curr) => {
   acc = [...acc, ...curr.pages];
   return acc;
 }, []);
+
+

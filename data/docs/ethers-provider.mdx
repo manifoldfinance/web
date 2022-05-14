@@ -2,21 +2,18 @@
 
 > 🚧 Work in Progress Section
 
-ethers-provider-openmev-bundle is a repository that contains the
-`OpenMevBundleProvider` ethers.js provider to provide high-level access to the
-`eth_sendBundle` rpc endpoint on mev-relay.
+ethers-provider-openmev-bundle is a repository that contains the `OpenMevBundleProvider` ethers.js provider to provide
+high-level access to the `eth_sendBundle` rpc endpoint on mev-relay.
 
-openmev-enabled relays and miners expose two new jsonrpc endpoint:
-`eth_sendBundle` and `eth_callBundle`. Since these are brand-new, non-standard
-endpoints, ethers.js and other libraries do not natively support these requests
-(like `getTransactionCount`).
+openmev-enabled relays and miners expose two new jsonrpc endpoint: `eth_sendBundle` and `eth_callBundle`. Since these
+are brand-new, non-standard endpoints, ethers.js and other libraries do not natively support these requests (like
+`getTransactionCount`).
 
-In order to interact with these endpoints, you will also need access to another
-full-featured (non-Flashbots) endpoint for nonce-calculation, gas estimation,
-and transaction status.
+In order to interact with these endpoints, you will also need access to another full-featured (non-Flashbots) endpoint
+for nonce-calculation, gas estimation, and transaction status.
 
-This library is not a fully functional ethers.js implementation, just a simple
-provider class, designed to interact with your existing ethers.js v5 module.
+This library is not a fully functional ethers.js implementation, just a simple provider class, designed to interact with
+your existing ethers.js v5 module.
 
 ```ts
 // Force page refreshes on network changes
@@ -34,6 +31,5 @@ provider class, designed to interact with your existing ethers.js v5 module.
 }
 ```
 
-At a minimum, most applications that support network changes will want to
-`provider.removeAllListeners()` on network changes, and re-establish their
-events.
+At a minimum, most applications that support network changes will want to `provider.removeAllListeners()` on network
+changes, and re-establish their events.

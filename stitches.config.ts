@@ -118,17 +118,7 @@ import {
 import type * as Stitches from '@stitches/react';
 export type { VariantProps } from '@stitches/react';
 
-export const {
-  styled,
-  css,
-  theme,
-  createTheme,
-  getCssText,
-  globalCss,
-  keyframes,
-  config,
-  reset,
-} = createStitches({
+export const { styled, css, theme, createTheme, getCssText, globalCss, keyframes, config, reset } = createStitches({
   theme: {
     colors: {
       ...gray,

@@ -29,61 +29,38 @@ type CodeBlockProps = PreProps & {
   showLineNumbers?: boolean;
 };
 
-export const CodeBlock = React.forwardRef<HTMLPreElement, CodeBlockProps>(
-  (_props, forwardedRef) => {
-    const {
-      language,
-      value,
-      line = '0',
-      className = '',
-      mode,
-      css,
-      variant,
-      showLineNumbers,
-      ...props
-    } = _props;
-    let result = refractor.highlight(value, language);
+export const CodeBlock = React.forwardRef<HTMLPreElement, CodeBlockProps>((_props, forwardedRef) => {
+  const { language, value, line = '0', className = '', mode, css, variant, showLineNumbers, ...props } = _props;
+  let result = refractor.highlight(value, language);
 
-    result = highlightLine(result, rangeParser(line));
+  result = highlightLine(result, rangeParser(line));
 
-    result = highlightWord(result);
+  result = highlightWord(result);
 
-    // convert to html
-    result = hastToHtml(result);
+  // convert to html
+  result = hastToHtml(result);
 
-    // TODO reset theme
+  // TODO reset theme
 
-    const classes = `language-${language} ${className}`;
+  const classes = `language-${language} ${className}`;
 
-    if (mode === 'typewriter') {
-      return (
-        <CodeTypewriter
-          className={classes}
-          css={css}
-          variant={variant}
-          value={result}
-          {...props}
-        />
-      );
-    }
+  if (mode === 'typewriter') {
+    return <CodeTypewriter className={classes} css={css} variant={variant} value={result} {...props} />;
+  }
 
-    return (
-      <Pre
-        ref={forwardedRef}
-        className={classes}
-        css={css}
-        variant={variant}
-        data-line-numbers={showLineNumbers}
-        {...props}
-      >
-        <code
-          className={classes}
-          dangerouslySetInnerHTML={{ __html: result }}
-        />
-      </Pre>
-    );
-  },
-);
+  return (
+    <Pre
+      ref={forwardedRef}
+      className={classes}
+      css={css}
+      variant={variant}
+      data-line-numbers={showLineNumbers}
+      {...props}
+    >
+      <code className={classes} dangerouslySetInnerHTML={{ __html: result }} />
+    </Pre>
+  );
+});
 
 /**
  * recursively get all text nodes as an array for a given element
@@ -125,9 +102,7 @@ function wrapEachCharacter(textNode, tag, count) {
     parent.insertBefore(element, textNode);
 
     // skip a couple of frames to trigger transition
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => (element.style.opacity = 1)),
-    );
+    requestAnimationFrame(() => requestAnimationFrame(() => (element.style.opacity = 1)));
   });
 
   parent.removeChild(textNode);
@@ -155,12 +130,7 @@ function CodeTypewriter({ value, className, css, variant, ...props }) {
 
   return (
     <Pre className={className} css={css} variant={variant} {...props}>
-      <code
-        ref={wrapperRef}
-        style={{ opacity: 0 }}
-        className={className}
-        dangerouslySetInnerHTML={{ __html: value }}
-      />
+      <code ref={wrapperRef} style={{ opacity: 0 }} className={className} dangerouslySetInnerHTML={{ __html: value }} />
     </Pre>
   );
 }

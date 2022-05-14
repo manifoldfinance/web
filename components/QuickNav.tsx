@@ -27,9 +27,7 @@ export function QuickNav() {
   const [headings, setHeadings] = React.useState<HTMLHeadingElement[]>([]);
 
   React.useEffect(() => {
-    const headingElements: HTMLHeadingElement[] = Array.from(
-      document.querySelectorAll('[data-heading]'),
-    );
+    const headingElements: HTMLHeadingElement[] = Array.from(document.querySelectorAll('[data-heading]'));
 
     setHeadings(headingElements);
   }, []);

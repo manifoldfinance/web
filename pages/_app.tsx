@@ -1,8 +1,4 @@
-import {
-  DesignSystemProvider,
-  darkTheme,
-  globalCss,
-} from '@modulz/design-system';
+import { DesignSystemProvider, darkTheme, globalCss } from '@modulz/design-system';
 
 import { AppProps } from 'next/app';
 import { DocsPage } from '@components/DocsPage';

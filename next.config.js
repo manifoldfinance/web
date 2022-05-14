@@ -29,7 +29,18 @@ module.exports = withPlugins([withTM, withOptimizedImages], {
       ],
     };
   },
+  async headeres() {
+    return [
+      {
+        source: '/*',
+        headers: [{ key: 'Web-Build', value: process.env.VERCEL_GIT_COMMIT_SHA }]
+      }
+    ];
+  },
 });
 
 // Don't delete this console log, useful to see the config in Vercel deployments
+console.log('process.env.VERCEL_GIT_COMMIT_SHA: ', process.env.VERCEL_GIT_COMMIT_SHA);
+console.log('process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA: ', process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA);
+//console.log('process.env.GIT_COMMIT_SHA: ', process.env.GIT_COMMIT_SHA);
 console.log('next.config.js', JSON.stringify(module.exports, null, 2));

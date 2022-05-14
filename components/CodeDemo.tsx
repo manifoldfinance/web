@@ -31,10 +31,7 @@ export function CodeDemo({ css, line, ...props }: CodeDemoProps) {
     const linesToHighlight = rangeParser(line);
 
     const firstLineNumber = Math.max(0, linesToHighlight[0] - 1);
-    const lastLineNumber = Math.min(
-      lines.length - 1,
-      [...linesToHighlight].reverse()[0] - 1,
-    );
+    const lastLineNumber = Math.min(lines.length - 1, [...linesToHighlight].reverse()[0] - 1);
     const firstLine = lines[firstLineNumber];
     const lastLine = lines[lastLineNumber];
 
@@ -71,9 +68,7 @@ export function CodeDemo({ css, line, ...props }: CodeDemoProps) {
       }
     });
 
-    requestAnimationFrame(
-      () => (codeInner.style.transform = `translate3d(0, ${-translateY}px, 0)`),
-    );
+    requestAnimationFrame(() => (codeInner.style.transform = `translate3d(0, ${-translateY}px, 0)`));
   }, [line]);
 
   // Maybe improve the implementation below

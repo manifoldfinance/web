@@ -1,14 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Heading,
-  Link,
-  Paragraph,
-  Section,
-  Separator,
-  Text,
-} from '@modulz/design-system';
+import { Box, Container, Grid, Heading, Link, Paragraph, Section, Separator, Text } from '@modulz/design-system';
 
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { MarketingButton } from './MarketingButton';
@@ -25,20 +15,14 @@ export const IntroSection = () => {
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
             Bespoke Opportunities
           </Heading>
-          <NextLink
-            href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f"
-            passHref
-          >
+          <NextLink href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
               Learn More
             </MarketingButton>
           </NextLink>
         </Box>
 
-        <Grid
-          columns={{ '@initial': 1, '@bp1': 2 }}
-          gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}
-        >
+        <Grid columns={{ '@initial': 1, '@bp1': 2 }} gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}>
           <Box>
             <Text
               as="h3"
@@ -53,9 +37,8 @@ export const IntroSection = () => {
               OpenMEV: MEV Profits for Everyone
             </Text>
             <Paragraph>
-              OpenMEV enables protocols to not only protect their users it also
-              maximizes returns by recapturing arbitrage profit back to the
-              protocol.
+              OpenMEV enables protocols to not only protect their users it also maximizes returns by recapturing
+              arbitrage profit back to the protocol.
             </Paragraph>
           </Box>
 
@@ -73,9 +56,8 @@ export const IntroSection = () => {
               Spotlight: Sushiswap
             </Text>
             <Paragraph>
-              Sushiswap recently launched its SushiGuard program to protect and
-              incentivize the Sushi Protocol through additional profits by using
-              OpenMEV.
+              Sushiswap recently launched its SushiGuard program to protect and incentivize the Sushi Protocol through
+              additional profits by using OpenMEV.
             </Paragraph>
             <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
               <NextLink href="https://docs.openmev.org" passHref>
