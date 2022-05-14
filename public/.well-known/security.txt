@@ -1,0 +1,6 @@
+Contact: mailto:sam@manifoldfinance.com
+Expires: 2024-02-15T08:01:00.000Z
+Encryption: https://manifoldfinance.com/.well-known/pgp-key.txt
+Encryption: https://manifoldfinance.com/.well-known/pgp-key.asc
+Preferred-Languages: en
+Canonical: https://manifoldfinance.com/.well-known/security.txt
