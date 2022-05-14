@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx next dev",
+    "vercel": "bash build.sh",
     "prod": "NODE_ENV=production npx next build && npx next-sitemap",
     "build": "CI='' npx next build && npx next-sitemap",
     "start": "npx next start",
