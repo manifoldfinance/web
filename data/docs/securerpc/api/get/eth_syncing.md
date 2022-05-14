@@ -6,7 +6,7 @@ Returns an object with data about the sync status or false.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_syncing`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_syncing`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns an object with data about the sync status or false.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_syncing
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_syncing
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

@@ -6,7 +6,7 @@ Returns a list of addresses owned by client.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_accounts`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_accounts`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns a list of addresses owned by client.
 
 ```bash
 // HTTP GET
-curl https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_accounts
+curl https://api.securerpc.com/v1/ethereum/mainnet/eth_accounts
 
 // WEBSOCKETS
 >wscat -c wss://mainnet.backbonecabal.xyz/ws

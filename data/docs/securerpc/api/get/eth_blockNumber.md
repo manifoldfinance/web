@@ -6,7 +6,7 @@ Returns the number of most recent block.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_blockNumber`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_blockNumber`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns the number of most recent block.
 
 ```bash
 // HTTP GET
-curl https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_blockNumber
+curl https://api.securerpc.com/v1/ethereum/mainnet/eth_blockNumber
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

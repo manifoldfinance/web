@@ -8,7 +8,7 @@ described in this way, since they query the blockchain for various pieces of inf
 
 ### GET
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/network/method?params=`
+`GET https://api.securerpc.com/v1/ethereum/network/method?params=`
 
 | Parameters |                                                                                                                                                                |        |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -22,7 +22,7 @@ described in this way, since they query the blockchain for various pieces of inf
 curl --include \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
-  'https://api.backbonecabal.xyz/v1/jsonrpc/{network}/{method}?params='
+  'https://api.securerpc.com/v1/ethereum/{network}/{method}?params='
 ```
 
 ### Response

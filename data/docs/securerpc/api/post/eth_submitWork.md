@@ -6,7 +6,7 @@ Used for submitting a proof-of-work solution.
 
 ### REQUEST
 
-`POST https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_submitWork`
+`POST https://api.securerpc.com/v1/ethereum/:network/eth_submitWork`
 
 #### HEADERS
 
@@ -23,7 +23,7 @@ Used for submitting a proof-of-work solution.
 
 ```bash
 // HTTP POST api.backbonecabal.xyz
-curl https://api.backbonecabal.xyz/v1/jsonrpc/mainnet \
+curl https://api.securerpc.com/v1/ethereum/mainnet \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_submitWork","params": ["0x0000000000000001","0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef","0xD1FE5700000000000000000000000000D1FE5700000000000000000000000000"],"id":1}'

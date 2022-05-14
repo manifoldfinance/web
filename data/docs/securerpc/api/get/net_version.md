@@ -6,7 +6,7 @@ Returns the current network id.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/net_version`
+`GET https://api.securerpc.com/v1/ethereum/:network/net_version`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns the current network id.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/net_version
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/net_version
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

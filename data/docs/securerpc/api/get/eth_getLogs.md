@@ -6,7 +6,7 @@ Returns an array of all logs matching a given filter object.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getLogs?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getLogs?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -30,7 +30,7 @@ Returns an array of all logs matching a given filter object.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getLogs --data-urlencode 'params=[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getLogs --data-urlencode 'params=[{"topics":["0x241ea03ca20251805084d27d4440371c34a0b85ff108f6bb5611248f73818b80"]}]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

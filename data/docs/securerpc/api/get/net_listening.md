@@ -6,7 +6,7 @@ Returns true if client is actively listening for network connections.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/net_listening`
+`GET https://api.securerpc.com/v1/ethereum/:network/net_listening`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns true if client is actively listening for network connections.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/net_listening
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/net_listening
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

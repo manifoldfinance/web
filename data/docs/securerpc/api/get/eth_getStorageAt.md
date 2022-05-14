@@ -6,7 +6,7 @@ Returns the value from a storage position at a given address.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getStorageAt?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getStorageAt?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -23,7 +23,7 @@ Returns the value from a storage position at a given address.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getStorageAt --data-urlencode 'params=["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getStorageAt --data-urlencode 'params=["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

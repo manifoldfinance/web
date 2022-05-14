@@ -7,7 +7,7 @@ endpoint to get the list of permitted methods. Use the regular Ethereum JSON-RPC
 
 ### POST
 
-`POST https://api.backbonecabal.xyz/v1/jsonrpc/network`
+`POST https://api.securerpc.com/v1/ethereum/network`
 
 | Parameters |                              |        |
 | ---------- | ---------------------------- | ------ |
@@ -43,7 +43,7 @@ curl --include \
   \"method\": \"eth_submitHashrate\",
   \"params\": []
 }" \
-'https://api.backbonecabal.xyz/v1/jsonrpc/{network}'
+'https://api.securerpc.com/v1/ethereum/{network}'
 ```
 
 ### Response
@@ -131,7 +131,7 @@ curl --include \
   \"method\": \"eth_submitWork\",
   \"params\": []
 }" \
-'https://api.backbonecabal.xyz/v1/jsonrpc/{network}'
+'https://api.securerpc.com/v1/ethereum/{network}'
 ```
 
 ### Response
@@ -172,7 +172,7 @@ curl --include \
   \"method\": \"eth_estimateGas\",
   \"params\": []
 }" \
-'https://api.backbonecabal.xyz/v1/jsonrpc/{network}'
+'https://api.securerpc.com/v1/ethereum/{network}'
 ```
 
 ### Response
@@ -209,7 +209,7 @@ curl --include \
   \"method\": \"eth_submitWork\",
   \"params\": []
 }" \
-'https://api.backbonecabal.xyz/v1/jsonrpc/{network}'
+'https://api.securerpc.com/v1/ethereum/{network}'
 ```
 
 ### Response
@@ -250,7 +250,7 @@ curl --include \
   \"method\": \"eth_estimateGas\",
   \"params\": []
 }" \
-'https://api.backbonecabal.xyz/v1/jsonrpc/{network}'
+'https://api.securerpc.com/v1/ethereum/{network}'
 ```
 
 ### Response

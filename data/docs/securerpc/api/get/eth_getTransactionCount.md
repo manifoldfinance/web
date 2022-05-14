@@ -6,7 +6,7 @@ Returns the number of transactions sent from an address.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getTransactionCount?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getTransactionCount?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -22,7 +22,7 @@ Returns the number of transactions sent from an address.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getTransactionCount --data-urlencode 'params=["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getTransactionCount --data-urlencode 'params=["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

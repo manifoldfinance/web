@@ -6,7 +6,7 @@ Returns code at a given address.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getCode?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getCode?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -22,7 +22,7 @@ Returns code at a given address.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getCode --data-urlencode 'params=["0x06012c8cf97bead5deae237070f9587f8e7a266d","latest"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getCode --data-urlencode 'params=["0x06012c8cf97bead5deae237070f9587f8e7a266d","latest"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

@@ -6,7 +6,7 @@ Returns information about the 'Uncle' of a block by hash and the Uncle index pos
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getUncleByBlockNumberAndIndex?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getUncleByBlockNumberAndIndex?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -22,7 +22,7 @@ Returns information about the 'Uncle' of a block by hash and the Uncle index pos
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getUncleByBlockNumberAndIndex --data-urlencode 'params=["0x29c","0x0"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getUncleByBlockNumberAndIndex --data-urlencode 'params=["0x29c","0x0"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

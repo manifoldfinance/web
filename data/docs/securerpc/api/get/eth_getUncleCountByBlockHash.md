@@ -6,7 +6,7 @@ Returns the number of uncles in a block from a block matching the given block ha
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getUncleCountByBlockHash?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getUncleCountByBlockHash?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -20,7 +20,7 @@ Returns the number of uncles in a block from a block matching the given block ha
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getUncleCountByBlockHash --data-urlencode 'params=["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getUncleCountByBlockHash --data-urlencode 'params=["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

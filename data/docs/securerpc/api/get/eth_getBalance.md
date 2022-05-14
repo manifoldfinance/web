@@ -6,7 +6,7 @@ Returns the balance of the account of given address.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getBalance?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getBalance?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -23,7 +23,7 @@ Returns the balance of the account of given address.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getBalance --data-urlencode 'params=["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getBalance --data-urlencode 'params=["0xc94770007dda54cF92009BFF0dE90c06F603a09f","latest"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

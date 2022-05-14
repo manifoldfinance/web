@@ -6,7 +6,7 @@ Returns information about a block by hash.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getBlockByNumber?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getBlockByNumber?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -23,7 +23,7 @@ Returns information about a block by hash.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getBlockByNumber --data-urlencode 'params=["0x5BAD55",false]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getBlockByNumber --data-urlencode 'params=["0x5BAD55",false]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

@@ -6,7 +6,7 @@ Returns information about a transaction by block hash and transaction index posi
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getTransactionByBlockHashAndIndex?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getTransactionByBlockHashAndIndex?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -21,7 +21,7 @@ Returns information about a transaction by block hash and transaction index posi
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getTransactionByBlockHashAndIndex --data-urlencode 'params=["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35","0x0"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getTransactionByBlockHashAndIndex --data-urlencode 'params=["0xb3b20624f8f0f86eb50dd04688409e5cea4bd02d700bf6e79e9384d47d6a5a35","0x0"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

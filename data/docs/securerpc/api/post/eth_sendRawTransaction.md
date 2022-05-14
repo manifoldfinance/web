@@ -6,7 +6,7 @@ Creates new message call transaction or a contract creation for signed transacti
 
 ### REQUEST
 
-`POST https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_sendRawTransaction`
+`POST https://api.securerpc.com/v1/ethereum/:network/eth_sendRawTransaction`
 
 #### HEADERS
 
@@ -20,7 +20,7 @@ Creates new message call transaction or a contract creation for signed transacti
 
 ```bash
 // HTTP POST api.backbonecabal.xyz
-curl https://api.backbonecabal.xyz/v1/jsonrpc/mainnet \
+curl https://api.securerpc.com/v1/ethereum/mainnet \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params":["0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675"],"id":1}'

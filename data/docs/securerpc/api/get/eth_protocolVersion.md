@@ -6,7 +6,7 @@ Returns the current ethereum protocol version.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_protocolVersion`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_protocolVersion`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns the current ethereum protocol version.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_protocolVersion
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_protocolVersion
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

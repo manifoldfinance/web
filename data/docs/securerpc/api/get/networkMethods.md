@@ -7,7 +7,7 @@ endpoints.
 
 ### GET
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/network/methods`
+`GET https://api.securerpc.com/v1/ethereum/network/methods`
 
 ### Parameters
 
@@ -21,7 +21,7 @@ endpoints.
 curl --include \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
-  'https://api.backbonecabal.xyz/v1/jsonrpc/{network}/methods'
+  'https://api.securerpc.com/v1/ethereum/{network}/methods'
 ```
 
 ### Response

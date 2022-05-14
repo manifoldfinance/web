@@ -6,7 +6,7 @@ Returns the number of hashes per second that the node is mining with. Only appli
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_hashrate`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_hashrate`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns the number of hashes per second that the node is mining with. Only appli
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_hashrate
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_hashrate
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

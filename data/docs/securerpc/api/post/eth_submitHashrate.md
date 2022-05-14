@@ -6,7 +6,7 @@ Used for submitting mining hashrate.
 
 ### REQUEST
 
-`POST https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_submitHashrate`
+`POST https://api.securerpc.com/v1/ethereum/:network/eth_submitHashrate`
 
 #### HEADERS
 
@@ -21,7 +21,7 @@ Used for submitting mining hashrate.
 
 ```bash
 // HTTP POST api.backbonecabal.xyz
-curl https://api.backbonecabal.xyz/v1/jsonrpc/mainnet \
+curl https://api.securerpc.com/v1/ethereum/mainnet \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{"jsonrpc":"2.0","method":"eth_submitHashrate","params":["0x0000000000000000000000000000000000000000000000000000000000500000", "0x59daa26581d0acd1fce254fb7e85952f4c09d0915afd33d3886cd914bc7d283c"],"id":1}'

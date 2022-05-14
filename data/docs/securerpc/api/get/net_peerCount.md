@@ -6,7 +6,7 @@ Returns the number of peers currently connected to the client.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/net_peerCount`
+`GET https://api.securerpc.com/v1/ethereum/:network/net_peerCount`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns the number of peers currently connected to the client.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/net_peerCount
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/net_peerCount
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

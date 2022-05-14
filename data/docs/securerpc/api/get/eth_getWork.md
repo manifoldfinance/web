@@ -6,7 +6,7 @@ Returns the hash of the current block, the seedHash, and the boundary condition 
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getWork`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getWork`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns the hash of the current block, the seedHash, and the boundary condition 
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getWork
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getWork
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

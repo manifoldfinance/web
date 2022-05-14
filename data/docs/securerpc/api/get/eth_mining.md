@@ -6,7 +6,7 @@ Returns true if client is actively mining new blocks.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_mining`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_mining`
 
 #### HEADERS
 
@@ -16,7 +16,7 @@ Returns true if client is actively mining new blocks.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_mining
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_mining
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

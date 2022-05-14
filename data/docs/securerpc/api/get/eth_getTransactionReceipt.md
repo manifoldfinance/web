@@ -7,7 +7,7 @@ transactions.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getTransactionReceipt?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getTransactionReceipt?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -21,7 +21,7 @@ transactions.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getTransactionReceipt --data-urlencode 'params=["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getTransactionReceipt --data-urlencode 'params=["0xbb3a336e3f823ec18197f1e13ee875700f08f03e2cab75f0d0b118dabb44cba0"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \

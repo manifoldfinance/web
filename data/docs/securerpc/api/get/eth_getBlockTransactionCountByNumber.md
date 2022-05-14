@@ -6,7 +6,7 @@ Returns the number of transactions in a block matching the given block number.
 
 ### REQUEST
 
-`GET https://api.backbonecabal.xyz/v1/jsonrpc/:network/eth_getBlockTransactionCountByNumber?params=:paramsJSONArray`
+`GET https://api.securerpc.com/v1/ethereum/:network/eth_getBlockTransactionCountByNumber?params=:paramsJSONArray`
 
 #### HEADERS
 
@@ -21,7 +21,7 @@ Returns the number of transactions in a block matching the given block number.
 
 ```bash
 // HTTP GET
-curl -G https://api.backbonecabal.xyz/v1/jsonrpc/mainnet/eth_getBlockTransactionCountByNumber --data-urlencode 'params=["latest"]'
+curl -G https://api.securerpc.com/v1/ethereum/mainnet/eth_getBlockTransactionCountByNumber --data-urlencode 'params=["latest"]'
 
 // HTTP POST
 curl https://mainnet.backbonecabal.xyz/ \
