@@ -1,13 +1,4 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Heading,
-  Paragraph,
-  Section,
-  Separator,
-  Text,
-} from '@modulz/design-system';
+import { Box, Container, Grid, Heading, Paragraph, Section, Separator, Text } from '@modulz/design-system';
 
 import { ArrowRightIcon } from '@radix-ui/react-icons';
 import { MarketingButton } from './MarketingButton';
@@ -33,10 +24,7 @@ export const AdoptionSection = () => {
           </NextLink>
         </Box>
 
-        <Grid
-          columns={{ '@initial': 1, '@bp1': 2 }}
-          gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}
-        >
+        <Grid columns={{ '@initial': 1, '@bp1': 2 }} gap={{ '@initial': 4, '@bp1': 7, '@bp2': 9 }}>
           <Box>
             <Text
               as="h3"
@@ -51,8 +39,7 @@ export const AdoptionSection = () => {
               Confidence in incentives
             </Text>
             <Paragraph>
-              Ensure your earned surplus is being allocated optimally to
-              maximize returns for Stakeholders and LPs.
+              Ensure your earned surplus is being allocated optimally to maximize returns for Stakeholders and LPs.
             </Paragraph>
           </Box>
 
@@ -70,9 +57,8 @@ export const AdoptionSection = () => {
               Protocol driven optimization
             </Text>
             <Paragraph>
-              Use recaptured MEV to optimize protocol incentives and drive gains
-              to your most important metrics. Always incentive aligned to
-              protocol.
+              Use recaptured MEV to optimize protocol incentives and drive gains to your most important metrics. Always
+              incentive aligned to protocol.
             </Paragraph>
           </Box>
         </Grid>

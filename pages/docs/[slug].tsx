@@ -27,11 +27,7 @@ export default function Doc({ frontmatter, code }: Doc) {
     <>
       <TitleAndMetaTags title={`${frontmatter.title} — Manifold Finance`} />
 
-      <Text
-        as="h1"
-        size="8"
-        css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }}
-      >
+      <Text as="h1" size="8" css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }}>
         {frontmatter.title}
       </Text>
 

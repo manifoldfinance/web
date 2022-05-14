@@ -1,13 +1,4 @@
-import {
-  Badge,
-  Box,
-  Button,
-  Container,
-  Flex,
-  Link,
-  Separator,
-  Text,
-} from '@modulz/design-system';
+import { Badge, Box, Button, Container, Flex, Link, Separator, Text } from '@modulz/design-system';
 import { format, parseISO } from 'date-fns';
 import { getAllFrontmatter, getMdxBySlug } from '@lib/mdx';
 
@@ -27,28 +18,19 @@ type BlogPost = {
   relatedPosts?: Frontmatter[];
 };
 
-export default function BlogPost({
-  frontmatter,
-  code,
-  relatedPosts,
-}: BlogPost) {
+export default function BlogPost({ frontmatter, code, relatedPosts }: BlogPost) {
   const Component = React.useMemo(() => getMDXComponent(code), [code]);
 
   const twitterShare = `
 		https://twitter.com/intent/tweet?
 		text="${frontmatter.title}" by @${
     authors[frontmatter.by].twitter
-  } on the Primitives blog.&url=https://manifoldfinance.com/blog/${
-    frontmatter.slug
-  }
+  } on the Primitives blog.&url=https://manifoldfinance.com/blog/${frontmatter.slug}
 		`;
 
   return (
     <>
-      <TitleAndMetaTags
-        title={`${frontmatter.title} — Manifold Finance`}
-        poster={frontmatter.poster}
-      />
+      <TitleAndMetaTags title={`${frontmatter.title} — Manifold Finance`} poster={frontmatter.poster} />
 
       <Header />
 
@@ -74,29 +56,17 @@ export default function BlogPost({
           </Button>
         </NextLink>
 
-        <Text
-          as="h1"
-          size="8"
-          css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }}
-        >
+        <Text as="h1" size="8" css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }}>
           {frontmatter.title}
         </Text>
 
-        <Text
-          as="h2"
-          size="6"
-          css={{ mt: '$2', mb: '$4', color: '$slate11', lineHeight: '30px' }}
-        >
+        <Text as="h2" size="6" css={{ mt: '$2', mb: '$4', color: '$slate11', lineHeight: '30px' }}>
           {frontmatter.description}
         </Text>
 
         <Flex css={{ mt: '$4', mb: '$7', alignItems: 'center' }}>
           {/* <Avatar src={authors[data.by].avatar} mr={2} /> */}
-          <Text
-            as="p"
-            size="3"
-            css={{ color: '$slate11', lineHeight: 0, whiteSpace: 'nowrap' }}
-          >
+          <Text as="p" size="3" css={{ color: '$slate11', lineHeight: 0, whiteSpace: 'nowrap' }}>
             <Link
               href={`https://twitter.com/${authors[frontmatter.by].twitter}`}
               rel="noopener noreferrer"
@@ -106,11 +76,7 @@ export default function BlogPost({
             </Link>
           </Text>
           <Separator orientation="vertical" css={{ mx: '$2' }} />
-          <Text
-            as="time"
-            size="3"
-            css={{ color: '$slate11', lineHeight: 0, whiteSpace: 'nowrap' }}
-          >
+          <Text as="time" size="3" css={{ color: '$slate11', lineHeight: 0, whiteSpace: 'nowrap' }}>
             {format(parseISO(frontmatter.publishedAt), 'MMMM yyyy')}
           </Text>
           <Flex
@@ -139,12 +105,7 @@ export default function BlogPost({
         <Box css={{ textAlign: 'center' }}>
           <Text as="p" size="4" css={{ lineHeight: 2 }}>
             Share this post on{' '}
-            <Link
-              href={twitterShare}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Share this post on Twitter"
-            >
+            <Link href={twitterShare} target="_blank" rel="noopener noreferrer" title="Share this post on Twitter">
               Twitter
             </Link>
             .

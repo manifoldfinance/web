@@ -80,11 +80,7 @@ export function Header() {
         >
           <Text>GitHub</Text>
         </Link>
-        <Link
-          href="https://t.me/manifoldfinance"
-          variant="subtle"
-          css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}
-        >
+        <Link href="https://t.me/manifoldfinance" variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
           <Text>Telegram</Text>
         </Link>
       </Flex>

@@ -12,7 +12,7 @@ module.exports = {
   endOfLine: 'lf',
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  printWidth: 80,
+  printWidth: 120,
   proseWrap: 'always',
   quoteProps: 'consistent',
   semi: true,

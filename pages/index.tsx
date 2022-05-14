@@ -142,14 +142,10 @@ function doMethod() external payable {
 `;
 
 export default function Home() {
-  const [variantsCodeActiveHighlight, setVariantsCodeActiveHighlight] =
-    React.useState('one');
-  const [themingCodeActiveHighlight, setThemingCodeActiveHighlight] =
-    React.useState('one');
-  const [utilsCodeActiveHighlight, setUtilsCodeActiveHighlight] =
-    React.useState('one');
-  const [tokensActiveHighlight, setTokensCodeActiveHighlight] =
-    React.useState('one');
+  const [variantsCodeActiveHighlight, setVariantsCodeActiveHighlight] = React.useState('one');
+  const [themingCodeActiveHighlight, setThemingCodeActiveHighlight] = React.useState('one');
+  const [utilsCodeActiveHighlight, setUtilsCodeActiveHighlight] = React.useState('one');
+  const [tokensActiveHighlight, setTokensCodeActiveHighlight] = React.useState('one');
 
   return (
     <Box>
@@ -213,20 +209,12 @@ export default function Home() {
                   Supports: Flashbots, Eden Network, Ethermine
                 </Code>
               </Box>
-              <Text
-                size="8"
-                css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}
-              >
+              <Text size="8" css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}>
                 Recapture MEV back to your end users, seamlessly
               </Text>
-              <Text
-                size="4"
-                css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}
-              >
-                Protection from arbitrage to trade optimization. Privacy,
-                throughput, uptime, and unique features like Account Abstraction
-                support makes SecureRPC more than an ordinary web3 provider -
-                its a web3 enabler.
+              <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
+                Protection from arbitrage to trade optimization. Privacy, throughput, uptime, and unique features like
+                Account Abstraction support makes SecureRPC more than an ordinary web3 provider - its a web3 enabler.
               </Text>
               <Box
                 css={{
@@ -243,13 +231,10 @@ export default function Home() {
                   variant={tokensActiveHighlight === 'two' ? 'active' : 'ghost'}
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
-                  <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    OpenMEV enabled APY
-                  </Text>
+                  <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>OpenMEV enabled APY</Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Validator rewards also include additional MEV rewards not
-                    available to the public mempool through our OpenMEV
-                    strategy.
+                    Validator rewards also include additional MEV rewards not available to the public mempool through
+                    our OpenMEV strategy.
                   </Text>
                 </Card>
               </Box>
@@ -268,19 +253,12 @@ export default function Home() {
                   Seamless slashing, volatility and uptime hedge
                 </Code>
               </Box>
-              <Text
-                size="8"
-                css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}
-              >
+              <Text size="8" css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}>
                 Block Optionality makes slashing risk nearly zero.
               </Text>
-              <Text
-                size="4"
-                css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}
-              >
-                Block Optionality means a portion of all blocks produced by
-                Manifold are auctioned off as a forward deliverable contract to
-                end-users like MEV Searchers, Traders, Institutions, etc.
+              <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
+                Block Optionality means a portion of all blocks produced by Manifold are auctioned off as a forward
+                deliverable contract to end-users like MEV Searchers, Traders, Institutions, etc.
               </Text>
               <Box
                 css={{
@@ -294,19 +272,16 @@ export default function Home() {
                 <Card
                   as="button"
                   onMouseDown={() => setUtilsCodeActiveHighlight('two')}
-                  variant={
-                    utilsCodeActiveHighlight === 'two' ? 'active' : 'ghost'
-                  }
+                  variant={utilsCodeActiveHighlight === 'two' ? 'active' : 'ghost'}
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
                     Blockspace Futures provide additional hedge
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
-                    Blockspace futures reduce operational risks and provide an
-                    additional source of profits. Combined with exclusive MEV
-                    profits and hedging slashing risk means higher APY's with
-                    reduced risk and exposure.
+                    Blockspace futures reduce operational risks and provide an additional source of profits. Combined
+                    with exclusive MEV profits and hedging slashing risk means higher APY's with reduced risk and
+                    exposure.
                   </Text>
                 </Card>
               </Box>

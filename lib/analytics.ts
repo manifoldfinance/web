@@ -1,13 +1,13 @@
-/** 
+/**
  * @export useAnalytics
  * @type WindowWithAnalytics
- * 
+ *
  * ```javascript
  * import { renderSnippet, gtagUrl } from '@lib/analytics';
- * 
+ *
  * <script async src={gtagUrl} />
  * ```
- * 
+ *
  */
 import React from 'react';
 import { Router } from 'next/router';
@@ -46,4 +46,4 @@ export function renderSnippet() {
     gtag('config', '${trackingID}');
     `;
   }
-};
+}

@@ -10,13 +10,7 @@ type TweetType = {
   username: string;
 };
 
-export const Tweet = ({
-  url,
-  children,
-  avatar,
-  author,
-  username,
-}: TweetType) => {
+export const Tweet = ({ url, children, avatar, author, username }: TweetType) => {
   return (
     <Card
       as="a"
@@ -52,12 +46,7 @@ export const Tweet = ({
       <Flex css={{ jc: 'space-between', mb: '$2' }}>
         <Flex css={{ ai: 'center', fg: 1 }}>
           <Box css={{ mr: '$2' }}>
-            <Avatar
-              size="3"
-              alt={author}
-              src={avatar}
-              fallback={author.charAt(0)}
-            />
+            <Avatar size="3" alt={author} src={avatar} fallback={author.charAt(0)} />
           </Box>
           <Box>
             <Text size="3" css={{ fontWeight: 500, mb: '$1' }}>
@@ -69,10 +58,7 @@ export const Tweet = ({
           </Box>
         </Flex>
         <Box css={{ color: '$slate10' }}>
-          <Box
-            className="icon-toggle"
-            css={{ transition: 'opacity 50ms linear' }}
-          >
+          <Box className="icon-toggle" css={{ transition: 'opacity 50ms linear' }}>
             <ExternalLinkIcon />
           </Box>
         </Box>

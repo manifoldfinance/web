@@ -2,13 +2,7 @@ import { Box, theme } from '@modulz/design-system';
 
 import React from 'react';
 
-export function HeroContainer({
-  css,
-  children,
-}: {
-  css?: any;
-  children?: React.ReactNode;
-}) {
+export function HeroContainer({ css, children }: { css?: any; children?: React.ReactNode }) {
   return (
     <Box
       // In case any semantic content sneaks through in a hero, let's hide it
@@ -16,8 +10,7 @@ export function HeroContainer({
       role="presentation"
       className={`${theme}`}
       css={{
-        'backgroundImage':
-          'linear-gradient(330deg, $purple9 0%, $indigo9 100%)',
+        'backgroundImage': 'linear-gradient(330deg, $purple9 0%, $indigo9 100%)',
         'position': 'relative',
         'display': 'flex',
         'alignItems': 'flex-start',

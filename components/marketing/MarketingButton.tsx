@@ -79,18 +79,17 @@ type MarketingButtonProps = {
   icon?: React.ComponentType<any>;
 } & React.ComponentProps<typeof StyledButton>;
 
-export const MarketingButton = React.forwardRef<
-  HTMLButtonElement,
-  MarketingButtonProps
->(({ children, icon: Icon, ...props }, forwardedRef) => {
-  return (
-    <StyledButton ref={forwardedRef} {...props}>
-      {children}
-      {Icon && (
-        <Box as="span" css={{ ml: 8, mr: -3 }}>
-          <Icon />
-        </Box>
-      )}
-    </StyledButton>
-  );
-});
+export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButtonProps>(
+  ({ children, icon: Icon, ...props }, forwardedRef) => {
+    return (
+      <StyledButton ref={forwardedRef} {...props}>
+        {children}
+        {Icon && (
+          <Box as="span" css={{ ml: 8, mr: -3 }}>
+            <Icon />
+          </Box>
+        )}
+      </StyledButton>
+    );
+  },
+);

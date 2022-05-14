@@ -1,14 +1,7 @@
 import React from 'react';
 
 export const ManifoldLogoIcon = (props: React.ComponentProps<'svg'>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    viewBox="0 0 32 32"
-    fill="none"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" {...props}>
     <path
       d="M22.4985 16.3208C21.5691 10.5557 16.4071 6.44877 10.6537 6.79257C10.391 6.80681 10.1283 6.83161 9.86568 6.86697C5.95998 7.37458 2.7975 9.83358 1.22379 13.1441C1.01315 11.6466 1.10991 10.1232 1.50844 8.66258C1.90696 7.20196 2.59925 5.83332 3.54506 4.63634C7.42434 -0.313195 14.5687 -1.3381 19.5036 2.34628C20.3065 2.94483 21.0208 3.64875 21.6263 4.43807C24.2085 7.80614 24.5826 12.4535 22.4985 16.3208Z"
       fill="currentcolor"

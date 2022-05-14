@@ -20,10 +20,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <style
-            id="stitches"
-            dangerouslySetInnerHTML={{ __html: getCssAndReset() }}
-          />
+          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssAndReset() }} />
           <link
             rel="preload"
             href="/fonts/UntitledSansWeb-Regular.woff"

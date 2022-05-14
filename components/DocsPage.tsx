@@ -1,14 +1,6 @@
 import * as React from 'react';
 
-import {
-  Badge,
-  Box,
-  Container,
-  Flex,
-  IconButton,
-  Link,
-  Text,
-} from '@modulz/design-system';
+import { Badge, Box, Container, Flex, IconButton, Link, Text } from '@modulz/design-system';
 import { allDocsRoutes, docsRoutes } from '@lib/docsRoutes';
 
 import { ExternalIcon } from './ExternalIcon';
@@ -23,14 +15,9 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const currentPath = router.pathname.replace(
-    '[slug]',
-    router.query.slug as string,
-  );
+  const currentPath = router.pathname.replace('[slug]', router.query.slug as string);
   const currentPageId = currentPath.substr(1);
-  const currentPageIndex = allDocsRoutes.findIndex(
-    (page) => page.slug === currentPageId,
-  );
+  const currentPageIndex = allDocsRoutes.findIndex((page) => page.slug === currentPageId);
 
   const previous = allDocsRoutes[currentPageIndex - 1];
   const next = allDocsRoutes[currentPageIndex + 1];
@@ -115,11 +102,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
             </NextLink>
 
             <Box css={{ 'ml': '$2', '@bp2': { display: 'none' } }}>
-              <IconButton
-                variant="ghost"
-                onClick={() => setIsOpen(!isOpen)}
-                state={isOpen ? 'active' : undefined}
-              >
+              <IconButton variant="ghost" onClick={() => setIsOpen(!isOpen)} state={isOpen ? 'active' : undefined}>
                 <HamburgerMenuIcon />
               </IconButton>
             </Box>
@@ -137,11 +120,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
               <Box key={section.label} css={{ mb: '$4' }}>
                 <NavHeading>{section.label}</NavHeading>
                 {section.pages.map((page) => (
-                  <NavItem
-                    key={page.slug}
-                    href={`/${page.slug}`}
-                    active={currentPath === `/${page.slug}`}
-                  >
+                  <NavItem key={page.slug} href={`/${page.slug}`} active={currentPath === `/${page.slug}`}>
                     <Text size="2" css={{ color: 'inherit', lineHeight: '1' }}>
                       {page.title}
                     </Text>
@@ -295,15 +274,10 @@ function NavItem({ children, active, href, ...props }: NavItemProps) {
   const isExternal = href.startsWith('http');
 
   return (
-    <Box
-      as={isExternal ? 'span' : (NextLink as any)}
-      {...(isExternal ? {} : { href, passHref: true })}
-    >
+    <Box as={isExternal ? 'span' : (NextLink as any)} {...(isExternal ? {} : { href, passHref: true })}>
       <Box
         {...props}
-        {...(isExternal
-          ? { href, target: '_blank', rel: 'noopener noreferrer' }
-          : {})}
+        {...(isExternal ? { href, target: '_blank', rel: 'noopener noreferrer' } : {})}
         as="a"
         css={{
           'display': 'flex',

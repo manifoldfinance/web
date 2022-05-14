@@ -41,8 +41,7 @@ export const HomepageButton = styled('button', {
           backgroundColor: '$indigo6',
         },
         '&:focus': {
-          boxShadow:
-            '0 0 0 1px $colors$indigo8, inset 0 0 0 1px $colors$indigo8',
+          boxShadow: '0 0 0 1px $colors$indigo8, inset 0 0 0 1px $colors$indigo8',
         },
       },
     },

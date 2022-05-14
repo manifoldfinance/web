@@ -1,9 +1,4 @@
-import {
-  ArrowRightIcon,
-  CheckIcon,
-  CopyIcon,
-  ExternalLinkIcon,
-} from '@modulz/radix-icons';
+import { ArrowRightIcon, CheckIcon, CopyIcon, ExternalLinkIcon } from '@modulz/radix-icons';
 import {
   Box,
   Code,
@@ -124,13 +119,7 @@ export function Hero() {
                 mb: '$4',
               }}
             >
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M12 10.8333L14.1667 0.833328L4.91669 14.1667H13L10.8334 24.1667L20.0834 10.8333H12Z"
                   stroke={theme.colors.indigo11.computedValue}
@@ -159,8 +148,8 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              From Sushiswap to OlympusDAO, some of the biggest names in DeFi
-              are already using Manifold to leverage MEV to their advantage.
+              From Sushiswap to OlympusDAO, some of the biggest names in DeFi are already using Manifold to leverage MEV
+              to their advantage.
             </Text>
           </Box>
           <Box>
@@ -176,13 +165,7 @@ export function Hero() {
                 mb: '$4',
               }}
             >
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19.8333 3.5H21.5H23.1667M21.5 1.83334V5.16667"
                   stroke={theme.colors.indigo11.computedValue}
@@ -260,8 +243,8 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              SecureRPC provides an aggregated connection to endpoints like{' '}
-              <Code>Flashbots</Code>, <Code>Eden Network</Code>, etc.
+              SecureRPC provides an aggregated connection to endpoints like <Code>Flashbots</Code>,{' '}
+              <Code>Eden Network</Code>, etc.
             </Text>
           </Box>
           <Box>
@@ -277,13 +260,7 @@ export function Hero() {
                 mb: '$4',
               }}
             >
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19.572 21.68L19.94 2.83C19.94 2.83 18 2.25 12.5 2.25C7 2.25 5.06 2.83 5.06 2.83L5.428 21.68C5.428 21.68 8 21.75 12.5 21.75C17 21.75 19.572 21.68 19.572 21.68Z"
                   stroke={theme.colors.indigo11.computedValue}
@@ -331,8 +308,8 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              With our newly upgraded staking protocol we now provide ETH2
-              Validators with a direct source of MEV profits.
+              With our newly upgraded staking protocol we now provide ETH2 Validators with a direct source of MEV
+              profits.
             </Text>
           </Box>
           <Box>
@@ -348,13 +325,7 @@ export function Hero() {
                 mb: '$4',
               }}
             >
-              <svg
-                width="25"
-                height="25"
-                viewBox="0 0 25 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M8.19074 3.12218C8.53437 3.15491 8.83946 2.90287 8.87218 2.55925C8.90491 2.21563 8.65288 1.91054 8.30926 1.87781L8.19074 3.12218ZM0.495758 11.9172C0.173891 12.0419 0.0140532 12.4039 0.13875 12.7258C0.263448 13.0476 0.62546 13.2075 0.947327 13.0828L0.495758 11.9172ZM8.30926 1.87781C6.10262 1.66765 4.69533 1.96705 3.94984 2.91423C3.58454 3.37835 3.43906 3.92848 3.38581 4.46734C3.33307 5.00093 3.36629 5.58109 3.40414 6.13626C3.48315 7.29507 3.5787 8.39541 3.24981 9.39439C2.94162 10.3305 2.23022 11.2452 0.495758 11.9172L0.947327 13.0828C2.97709 12.2964 3.99512 11.1278 4.43712 9.78528C4.85842 8.50562 4.72493 7.132 4.65125 6.05123C4.61275 5.48661 4.58871 5.00557 4.62975 4.59027C4.67027 4.18023 4.7696 3.89377 4.93209 3.68733C5.24217 3.29336 6.02238 2.91567 8.19074 3.12218L8.30926 1.87781Z"
                   fill={theme.colors.indigo11.computedValue}
@@ -399,8 +370,7 @@ export function Hero() {
                 lineHeight: '25px',
               }}
             >
-              OpenMEV operates its mechanisms so that it does not discriminate
-              for or against any specific user.
+              OpenMEV operates its mechanisms so that it does not discriminate for or against any specific user.
             </Text>
           </Box>
         </Grid>

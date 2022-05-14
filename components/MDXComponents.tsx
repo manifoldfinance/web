@@ -12,61 +12,27 @@ import { BenchmarkChart } from './BenchmarkChart';
 export const components = {
   ...DS,
   BenchmarkChart,
-  h1: (props) => (
-    <DS.Text
-      {...props}
-      as="h1"
-      size="8"
-      css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }}
-    />
-  ),
+  h1: (props) => <DS.Text {...props} as="h1" size="8" css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }} />,
   h2: ({ children, id, ...props }) => (
     <LinkHeading id={id} css={{ mt: '$7', mb: '$2' }}>
-      <DS.Heading
-        {...props}
-        as={'h2' as any}
-        size="2"
-        id={id}
-        css={{ scrollMarginTop: '$6' }}
-        data-heading
-      >
+      <DS.Heading {...props} as={'h2' as any} size="2" id={id} css={{ scrollMarginTop: '$6' }} data-heading>
         {children}
       </DS.Heading>
     </LinkHeading>
   ),
   h3: ({ children, id, ...props }) => (
     <LinkHeading id={id} css={{ mt: '$7', mb: '$1' }}>
-      <DS.Heading
-        {...props}
-        as={'h3' as any}
-        id={id}
-        css={{ scrollMarginTop: '$6' }}
-        data-heading
-      >
+      <DS.Heading {...props} as={'h3' as any} id={id} css={{ scrollMarginTop: '$6' }} data-heading>
         {children}
       </DS.Heading>
     </LinkHeading>
   ),
-  h4: (props) => (
-    <DS.Text
-      as="h4"
-      {...props}
-      size="4"
-      css={{ mb: '$3', lineHeight: '27px', fontWeight: 500 }}
-    />
-  ),
+  h4: (props) => <DS.Text as="h4" {...props} size="4" css={{ mb: '$3', lineHeight: '27px', fontWeight: 500 }} />,
   p: (props) => <DS.Paragraph {...props} css={{ mb: '$3' }} />,
   a: ({ href = '', ...props }) => {
     if (href.startsWith('http')) {
       return (
-        <DS.Link
-          {...props}
-          variant="blue"
-          href={href}
-          css={{ fontSize: 'inherit' }}
-          target="_blank"
-          rel="noopener"
-        />
+        <DS.Link {...props} variant="blue" href={href} css={{ fontSize: 'inherit' }} target="_blank" rel="noopener" />
       );
     }
     return (
@@ -76,43 +42,22 @@ export const components = {
     );
   },
 
-  hr: (props) => (
-    <DS.Separator size="2" {...props} css={{ my: '$6', mx: 'auto' }} />
-  ),
-  ul: (props) => (
-    <DS.Box {...props} css={{ color: '$hiContrast', mb: '$3' }} as="ul" />
-  ),
-  ol: (props) => (
-    <DS.Box {...props} css={{ color: '$hiContrast', mb: '$3' }} as="ol" />
-  ),
+  hr: (props) => <DS.Separator size="2" {...props} css={{ my: '$6', mx: 'auto' }} />,
+  ul: (props) => <DS.Box {...props} css={{ color: '$hiContrast', mb: '$3' }} as="ul" />,
+  ol: (props) => <DS.Box {...props} css={{ color: '$hiContrast', mb: '$3' }} as="ol" />,
   li: (props) => (
     <li>
       <DS.Paragraph {...props} />
     </li>
   ),
-  strong: (props) => (
-    <DS.Text
-      {...props}
-      css={{ display: 'inline', fontSize: 'inherit', fontWeight: 500 }}
-    />
-  ),
+  strong: (props) => <DS.Text {...props} css={{ display: 'inline', fontSize: 'inherit', fontWeight: 500 }} />,
   img: ({ ...props }) => (
     <DS.Box css={{ my: '$6' }}>
-      <DS.Box
-        as="img"
-        {...props}
-        css={{ maxWidth: '100%', verticalAlign: 'middle', ...props.css }}
-      />
+      <DS.Box as="img" {...props} css={{ maxWidth: '100%', verticalAlign: 'middle', ...props.css }} />
     </DS.Box>
   ),
   pre: ({ children }) => <>{children}</>,
-  code: ({
-    className,
-    children,
-    id,
-    showLineNumbers = false,
-    collapsed = false,
-  }) => {
+  code: ({ className, children, id, showLineNumbers = false, collapsed = false }) => {
     const isInlineCode = !className;
 
     if (isInlineCode) {
@@ -129,8 +74,7 @@ export const components = {
         inset: 0,
         width: '100%',
         height: '100%',
-        backgroundImage:
-          'linear-gradient(to bottom, transparent 30%, $$background)',
+        backgroundImage: 'linear-gradient(to bottom, transparent 30%, $$background)',
       },
     };
     return (
@@ -194,17 +138,7 @@ export const components = {
       </DS.Text>
     </DS.Box>
   ),
-  Video: ({
-    small,
-    large,
-    src,
-    children = '',
-    muted = true,
-    autoPlay = true,
-    controls,
-    size,
-    ...props
-  }) => (
+  Video: ({ small, large, src, children = '', muted = true, autoPlay = true, controls, size, ...props }) => (
     <DS.Box as="figure" css={{ mx: '0', my: '$6' }}>
       <OffsetBox size={size}>
         <video
@@ -262,8 +196,7 @@ export const components = {
 
       const addClass = () => target.classList.add('on');
       const removeClass = () => target.classList.remove('on');
-      const addClick = () =>
-        isExternal ? window.location.replace(href) : NextRouter.push(href);
+      const addClick = () => (isExternal ? window.location.replace(href) : NextRouter.push(href));
 
       target.addEventListener('mouseenter', addClass);
       target.addEventListener('mouseleave', removeClass);
@@ -292,10 +225,8 @@ export const components = {
       // exit if the `index` passed is bigger than the total number of highlighted words
       if (Math.max(...targetIndex) >= allHighlightWords.length) return;
 
-      const addClass = () =>
-        targetIndex.forEach((i) => allHighlightWords[i].classList.add('on'));
-      const removeClass = () =>
-        targetIndex.forEach((i) => allHighlightWords[i].classList.remove('on'));
+      const addClass = () => targetIndex.forEach((i) => allHighlightWords[i].classList.add('on'));
+      const removeClass = () => targetIndex.forEach((i) => allHighlightWords[i].classList.remove('on'));
 
       trigger.addEventListener('mouseenter', addClass);
       trigger.addEventListener('mouseleave', removeClass);
@@ -330,15 +261,7 @@ const OffsetBox = DS.styled('div', {
   },
 });
 
-const LinkHeading = ({
-  id,
-  children,
-  css,
-}: {
-  id: string;
-  children: React.ReactNode;
-  css?: any;
-}) => (
+const LinkHeading = ({ id, children, css }: { id: string; children: React.ReactNode; css?: any }) => (
   <DS.Box css={{ ...css }}>
     <DS.Box
       as="a"

@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  styled,
-  Box,
-  Code,
-  Text,
-  Paragraph,
-  Card,
-  Grid,
-  Container,
-} from '@modulz/design-system';
+import { styled, Box, Code, Text, Paragraph, Card, Grid, Container } from '@modulz/design-system';
 import { TitleAndMetaTags } from '@components/TitleAndMetaTags';
 import { Header } from '@components/Header';
 //import { CodeDemo } from '@components/CodeDemo';
