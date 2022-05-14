@@ -12,11 +12,9 @@ coverage/
 scripts/
 .editorconfig
 .hybrid-cache-*.cache
-.jest-test-results.json
-*.md
+.jest-test-results.jso
 LICENSE
 README
-*.md
 apm/
 *.log
 
