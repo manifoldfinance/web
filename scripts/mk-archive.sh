@@ -1,0 +1,1 @@
+git archive --output=./archive.tgz --format=tgz HEAD
