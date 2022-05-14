@@ -51,13 +51,19 @@ export function Header() {
             <Text>Staking </Text>
           </Link>
         </NextLink>
+        <NextLink href="https://manifoldfinance.com/docs" passHref>
+          <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
+            <Text>Resources </Text>
+          </Link>
+        </NextLink>
+
         <NextLink href="/blog" passHref>
           <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
             <Text>Blog</Text>
           </Link>
         </NextLink>
         <Link
-          href="https://forums.manifoldfinace.com"
+          href="https://forums.manifoldfinance.com/"
           variant="subtle"
           css={{
             'mr': '$5',
