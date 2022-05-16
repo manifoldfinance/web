@@ -22,20 +22,23 @@ The block parameter can have the following values:
 
 Use `eth_subscribe` to create subscriptions for the following event types:
 
-New headers Logs Pending transactions Dropped transactions Synchronizing
+- New headers    
+- Logs    
+- Pending transactions    
+- Dropped transactions    
 
-> TIP Use `mev_subscribe` to create subscriptions for logs on private transactions.
 
 ## Logs
 
-To notify you about logs included in new blocks, use the logs' parameter with `eth_subscribe` or `mev_subscribe`.
+To notify you about logs included in new blocks, use the logs' parameter with `eth_subscribe` or `mev_subscribe`.    
 Specify a filter object to receive notifications only for logs matching your filter.
 
 Logs subscriptions have a filter object parameter with the following fields:
 
-`address` - (optional) Either an address or an array of addresses. Returns only logs created from these addresses.
-`topics` - (optional) Returns only logs that match the specified topics. `fromBlock` - (optional) The earliest block
-from which to return logs. `toBlock` - (optional) The last block from which to return logs.
+`address` - (optional) Either an address or an array of addresses. Returns only logs created from these addresses.    
+`topics` - (optional) Returns only logs that match the specified topics.    
+`fromBlock` - (optional) The earliest block from which to return logs.    
+`toBlock` - (optional) The last block from which to return logs.    
 
 If a chain _reorganization_ occurs, the subscription publishes notifications for logs from the old chain with the
 removed property in the log object set to true. This means the subscription can publish notifications for multiple logs
@@ -45,27 +48,50 @@ for the same transaction.
 
 These are methods we support for which we return static responses to ensure compliance
 
-<pre>
-  eth_chainId eth_protocolVersion eth_mining eth_hashrate eth_accounts eth_syncing eth_coinbase net_listening
-  net_peerCount net_version web3_clientVersion
-</pre>
+
+| rpc_method                              | endpoint    |
+|-----------------------------------------|-------------|
+| eth_getUncleByBlockNumberAndIndex       |   v1        |
+| eth_protocolVersion            |   v1        |
+| net_version          |   v1        |
+| web3_clientVersion                  |   v1        |
+| eth_chainId                  |   v1        |
+
+
 
 ### Supported RPC Methods
 
 These are all methods we expose and proxy to our internal eth clients
 
-<pre>
-  eth_blockNumber eth_call eth_estimateGas eth_gasPrice eth_getBalance eth_getBlockByHash eth_getBlockByNumber
-  eth_getBlockTransactionCountByHash eth_getBlockTransactionCountByNumber eth_getCode eth_getStorageAt
-  eth_getTransactionByBlockHashAndIndex eth_getTransactionByBlockNumberAndIndex eth_getTransactionByHash
-  eth_getTransactionCount eth_getTransactionReceipt eth_getUncleByBlockHashAndIndex eth_getUncleByBlockNumberAndIndex
-  eth_getUncleCountByBlockHash eth_getUncleCountByBlockNumber eth_sign eth_signTypedData eth_sendRawTransaction
-</pre>
 
-### OpenMEV Transaction
+| rpc_method                              | endpoint    |
+|-----------------------------------------|-------------|
+| eth_blockNumber                         |   v1        |
+| eth_call                                |   v1        |
+| eth_estimateGas                         |   v1        |
+| eth_gasPrice                            |   v1        |
+| eth_getBalance                          |   v1        |
+| eth_getBlockByHash                      |   v1        |
+| eth_getBlockByNumber                    |   v1        |
+| eth_getBlockTransactionCountByHash      |   v1        |
+| eth_getBlockTransactionCountByNumber    |   v1        |
+| eth_getCode                             |   v1        |
+| eth_getStorageAt                        |   v1        |
+| eth_getTransactionByBlockHashAndIndex   |   v1        |
+| eth_getTransactionByBlockNumberAndIndex |   v1        |
+| eth_getTransactionByHash                |   v1        |
+| eth_getTransactionCount                 |   v1        |
+| eth_getTransactionReceipt               |   v1        |
+| eth_getUncleByBlockHashAndIndex         |   v1        |
+| eth_getUncleByBlockNumberAndIndex       |   v1        |
+| eth_getUncleCountByBlockHash            |   v1        |
+| eth_getUncleCountByBlockNumber          |   v1        |
+| eth_sendRawTransaction                  |   v1        |
+ 
 
-Same signature as `eth_sendRawTransaction` but the tx is eligible for arb and goes into our OpenMEV workflow (e.g. gas
-rebate). Anything received via `eth_sendRawTransaction` just gets relayed
+### SecureRPC MEV Transaction
+
+Same signature as `eth_sendRawTransaction`
 
 ```
 manifold_sendTransaction
