@@ -24,7 +24,7 @@ export function DocsPage({ children }: { children: React.ReactNode }) {
 
   const GITHUB_URL = 'https://github.com/manifoldfinance';
   const _URL = 'https://github.com';
-  const REPO_NAME = 'manifoldfinance/web';
+  const REPO_NAME = 'web';
   const editUrl = `${GITHUB_URL}/${REPO_NAME}/edit/master/data${currentPath}.mdx`;
 
   React.useEffect(() => {

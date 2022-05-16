@@ -1,3 +1,4 @@
+/** @exports docsRoutes */
 export const docsRoutes = [
   /**
   {
@@ -25,16 +26,16 @@ export const docsRoutes = [
   },
  */
   {
-    label: 'OpenMEV',
+    label: 'SecureRPC',
     pages: [
-      { title: 'Overview', slug: 'docs/developers-overview' },
+      { title: 'Supported RPC Methods', slug: 'docs/securerpc' },
+      { title: 'Developers Overview', slug: 'docs/developers-overview' },
       { title: 'Ethers Provider', slug: 'docs/ethers-provider' },
       { title: 'Installation', slug: 'docs/installation' },
-      { title: 'Supported RPC Methods', slug: 'docs/openmev-rpc-ref' },
     ],
   },
   {
-    label: 'OpenMEV API',
+    label: 'SecureRPC API',
     pages: [
       { title: 'eth_call.mdx', slug: 'docs/securerpc/api/post/eth_call' },
      { title: 'eth_estimateGas.mdx', slug: 'docs/securerpc/api/post/eth_estimateGas' },
@@ -56,5 +57,3 @@ export const allDocsRoutes = docsRoutes.reduce((acc, curr) => {
   acc = [...acc, ...curr.pages];
   return acc;
 }, []);
-
-

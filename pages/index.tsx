@@ -213,8 +213,8 @@ export default function Home() {
                 Recapture MEV back to your end users, seamlessly
               </Text>
               <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
-                Protection from arbitrage to trade optimization. Privacy, throughput, uptime, and unique features like
-                Account Abstraction support makes SecureRPC more than an ordinary web3 provider - its a web3 enabler.
+                Protection from arbitrage to trade optimization. Privacy, reduced slippage, reduced rejection rate, and features like
+                Account Abstraction support make SecureRPC more than an ordinary web3 provider - its a web3 enabler.
               </Text>
               <Box
                 css={{
@@ -234,7 +234,7 @@ export default function Home() {
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>OpenMEV enabled APY</Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
                     Validator rewards also include additional MEV rewards not available to the public mempool through
-                    our OpenMEV strategy.
+                    our OpenMEV Block Construction Gateway.
                   </Text>
                 </Card>
               </Box>
@@ -280,7 +280,7 @@ export default function Home() {
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
                     Blockspace futures reduce operational risks and provide an additional source of profits. Combined
-                    with exclusive MEV profits and hedging slashing risk means higher APY's with reduced risk and
+                    with exclusive MEV profits and hedging slashing risk means higher APY's while reducing risk and
                     exposure.
                   </Text>
                 </Card>

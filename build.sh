@@ -9,8 +9,14 @@ else
   exit 0;
 fi
 yarn install --preferr-offline
-export NODE_ENV=production
-npx next build
+echo "Generating sitemap..."
+node scripts/generate-sitemap.js
+#export NODE_ENV=production
+echo "Generating buildhash..."
+git hash-object buildhash.txt > NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA
+mkdir -p .next/server/pages/
 touch .next/server/pages/artifact.json
+echo "Compiling output..."
+npx next build
 node scripts/mk.js
-
+echo "Build process exiting without error..."
