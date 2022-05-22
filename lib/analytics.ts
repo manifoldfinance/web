@@ -18,7 +18,7 @@ type WindowWithAnalytics = Window &
   };
 
 // G-77Y42XWKC1
-const trackingID = 'G-77Y42XWKC1';
+export const trackingID = 'G-77Y42XWKC1';
 
 export const useAnalytics = () => {
   React.useEffect(() => {
