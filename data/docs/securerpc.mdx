@@ -96,3 +96,153 @@ Same signature as `eth_sendRawTransaction`
 ```
 manifold_sendTransaction
 ```
+
+
+## 3rd Party Compatible APIs
+
+SecureRPC's third party compatibility APIs require an active membership.
+[securerpc.com/request-invite](https://securerpc.com/request-invite/).
+
+The following APIs are designed to be API compatible with different
+third party endpoints. Responses are intended to be "happy path
+compatible" with the third party endpoints - that is under some error
+conditions responses may not be exactly identical. Additionally, in some
+cases where aggregations or estimates are involved responses may not be
+identical, but should be comparable and fit for the same purposes.
+Additionally, our APIs will generally provide addresses in checksummed
+format.
+
+
+## Etherscan Compatible
+
+SecureRPC implements the following Etherscan compatible APIs. 
+All Etherscan compatible API calls are of the form:
+
+```env
+    https://api.securerpc.com/eth/api?module=$MODULE&action=$ACTION
+```
+
+With additional parameters to be documented below.
+
+### Account Transaction List
+
+Returns transactions and receipt data where the specified address is
+either the sender, recipient, or the contract created by a transaction.
+
+```bash
+    curl 'https://api.securerpc.com/eth/api?module=account&action=txlist&address=0xdde19c145c1ee51b48f7a28e8df125da0cc440be'
+```
+
+The following parameters are available:
+
+| **Key** 	| **Value** 	| **Description** 	|
+|---	|---	|---	|
+| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
+| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
+| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
+| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
+| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
+| sort 	| (default asc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+
+
+<div class="note">
+<div class="title">
+
+📖 NOTE.
+
+</div>
+
+The behavior of the `isError` field of transactions within this API is
+not documented by Etherscan, and our implementation differs in some
+cases. We define `isError` to be `true` if the transaction reverted, or
+failed for other reasons (such as invalid opcodes), and `false`
+otherwise.
+
+</div>
+
+### Account Token Transfer List
+
+Returns information about ERC20 token transfers, including several
+pieces of information about the transaction in which the token transfer
+occurred.
+
+```bash
+    curl -sL 'https://api.securerpc.com/eth/api?module=account&action=tokentx&address=0xA0766B65A4f7B1da79a1AF79aC695456eFa28644'
+```
+The following parameters are available:
+
+| **Key** 	| **Value** 	| **Description** 	|
+|---	|---	|---	|
+| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
+| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
+| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
+| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
+| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
+| sort 	| (default desc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+
+### Account NFT Token Transfer List
+
+Returns information about ERC721 token transfers, including several
+pieces of information about the transaction in which the token transfer
+occurred.
+
+```bash
+    curl 'https://api.securerpc.com/eth/api?module=account&action=tokennfttx&address=0xA0766B65A4f7B1da79a1AF79aC695456eFa28644'
+```
+The following parameters are available:
+
+| **Key** 	| **Value** 	| **Description** 	|
+|---	|---	|---	|
+| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
+| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
+| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
+| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
+| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
+| sort 	| (default desc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+
+### Account Get Mined Blocks
+
+Get mined blocks by account, including block number, timestamp, and
+reward. Note that at this time Bolt does not support retrieving uncles
+with this method.
+
+```bash
+    curl 'https://api.securerpc.com/eth/api?module=account&action=getminedblocks&address=0xA0766B65A4f7B1da79a1AF79aC695456eFa28644'
+```
+| **Key** 	| **Value** 	| **Description** 	|
+|---	|---	|---	|
+| address  	| (required) 	| The Ethereum address to look up related nft transfers. 	|
+| startblock 	| (default 0) 	| The beginning of the block range to inspect. 	|
+| endblock 	| (default 99999999) 	| The end of the block range to inspect. 	|
+| offset  	| (default 10000) 	| The maximum number of records to be returned. 	|
+| page  	| (default 1) 	| The page number (assuming each page has a size of offset) 	|
+| sort 	| (default desc) 	| Whether records should be sorted ascending (asc - earliest records first) or descending (desc - oldest records first). 	|
+
+### Block Countdown
+
+Get the number of remaining blocks and the estimated remaining time in
+seconds until a particular block is mined.
+
+```bash
+    curl 'https://api.securerpc.com/eth/api?module=block&action=getblockcountdown&blockno=13000000'
+```
+
+-   `blockno` (required): The block to countdown to
+
+### Block Number By Time
+
+```bash
+    curl 'https://api.securerpc.com/eth/api?module=block&action=getblocknobytime&timestamp=1600000000&closest=before'
+```
+
+-   `timestamp` (required): The unix timestamp (in seconds) of the target block
+-   `closest` (default `before`): Whether to get the closest block before or the closest block after the specified time.
+
+### Token Info
+
+
+```bash
+    'https://api.securerpc.com/eth/api?module=token&action=tokeninfo&contractaddress=0xd084944d3c05cd115c09d072b9f44ba3e0e45921'
+```
+
+-   `contractraddress` (required): The contract address to get token info about.
