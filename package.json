@@ -1,18 +1,18 @@
 {
   "name": "@manifoldfinance/www",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
-    "dev": "npx next dev",
+    "dev": "NEXT_TELEMETRY_DISABLED=1 npx next dev",
     "vercel": "bash build.sh",
-    "prod": "NODE_ENV=production npx next build && npx next-sitemap",
-    "build": "CI='' npx next build && npx next-sitemap",
+    "prod": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production npx next build && npx next-sitemap",
+    "build": "NEXT_TELEMETRY_DISABLED=1 CI='' npx next build && npx next-sitemap",
     "start": "npx next start",
     "fmt": "npx prettier --write '**/*.{ts,tsx}'",
     "analyze": "ANALYZE=true yarn build && serve .next -n",
     "idev": "NODE_OPTIONS='--inspect' next dev",
     "inspect": "NODE_OPTIONS='--inspect' next dev",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --collectCoverage"
@@ -73,6 +73,6 @@
     "next-sitemap": "^2.5.10",
     "prettier": "^2.5.1",
     "textlint": "^12.1.1",
-    "typescript": "4.4.4"
+    "typescript": "4.6.3"
   }
 }
