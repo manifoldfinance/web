@@ -3,7 +3,7 @@ import { DesignSystemProvider, darkTheme, globalCss } from '@modulz/design-syste
 import { AppProps } from 'next/app';
 import { DocsPage } from '@components/DocsPage';
 import { Footer } from '@components/Footer';
-import React from 'react';
+import React, { useState, useEffect } from 'react'
 import { ThemeProvider } from 'next-themes';
 import { useAnalytics } from '@lib/analytics';
 import { useEffect } from 'react';
@@ -55,6 +55,20 @@ const globalStyles = globalCss({
 });
 
 function App({ Component, pageProps }: AppProps) {
+  const [width, setWindowWidth] = useState(0)
+   useEffect(() => { 
+
+     updateDimensions();
+
+     window.addEventListener(“resize”, updateDimensions);
+     return () => 
+       window.removeEventListener(“resize”,updateDimensions);
+    }, [])
+    const updateDimensions = () => {
+      const width = window.innerWidth
+      setWindowWidth(width)
+    }
+    
   globalStyles();
   const router = useRouter();
 
