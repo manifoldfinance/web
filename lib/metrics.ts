@@ -4,10 +4,10 @@ import { Router } from 'next/router';
 type WindowWithAnalytics = Window &
   typeof globalThis & {
     gtag: any;
-  };
+};
 
-// TODO - FIXME
-const trackingID = 'UA-000000000-1';
+// @const GoogleTag 
+const trackingID = 'G-77Y42XWKC1';
 
 export const useAnalytics = () => {
   React.useEffect(() => {
