@@ -31,3 +31,15 @@ body,
   position: relative;
   z-index: 0;
 }
+
+/* @media only screen and (min-width: 1024px) {
+  .container header .header-nav-area #nav_container  {
+    display:flex;
+  }
+}
+*/
+
+@page {
+    size: auto;
+    margin: 20mm 0 20mm 0;
+}
