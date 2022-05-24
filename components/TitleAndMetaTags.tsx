@@ -26,19 +26,29 @@ export function TitleAndMetaTags({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="viewport" content="width=device-width" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
       <link
         rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>"
       />
 
-      <meta property="og:url" content={`${url}${path}`} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+        <meta property="og:url" content={`${url}${path}`} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
 
-      <meta name="twitter:site" content="@foldfinance" />
-      <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@foldfinance" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- json-ld -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "http://www.manifoldfinance.com",
+          "logo": "http://www.manifoldfinance.com/favicon.png"
+        }
+        </script>
     </Head>
   );
 }
