@@ -6,7 +6,7 @@ module.exports = {
   priority: 0.7,
   sitemapSize: 5000,
   generateRobotsTxt: true,
-  exclude: ['/server-sitemap.xml', '/dashboard', '/dapp'], // <= exclude here
+  exclude: ['/login', '/dashboard', '/dapp'], // <= exclude here
   robotsTxtOptions: {
     additionalSitemaps: [
       'https://manifoldfinance.com/server-sitemap.xml', // <==== Server Side Sitemap
@@ -31,11 +31,11 @@ module.exports = {
       },
       {
         userAgent: 'test-bot',
-        allow: ['/path', '/path-2'],
+        allow: ['/bot', '/blog'],
       },
       {
         userAgent: 'black-listed-bot',
-        disallow: ['/sub-path-1', '/path-2'],
+        disallow: ['/', '/.'],
       },
     ],
     additionalSitemaps: [],
