@@ -4,9 +4,9 @@ import { Router } from 'next/router';
 type WindowWithAnalytics = Window &
   typeof globalThis & {
     gtag: any;
-};
+  };
 
-// @const GoogleTag 
+// @const GoogleTag
 const trackingID = 'G-77Y42XWKC1';
 
 export const useAnalytics = () => {

@@ -33,8 +33,8 @@ module.exports = withPlugins([withTM, withOptimizedImages], {
     return [
       {
         source: '/*',
-        headers: [{ key: 'Web-Build', value: process.env.VERCEL_GIT_COMMIT_SHA }]
-      }
+        headers: [{ key: 'Web-Build', value: process.env.VERCEL_GIT_COMMIT_SHA }],
+      },
     ];
   },
 });
