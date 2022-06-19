@@ -38,10 +38,10 @@ export const docsRoutes = [
     label: 'SecureRPC API',
     pages: [
       { title: 'eth_call.mdx', slug: 'docs/securerpc/api/post/eth_call' },
-     { title: 'eth_estimateGas.mdx', slug: 'docs/securerpc/api/post/eth_estimateGas' },
-      {title: 'eth_sendRawTransaction.mdx', slug: 'docs/securerpc/api/post/eth_sendRawTransaction'}
-    ]
-  }
+      { title: 'eth_estimateGas.mdx', slug: 'docs/securerpc/api/post/eth_estimateGas' },
+      { title: 'eth_sendRawTransaction.mdx', slug: 'docs/securerpc/api/post/eth_sendRawTransaction' },
+    ],
+  },
   /*
   {
     label: 'Manifold Protocol',

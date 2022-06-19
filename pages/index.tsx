@@ -213,8 +213,9 @@ export default function Home() {
                 Recapture MEV back to your end users, seamlessly
               </Text>
               <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
-                Protection from arbitrage to trade optimization. Privacy, reduced slippage, reduced rejection rate, and features like
-                Account Abstraction support make SecureRPC more than an ordinary web3 provider - its a web3 enabler.
+                Protection from arbitrage to trade optimization. Privacy, reduced slippage, reduced rejection rate, and
+                features like Account Abstraction support make SecureRPC more than an ordinary web3 provider - its a
+                web3 enabler.
               </Text>
               <Box
                 css={{
