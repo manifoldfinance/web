@@ -20,6 +20,9 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <meta charset="utf-8">
+
+          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssAndReset() }} />
           <link
             rel="preload"
@@ -90,12 +93,12 @@ export default class Document extends NextDocument {
 `,
             }}
           />
-          <script async src={gtagUrl} />
           <script dangerouslySetInnerHTML={{ __html: renderSnippet() }} />
         </Head>
         <body>
           <Main />
           <NextScript />
+         <script async src={gtagUrl} />
         </body>
       </Html>
     );
