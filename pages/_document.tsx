@@ -1,6 +1,6 @@
 import NextDocument, { Head, Html, Main, NextScript } from 'next/document';
 import { gtagUrl, renderSnippet } from '@lib/metrics';
-
+import Div100vh from 'react-div-100vh'
 import React from 'react';
 import { getCssText, reset } from '../stitches.config';
 
@@ -19,6 +19,7 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
+  <Div100vh>
         <Head>
           <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssAndReset() }} />
           <link
@@ -97,6 +98,7 @@ export default class Document extends NextDocument {
           <Main />
           <NextScript />
         </body>
+  </Div100vh>
       </Html>
     );
   }
