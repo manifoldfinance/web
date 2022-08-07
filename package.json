@@ -3,7 +3,6 @@
   "version": "0.2.4",
   "private": true,
   "scripts": {
-    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
     "dev": "npx next dev",
     "vercel": "bash build.sh",
     "prod": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production npx next build && npx next-sitemap",
@@ -18,18 +17,15 @@
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --collectCoverage"
   },
-  "resolutions": {
-    "@types/react": "17.0.39"
-  },
   "dependencies": {
     "@mdx-js/loader": "1.6.22",
-    "@modulz/design-system": "^1.0.0",
-    "@modulz/radix-icons": "4.0.0",
-    "@radix-ui/primitive": "^1.0.0",
     "@radix-ui/react-accessible-icon": "^0.1.4",
-    "@radix-ui/react-compose-refs": "^1.0.0",
-    "@radix-ui/react-context": "^1.0.0",
     "@radix-ui/react-icons": "^1.0.3",
+    "@modulz/design-system": "0.6.2",
+    "@modulz/radix-icons": "4.0.0",
+    "@radix-ui/primitive": "0.1.0",
+    "@radix-ui/react-compose-refs": "0.1.0",
+    "@radix-ui/react-context": "0.1.1",
     "@radix-ui/react-use-callback-ref": "0.1.0",
     "@stitches/react": "^1.2.8",
     "copy-to-clipboard": "3.3.1",

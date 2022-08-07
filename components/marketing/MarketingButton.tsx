@@ -75,8 +75,10 @@ export const StyledButton = styled('button', {
 });
 
 type MarketingButtonProps = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   as: any;
-  icon?: React.ComponentType<any>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon?: React.ComponentType<any | undefined>;
 } & React.ComponentProps<typeof StyledButton>;
 
 export const MarketingButton = React.forwardRef<HTMLButtonElement, MarketingButtonProps>(
