@@ -3,6 +3,7 @@
   "version": "0.2.4",
   "private": true,
   "scripts": {
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
     "dev": "npx next dev",
     "vercel": "bash build.sh",
     "prod": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production npx next build && npx next-sitemap",
@@ -16,6 +17,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --collectCoverage"
+  },
+  "resolutions": {
+    "@types/react": "17.0.39"
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.22",
@@ -48,6 +52,7 @@
     "next-transpile-modules": "6.4.1",
     "next-videos": "1.4.0",
     "nextra-theme-docs": "2.0.0-alpha.24",
+    "npm-force-resolutions": "^0.0.10",
     "parse-numeric-range": "1.2.0",
     "react": "17.0.2",
     "react-div-100vh": "^0.7.0",
