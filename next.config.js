@@ -53,20 +53,19 @@ const nextConfig = {
       ],
     };
   },
-  async headeres() {
+  async headers() {
     return [
       {
         source: '/(.*)',
-        headers: [{ key: 'Web-Build', value: process.env.VERCEL_GIT_COMMIT_SHA }],
+        headers: [{ key: 'Web-Build', value: process.env.GIT_COMMIT_SHA_SHORT }],
       },
     ];
   },
-});
+};
 
 module.exports = withTM(withOptimizedImages(nextConfig))
 
-// Don't delete this console log, useful to see the config in Vercel deployments
+
 console.log('process.env.VERCEL_GIT_COMMIT_SHA: ', process.env.VERCEL_GIT_COMMIT_SHA);
 console.log('process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA: ', process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA);
-//console.log('process.env.GIT_COMMIT_SHA: ', process.env.GIT_COMMIT_SHA);
 console.log('next.config.js', JSON.stringify(module.exports, null, 2));
