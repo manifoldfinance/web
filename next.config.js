@@ -1,26 +1,29 @@
 const readingTime = require('reading-time');
-const withPlugins = require('next-compose-plugins');
 const withOptimizedImages = require('next-optimized-images');
-
 const withTM = require('next-transpile-modules')(['@modulz/design-system']);
+const defaultTheme = require('tailwindcss/defaultTheme')
+const { screens } = defaultTheme
+/* require('v8-compile-cache-lib').install(); // faster builds */
+
 const date = new Date();
 const GIT_COMMIT_SHA_SHORT = typeof process.env.GIT_COMMIT_SHA === 'string' && process.env.GIT_COMMIT_SHA.substring(0, 8);
 
-module.exports = withPlugins([withTM, withOptimizedImages], {
-  future: {
-    webpack5: true,
-  },
-  // Next.js config
+
+// @ts-check
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  productionBrowserSourceMaps: false,
   poweredByHeader: false,
+  reactStrictMode: true,
+  optimizeImages: true,
+  optimizeCss: true,
   env: {
     /**
-     * @summary API Key Env Variables
+     * @const GITHUB_DISPATCH_TOKEN
      */
     // GITHUB_DISPATCH_TOKEN: process.env.GITHUB_DISPATCH_TOKEN,
-    SENTRY_DSN: process.env.SENTRY_DSN,
-    NEXT_PUBLIC_SENTRY_DSN: process.env.SENTRY_DSN, // Sentry DSN must be provided to the browser for error reporting to work there
     /**
-    * @const VERCEL_
+    * @env VERCEL
     * @see {@link https://vercel.com/docs/environment-variables#system-environment-variables}
     */
     VERCEL: process.env.VERCEL,
@@ -28,6 +31,9 @@ module.exports = withPlugins([withTM, withOptimizedImages], {
     VERCEL_URL: process.env.VERCEL_URL,
     CI: process.env.CI,
   },
+ publicRuntimeConfig: {
+    breakpoints: screens,
+    },
   async redirects() {
     return [
       {
@@ -56,6 +62,8 @@ module.exports = withPlugins([withTM, withOptimizedImages], {
     ];
   },
 });
+
+module.exports = withTM(withOptimizedImages(nextConfig))
 
 // Don't delete this console log, useful to see the config in Vercel deployments
 console.log('process.env.VERCEL_GIT_COMMIT_SHA: ', process.env.VERCEL_GIT_COMMIT_SHA);
