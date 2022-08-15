@@ -51,7 +51,7 @@ const nextConfig = {
       ],
     };
   },
-  async headers() {
+/*  async headers() {
     return [
       {
         source: '/(.*)',
@@ -59,6 +59,7 @@ const nextConfig = {
       },
     ];
   },
+*/
 };
 
 module.exports = withTM(withOptimizedImages(nextConfig))
