@@ -1,8 +1,6 @@
 const readingTime = require('reading-time');
 const withOptimizedImages = require('next-optimized-images');
 const withTM = require('next-transpile-modules')(['@modulz/design-system']);
-const defaultTheme = require('tailwindcss/defaultTheme')
-const { screens } = defaultTheme
 /* require('v8-compile-cache-lib').install(); // faster builds */
 
 const date = new Date();
@@ -31,9 +29,9 @@ const nextConfig = {
     VERCEL_URL: process.env.VERCEL_URL,
     CI: process.env.CI,
   },
- publicRuntimeConfig: {
-    breakpoints: screens,
-    },
+// publicRuntimeConfig: {
+//    breakpoints: screens,
+//    },
   async redirects() {
     return [
       {
