@@ -8,6 +8,7 @@ import { ThemeProvider } from 'next-themes';
 import { useAnalytics } from '@lib/analytics';
 import { useEffect } from 'react';
 
+import { useWindowSize } from '@hooks/useWindowSize';
 import * as Fathom from 'fathom-client';
 import { useRouter } from 'next/router';
 
@@ -81,6 +82,8 @@ function App({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', onRouteChangeComplete);
     };
   }, []);
+  const { width: windowWidth } = useWindowSize();
+  const smallWindow = windowWidth && windowWidth < 768;
   return (
     <DesignSystemProvider>
       <ThemeProvider
@@ -88,6 +91,8 @@ function App({ Component, pageProps }: AppProps) {
         attribute="class"
         value={{ light: 'light-theme', dark: darkTheme.className }}
         defaultTheme="light"
+        display="flex"
+        height="full"
       >
         {isDocs ? (
           <DocsPage>
