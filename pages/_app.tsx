@@ -33,6 +33,10 @@ const globalStyles = globalCss({
 
   'html': {
     overflowX: 'hidden',
+      width: useWindowSize().width > 768 ? 'calc(100vw - 16rem)': '100vw',
+      minHeight: useWindowSize().width > 768 ? '100vh' : '200vh',
+      height: 'auto',
+      border: 0,
   },
 
   'svg': {
@@ -82,7 +86,7 @@ function App({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeComplete', onRouteChangeComplete);
     };
   }, []);
-  const { width: windowWidth } = useWindowSize();
+    const { width: windowWidth } = useWindowSize();
   const smallWindow = windowWidth && windowWidth < 768;
   return (
     <DesignSystemProvider>
@@ -91,8 +95,6 @@ function App({ Component, pageProps }: AppProps) {
         attribute="class"
         value={{ light: 'light-theme', dark: darkTheme.className }}
         defaultTheme="light"
-        display="flex"
-        height="full"
       >
         {isDocs ? (
           <DocsPage>
