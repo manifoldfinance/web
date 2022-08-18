@@ -8,7 +8,7 @@ import { ThemeProvider } from 'next-themes';
 import { useAnalytics } from '@lib/analytics';
 import { useEffect } from 'react';
 
-import { useWindowSize } from '@hooks/useWindowSize';
+import useWindowSize from '@hooks/useWindowSize';
 import * as Fathom from 'fathom-client';
 import { useRouter } from 'next/router';
 
