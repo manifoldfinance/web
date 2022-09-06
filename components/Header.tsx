@@ -51,13 +51,13 @@ export function Header() {
             <Text>Staking </Text>
           </Link>
         </NextLink>
-        <NextLink href="https://manifoldfinance.com/docs" passHref>
+        <NextLink href="https://kb.manifoldfinance.com" passHref>
           <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
-            <Text>Resources </Text>
+            <Text>Docs </Text>
           </Link>
         </NextLink>
 
-        <NextLink href="/blog" passHref>
+        <NextLink href="https://manifoldfinance.github.io/primitives/" passHref>
           <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
             <Text>Blog</Text>
           </Link>
@@ -72,7 +72,7 @@ export function Header() {
             '@bp2': { mr: '$7' },
           }}
         >
-          <Text>Governance</Text>
+          <Text>Forums</Text>
         </Link>
         <Link
           href="https://github.com/manifoldfinance"
