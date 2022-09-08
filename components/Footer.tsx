@@ -70,8 +70,8 @@ export const Footer = () => {
                 '@bp2': { mt: '$5', ml: '0' },
               }}
             >
-              Copyright 2021 <br />
-              <Link href="https://manifoldfinance.com">Commodity Stream, LLC</Link>.
+              Copyright 2022 <br />
+              <Link href="https://manifoldfinance.com">Manifold Finance, Inc.</Link>.
             </Text>
           </Flex>
           <Box>
@@ -82,28 +82,28 @@ export const Footer = () => {
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
                   <NextLink href="https://docs.openmev.org" passHref>
-                    <Link variant="subtle">OpenMEV</Link>
+                    <Link variant="subtle">OpenMEV v1.0</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="#" passHref>
-                    <Link variant="subtle">FOLD Vault</Link>
+                  <NextLink href="https://goerli.securerpc.com" passHref>
+                    <Link variant="subtle">Goerli Testnet</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md" passHref>
+                  <NextLink href="https://kb.manifoldfinance.com/docs/Rpc/ref-json-rpc" passHref>
                     <Link variant="subtle">API</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://github.com/manifoldfinance/overview-docs/blob/master/README.md" passHref>
-                    <Link variant="subtle">FAQ</Link>
+                  <NextLink href="https://forums.manifoldfinance.com" passHref>
+                    <Link variant="subtle">Forums</Link>
                   </NextLink>
                 </Text>
               </li>
@@ -151,8 +151,8 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://forums.manifoldfinance.com" passHref>
-                    <Link variant="subtle">Forums</Link>
+                  <NextLink href="https://github.com/manifoldfinance/web/" passHref>
+                    <Link variant="subtle">Source</Link>
                   </NextLink>
                 </Text>
               </li>
