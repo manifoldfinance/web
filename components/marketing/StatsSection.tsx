@@ -65,10 +65,10 @@ export const StatsSection = () => {
                 'mb': '$2',
               }}
             >
-              15% APY*
+              Optimized Staking
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              See our Documentation for breakdown
+              Restaking enables additional opportunities 
             </Text>
           </Box>
           <Box css={{ backgroundColor: '$slateA5', width: 1 }} />
@@ -92,7 +92,7 @@ export const StatsSection = () => {
               </Box>
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              Ethereum Hashrate
+              Ethereum Validators 
             </Text>
           </Box>
           <Box css={{ backgroundColor: '$slateA5', width: 1 }} />
