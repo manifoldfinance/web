@@ -11,9 +11,9 @@ export const IntroSection = () => {
     <Section>
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>Market Leading</MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>Capital Pathfinder</MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Bespoke Opportunities
+            Connecting capital to the best opportunities
           </Heading>
           <NextLink href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
@@ -56,12 +56,12 @@ export const IntroSection = () => {
               Spotlight: Sushiswap
             </Text>
             <Paragraph>
-              Sushiswap recently launched its SushiGuard program to protect and incentivize the Sushi Protocol through
+              Sushiswap recently launched its SushiGuard router o protect and incentivize the Sushi Protocol through
               additional profits by using OpenMEV.
             </Paragraph>
             <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-              <NextLink href="https://docs.openmev.org" passHref>
-                <Link variant="subtle">Find out more</Link>
+              <NextLink href="https://docs.sushi.com/docs/Tutorials/howto-use-sushiguard" passHref>
+                <Link variant="subtle">Read the tutorial</Link>
               </NextLink>
             </Text>
           </Box>
