@@ -65,7 +65,7 @@ export const StatsSection = () => {
                 'mb': '$2',
               }}
             >
-              Optimized Staking
+              Capital optimized staking
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
               Restaking enables additional opportunities 
@@ -110,13 +110,13 @@ export const StatsSection = () => {
                 'mb': '$2',
               }}
             >
-              100m
+              120m
               <Box as="span" css={{ fontSize: '75%', ml: '0.25em' }}>
                 +
               </Box>
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              24hr USD Trade Volume
+              FOLD Market Volume
             </Text>
           </Box>
         </Grid>

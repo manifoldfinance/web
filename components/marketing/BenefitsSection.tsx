@@ -31,13 +31,11 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              Deposit FOLD/ETH. Earn Stablecoins.
+              FOLD v2 Markets soon
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              It takes a <em style={{ fontFamily: 'Georgia, serif' }}>lot</em> of time to develop and maintain a robust
-              distributed computing platform. Building toward the next frontier in validator infrastructure requires not
-              only knowledge but operations experience to be able to do it. Stake 80% ETH 20% FOLD earns like its 100%
-              ETH.
+              Why stake when you can<em style={{ fontFamily: 'Georgia, serif' }}>lend</em>? FOLD v2 will replace the existing
+              staking protocol, with an enhanced lending market making your FOLD holdings productive assets through our vault platform.
             </Paragraph>
           </Box>
 
@@ -52,12 +50,12 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              Lido & Rocketpool
+              Liquid Staking
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              The Lido and Rocketpool protocols are the premier ethereum2 staking pool providers. We provide hosting
-              infrastructure under these pools to offer Ethereum2 validator staking services. Combined with OpenMEV, we
-              are able to offer a high-performing, low-cost, and secure solution for Ethereum2 staking.
+              Lido is the premier Ethereum staking pool provider. We provide MEV Boost
+              infrastructure under offer for their validator staking services. Combined with OpenMEV, we
+              are able to offer a high-performing, low-cost, and secure solution for Ethereum Validators.
             </Paragraph>
           </Box>
         </Grid>

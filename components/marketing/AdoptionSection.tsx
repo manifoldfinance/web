@@ -15,11 +15,11 @@ export const AdoptionSection = () => {
             Continuously optimize fees and incentives in your protocol
           </MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Data driven adoption
+            Resist the tempting abstractions and false prophets: the only prophet that brings more profits to your protocol.
           </Heading>
-          <NextLink href="/docs" passHref>
+          <NextLink href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
-              Contact
+              Get started today
             </MarketingButton>
           </NextLink>
         </Box>
@@ -58,7 +58,10 @@ export const AdoptionSection = () => {
             </Text>
             <Paragraph>
               Use recaptured MEV to optimize protocol incentives and drive gains to your most important metrics. Always
-              incentive aligned to protocol.
+              incentive aligned to protocol. 
+              
+              * Except provided in situatations where players are sufficiently patient, there exists a Nash Equilibrium where collision may arise.
+             
             </Paragraph>
           </Box>
         </Grid>

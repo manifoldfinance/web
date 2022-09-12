@@ -10,11 +10,11 @@ export const AdoptionSection = () => {
     <Section>
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>Transition to Radix Primitives</MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>The Merge is almost here!</MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Adoption made easy
+            Ethereum's Proof of Stake upgrade is on schedule
           </Heading>
-          <NextLink href="/docs/primitives" passHref>
+          <NextLink href="https://kb.manifoldfinance.com" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
               Go to docs
             </MarketingButton>
@@ -37,8 +37,7 @@ export const AdoptionSection = () => {
             </Text>
             <Paragraph>
               Each component is its own independently versioned package, so new components can be added alongside your
-              existing code. No need to disrupt feature work with a huge rewrite{'\u2060'}—you can start small and add
-              more components one by one.
+              existing code.
             </Paragraph>
           </Box>
 
@@ -56,9 +55,7 @@ export const AdoptionSection = () => {
               Detailed docs and TypeScript support
             </Text>
             <Paragraph>
-              Radix documentation contains real-world examples, extensive API references, accessibility details, and
-              full TypeScript support. All components share a similar API, creating a consistent developer experience.
-              You will love working with Radix Primitives.
+              New SDK launching in October 2022
             </Paragraph>
           </Box>
         </Grid>
