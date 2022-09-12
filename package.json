@@ -1,21 +1,21 @@
 {
   "name": "@manifoldfinance/www",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "private": true,
   "scripts": {
     "dev": "npx next dev",
     "vercel": "bash build.sh",
-    "prod": "NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production npx next build && npx next-sitemap",
-    "build": "NEXT_TELEMETRY_DISABLED=1 CI='' npx next build && npx next-sitemap",
+    "prod": "export NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA=$(git rev-parse HEAD) && NEXT_TELEMETRY_DISABLED=1 NODE_ENV=production npx next build && npx next-sitemap",
+    "build": "export NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA=$(git rev-parse HEAD) && NEXT_TELEMETRY_DISABLED=1 CI='' npx next build && npx next-sitemap",
     "start": "npx next start",
     "fmt": "npx prettier --write '**/*.{ts,tsx}'",
     "analyze": "ANALYZE=true yarn build && serve .next -n",
     "idev": "NODE_OPTIONS='--inspect' next dev",
     "inspect": "NODE_OPTIONS='--inspect' next dev",
     "lint": "next lint --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --ci --collectCoverage"
+    "test": "npx jest -u",
+    "test:watch": "npx jest --watch",
+    "test:ci": "npx jest --ci --collectCoverage"
   },
   "dependencies": {
     "@mdx-js/loader": "1.6.22",
