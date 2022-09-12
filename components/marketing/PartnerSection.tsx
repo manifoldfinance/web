@@ -99,12 +99,12 @@ export const PartnerSection = () => {
                 mb: '$2',
               }}
             >
-              Rebate Gas costs to users + Incentivize Liquidity
+              MEV Boost = More Rewards
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              The Lido and Rocketpool protocols are the premier ethereum2 staking pool providers. We provide hosting
-              infrastructure under these pools to offer Ethereum2 validator staking services. Combined with OpenMEV, we
-              are able to offer a high-performing, low-cost, and secure solution for Ethereum2 staking.
+              Lido is the premier Ethereum staking pool provider. We provide MEV Boost
+              infrastructure under offer for their validator staking services. Combined with OpenMEV, we
+              are able to offer a high-performing, low-cost, and secure solution for Ethereum Validators.
             </Paragraph>
           </Box>
         </Grid>
