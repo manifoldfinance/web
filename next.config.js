@@ -42,7 +42,7 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
    async headers() {
      return [
        {
-        source: '/*',
+        source: '/(.*)',
         headers: [{ key: 'Web-Build', value: process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA }],
        },
      ];
