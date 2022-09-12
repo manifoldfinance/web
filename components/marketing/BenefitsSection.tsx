@@ -34,7 +34,7 @@ export const BenefitsSection = () => {
               FOLD v2 Markets soon
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              Why stake when you can<em style={{ fontFamily: 'Georgia, serif' }}>lend</em>? FOLD v2 will replace the existing
+              Why stake when you can <em style={{ fontFamily: 'Georgia, serif' }}>lend</em>? FOLD v2 will replace the existing
               staking protocol, with an enhanced lending market making your FOLD holdings productive assets through our vault platform.
             </Paragraph>
           </Box>
