@@ -61,7 +61,7 @@ const nextConfig = {
       },
     ];
   },
-});
+};
 
 module.exports = withPlugins(withTM(withOptimizedImages(nextConfig)));
 
