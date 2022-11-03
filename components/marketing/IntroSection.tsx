@@ -56,7 +56,7 @@ export const IntroSection = () => {
               Spotlight: Sushiswap
             </Text>
             <Paragraph>
-              Sushiswap recently launched its SushiGuard router o protect and incentivize the Sushi Protocol through
+              Sushiswap recently launched its SushiGuard router to protect and incentivize the Sushi Protocol through
               additional profits by using OpenMEV.
             </Paragraph>
             <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
