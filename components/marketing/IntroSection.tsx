@@ -53,15 +53,14 @@ export const IntroSection = () => {
                 mb: '$2',
               }}
             >
-              Spotlight: Sushiswap
+              mevETH & Yearn
             </Text>
             <Paragraph>
-              Sushiswap recently launched its SushiGuard router to protect and incentivize the Sushi Protocol through
-              additional profits by using OpenMEV.
+              mevETH is now part of Yearn Finance's yETH vault. This means that you can earn rewards from multiple protocols in one vault.
             </Paragraph>
             <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-              <NextLink href="https://docs.sushi.com/docs/Tutorials/howto-use-sushiguard" passHref>
-                <Link variant="subtle">Read the tutorial</Link>
+              <NextLink href="https://docs.mev.io" passHref>
+                <Link variant="subtle">Read the docs</Link>
               </NextLink>
             </Text>
           </Box>

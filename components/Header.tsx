@@ -46,14 +46,14 @@ export function Header() {
         </Box>
       </NextLink>
       <Flex as="nav" css={{ ai: 'center' }}>
-        <NextLink href="https://staking.manifoldfinance.com" passHref>
+        <NextLink href="https://mev.io" passHref>
           <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
-            <Text>Staking </Text>
+            <Text>mevETH Staking </Text>
           </Link>
         </NextLink>
-        <NextLink href="https://kb.manifoldfinance.com" passHref>
+        <NextLink href="https://docs.mev.io" passHref>
           <Link variant="subtle" css={{ 'mr': '$5', '@bp2': { mr: '$7' } }}>
-            <Text>Docs </Text>
+            <Text>mevETH Docs </Text>
           </Link>
         </NextLink>
 
