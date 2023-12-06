@@ -34,8 +34,8 @@ export const BenefitsSection = () => {
               mevETH LST
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              mevETH is a liquid staking protocol that focuses on improving MEV extraction to increase rewards for its validator set.
-              We provide infrastructure under offer for their validator staking services.
+              mevETH is a liquid staking protocol that focuses on improving MEV extraction to increase rewards for its
+              validator set. We provide infrastructure under offer for their validator staking services.
             </Paragraph>
           </Box>
 
@@ -53,7 +53,8 @@ export const BenefitsSection = () => {
               Vault Liquid Staking
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              mevETH utilizes the ERC4626 Vault contract to provide a liquid staking solution for ETH. This allows users to stake their ETH and receive rewards through a non-rebasing ERC4626 Vault.
+              mevETH utilizes the ERC4626 Vault contract to provide a liquid staking solution for ETH. This allows users
+              to stake their ETH and receive rewards through a non-rebasing ERC4626 Vault.
             </Paragraph>
           </Box>
         </Grid>

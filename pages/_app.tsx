@@ -91,7 +91,7 @@ function App({ Component, pageProps }: AppProps) {
         value={{ light: 'light-theme', dark: darkTheme.className }}
         defaultTheme="light"
       >
-              <Analytics />
+        <Analytics />
 
         {isDocs ? (
           <DocsPage>
@@ -99,7 +99,10 @@ function App({ Component, pageProps }: AppProps) {
             <Analytics />
           </DocsPage>
         ) : (
-          <><Component {...pageProps} /><Analytics /></>
+          <>
+            <Component {...pageProps} />
+            <Analytics />
+          </>
         )}
         {!isDocs && <Footer />}
       </ThemeProvider>

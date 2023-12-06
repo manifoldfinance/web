@@ -54,9 +54,7 @@ export const AdoptionSection = () => {
             >
               Detailed docs and TypeScript support
             </Text>
-            <Paragraph>
-              New SDK launching in October 2022
-            </Paragraph>
+            <Paragraph>New SDK launching in October 2022</Paragraph>
           </Box>
         </Grid>
       </Container>

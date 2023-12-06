@@ -206,7 +206,7 @@ export default function Home() {
                     color: '$yellow11',
                   }}
                 >
-                   mevETH and Frax
+                  mevETH and Frax
                 </Code>
               </Box>
               <Text size="8" css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}>

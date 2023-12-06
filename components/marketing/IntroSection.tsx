@@ -55,7 +55,8 @@ export const IntroSection = () => {
               mevETH & Yearn
             </Text>
             <Paragraph>
-              mevETH is now part of Yearn Finance's yETH vault. This means that you can earn rewards from multiple protocols in one vault.
+              mevETH is now part of Yearn Finance's yETH vault. This means that you can earn rewards from multiple
+              protocols in one vault.
             </Paragraph>
             <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
               <NextLink href="https://docs.mev.io" passHref>
