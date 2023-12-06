@@ -34,11 +34,10 @@ export const IntroSection = () => {
                 mb: '$2',
               }}
             >
-              OpenMEV: MEV Profits for Everyone
+              OpenMEV v3
             </Text>
             <Paragraph>
-              OpenMEV enables protocols to not only protect their users it also maximizes returns by recapturing
-              arbitrage profit back to the protocol.
+              OpenMEV represents the next generation of auction design and is backwards compatible with MEV Boost.
             </Paragraph>
           </Box>
 

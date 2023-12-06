@@ -206,16 +206,14 @@ export default function Home() {
                     color: '$yellow11',
                   }}
                 >
-                  Supports: Flashbots, Eden Network, Ethermine
+                   mevETH and Frax
                 </Code>
               </Box>
               <Text size="8" css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}>
-                Recapture MEV back to your end users, seamlessly
+                Frax and mevETH Validators
               </Text>
               <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
-                Protection from arbitrage to trade optimization. Privacy, reduced slippage, reduced rejection rate, and
-                features like Account Abstraction support make SecureRPC more than an ordinary web3 provider - its a
-                web3 enabler.
+                Manifold's new MEV Relay is being used by Frax and mevETH.
               </Text>
               <Box
                 css={{
@@ -251,15 +249,15 @@ export default function Home() {
                     color: '$blue11',
                   }}
                 >
-                  Seamless slashing, volatility and uptime hedge
+                  Rollup based, Scalable and Regulatory compliant
                 </Code>
               </Box>
               <Text size="8" css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}>
-                Block Optionality makes slashing risk nearly zero.
+                OpenMEV Auction
               </Text>
               <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
                 Block Optionality means a portion of all blocks produced by Manifold are auctioned off as a forward
-                deliverable contract to end-users like MEV Searchers, Traders, Institutions, etc.
+                deliverable contract to end-users like MEV Searchers and Builders.
               </Text>
               <Box
                 css={{
