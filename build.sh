@@ -8,6 +8,9 @@ else
   echo "🛑 - Build cancelled"
   exit 0;
 fi
+echo "Enabling Legacy OpenSSL Provider for Node 18+"
+export NODE_OPTIONS=--openssl-legacy-provider
+
 yarn install --preferr-offline
 echo "Generating sitemap..."
 node scripts/generate-sitemap.js

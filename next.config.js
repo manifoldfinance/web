@@ -39,7 +39,7 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
        ],
      };
    },
-   async headers() {
+/*   async headers() {
      return [
        {
         source: '/(.*)',
@@ -47,6 +47,7 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
        },
      ];
    },
+*/
  });
  
  

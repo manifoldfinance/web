@@ -1,6 +1,8 @@
 import { DesignSystemProvider, darkTheme, globalCss } from '@modulz/design-system';
+import { Analytics } from '@vercel/analytics/react';
+import type { AppProps } from 'next/app';
 
-import { AppProps } from 'next/app';
+//import { AppProps } from 'next/app';
 import { DocsPage } from '@components/DocsPage';
 import { Footer } from '@components/Footer';
 import React from 'react';
@@ -89,12 +91,15 @@ function App({ Component, pageProps }: AppProps) {
         value={{ light: 'light-theme', dark: darkTheme.className }}
         defaultTheme="light"
       >
+              <Analytics />
+
         {isDocs ? (
           <DocsPage>
             <Component {...pageProps} />
+            <Analytics />
           </DocsPage>
         ) : (
-          <Component {...pageProps} />
+          <><Component {...pageProps} /><Analytics /></>
         )}
         {!isDocs && <Footer />}
       </ThemeProvider>

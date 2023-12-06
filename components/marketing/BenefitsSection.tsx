@@ -12,9 +12,9 @@ export const BenefitsSection = () => {
     >
       <Container size="3">
         <Box css={{ mb: '$7' }}>
-          <MarketingCaption css={{ mb: '$1' }}>ETH, AVAX, and more</MarketingCaption>
+          <MarketingCaption css={{ mb: '$1' }}>+30,000 ETH Staked</MarketingCaption>
           <Heading as="h2" size="3">
-            MEV Returns for Validators
+            MEV Protocol
             <br />
           </Heading>
         </Box>
@@ -31,11 +31,11 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              FOLD v2 Markets soon
+              mevETH LST
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              Why stake when you can <em style={{ fontFamily: 'Georgia, serif' }}>lend</em>? FOLD v2 will replace the existing
-              staking protocol, with an enhanced lending market making your FOLD holdings productive assets through our vault platform.
+              mevETH is a liquid staking protocol that focuses on improving MEV extraction to increase rewards for its validator set.
+              We provide infrastructure under offer for their validator staking services.
             </Paragraph>
           </Box>
 
@@ -50,12 +50,10 @@ export const BenefitsSection = () => {
                 mb: '$2',
               }}
             >
-              Liquid Staking
+              Vault Liquid Staking
             </Text>
             <Paragraph css={{ mb: '$5' }}>
-              Lido is the premier Ethereum staking pool provider. We provide MEV Boost
-              infrastructure under offer for their validator staking services. Combined with OpenMEV, we
-              are able to offer a high-performing, low-cost, and secure solution for Ethereum Validators.
+              mevETH utilizes the ERC4626 Vault contract to provide a liquid staking solution for ETH. This allows users to stake their ETH and receive rewards through a non-rebasing ERC4626 Vault.
             </Paragraph>
           </Box>
         </Grid>

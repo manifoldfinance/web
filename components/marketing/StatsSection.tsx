@@ -65,10 +65,10 @@ export const StatsSection = () => {
                 'mb': '$2',
               }}
             >
-              Capital optimized staking
+              Relay optimized staking
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              Restaking enables additional opportunities 
+              Manifold Relay connected validators
             </Text>
           </Box>
           <Box css={{ backgroundColor: '$slateA5', width: 1 }} />
@@ -86,13 +86,13 @@ export const StatsSection = () => {
                 'mb': '$2',
               }}
             >
-              96%
+              60%
               <Box as="span" css={{ fontSize: '75%', ml: '0.25em' }}>
                 +
               </Box>
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              Ethereum Validators 
+              Higher
             </Text>
           </Box>
           <Box css={{ backgroundColor: '$slateA5', width: 1 }} />
@@ -110,13 +110,13 @@ export const StatsSection = () => {
                 'mb': '$2',
               }}
             >
-              120m
+              700m
               <Box as="span" css={{ fontSize: '75%', ml: '0.25em' }}>
                 +
               </Box>
             </Text>
             <Text variant="gray" size={{ '@initial': 3, '@bp2': 4 }}>
-              FOLD Market Volume
+              Combined Validator Set
             </Text>
           </Box>
         </Grid>

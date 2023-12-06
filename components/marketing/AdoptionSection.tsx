@@ -15,7 +15,7 @@ export const AdoptionSection = () => {
             Continuously optimize fees and incentives in your protocol
           </MarketingCaption>
           <Heading as="h2" size="3" css={{ mb: '$4' }}>
-            Resist the tempting abstractions and false prophets: the only prophet that brings more profits to your protocol.
+            Adopt OpenMEV
           </Heading>
           <NextLink href="https://notionforms.io/forms/dacf20c5-d93b-4552-8748-5deab183901f" passHref>
             <MarketingButton as="a" icon={ArrowRightIcon}>
@@ -61,7 +61,7 @@ export const AdoptionSection = () => {
               incentive aligned to protocol. <br/>
               <br/>
               *Except provided in situations where players are sufficiently patient, there exists a Nash Equilibrium where collision may arise.
-              
+
             </Paragraph>
           </Box>
         </Grid>
