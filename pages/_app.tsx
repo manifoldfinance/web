@@ -1,6 +1,7 @@
 import { DesignSystemProvider, darkTheme, globalCss } from '@modulz/design-system';
 import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
+import PlausibleProvider from 'next-plausible'
 
 //import { AppProps } from 'next/app';
 import { DocsPage } from '@components/DocsPage';
@@ -100,8 +101,10 @@ function App({ Component, pageProps }: AppProps) {
           </DocsPage>
         ) : (
           <>
+              <PlausibleProvider domain="manifoldfinance.com">
             <Component {...pageProps} />
             <Analytics />
+            </PlausibleProvider>
           </>
         )}
         {!isDocs && <Footer />}

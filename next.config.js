@@ -5,9 +5,9 @@
 const readingTime = require('reading-time');
 const withPlugins = require('next-compose-plugins');
 const withOptimizedImages = require('next-optimized-images');
- 
+
 const withTM = require('next-transpile-modules')(['@modulz/design-system']);
- 
+
 //const date = new Date();
 //const NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA = typeof process.env.GIT_COMMIT_SHA === 'string' && process.env.GIT_COMMIT_SHA.substring(0, 8);
 
@@ -20,7 +20,7 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
    poweredByHeader: false,
    reactStrictMode: true,
    productionBrowserSourceMaps: false,
-   async redirects() {
+ /*  async redirects() {
      return [
        {
          source: '/docs',
@@ -29,6 +29,7 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
        },
      ];
    },
+*/
    async rewrites() {
      return {
        fallback: [
@@ -49,10 +50,10 @@ const withTM = require('next-transpile-modules')(['@modulz/design-system']);
    },
 */
  });
- 
- 
+
+
  // Don't delete this console log, useful to see the config in Vercel deployments
  console.log('next.config.js', JSON.stringify(module.exports, null, 2));
- 
+
  //console.log('process.env.VERCEL_GIT_COMMIT_SHA: ', process.env.VERCEL_GIT_COMMIT_SHA);
  console.log('process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA: ', process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA);
