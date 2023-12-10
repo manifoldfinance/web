@@ -55,7 +55,7 @@ export function Community() {
                 Twitter
               </Text>
               <Text as="p" size="3" css={{ lineHeight: '23px', color: '$slate11' }}>
-                Warning: alpha leaks here. Founder manages this account.
+                Follow us on Twitter to stay up to date with the latest news, events, and announcements.
               </Text>
             </Card>
           </Box>

@@ -5692,10 +5692,10 @@ next-optimized-images@2.6.2:
     raw-loader "^2.0.0"
     url-loader "^1.1.2"
 
-next-plausible@^3.1.6:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-3.2.0.tgz#d801346253e0c1cf64a02b9fc3a42050455cbc47"
-  integrity sha512-OlYcLXBG3kKd/fKMpm8SZ5IkUKSFm1/8t7cv6e5bewIqlpdZpdWuSrjbdJpbmutb2KPLXHzilKp09zmDGjy9KQ==
+next-plausible@2:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/next-plausible/-/next-plausible-2.2.0.tgz#f825842f97bce0062bdaf897328c4908d7ce0a78"
+  integrity sha512-pIhs5MikL6ZMJvB7sxkM49xN06W1A6d6RYta5vrqwQmF2/oXoCG+IPoaPzyODZ/vo7f2/NMAOaUm5QM0dKqMdA==
 
 next-sitemap@2.5.10:
   version "2.5.10"

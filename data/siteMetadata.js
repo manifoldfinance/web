@@ -11,9 +11,9 @@
  */
 const siteMetadata = {
   title: 'Manifold Finance',
-  author: 'Ty Coon',
+  author: 'foldfinance',
   headerTitle: 'Manifold Finance',
-  description: 'Connect to a world of DeFi',
+  description: 'Connecting Capital to Decentralized Opportunities',
   language: 'en-us',
   siteUrl: 'https://manifoldfinance.com',
   siteRepo: 'https://github.com/manifoldfinance/web',

@@ -149,7 +149,7 @@ export default function Home() {
 
   return (
     <Box>
-      <TitleAndMetaTags title="Manifold Finance - Connect to better opportunities" />
+      <TitleAndMetaTags title="Manifold Finance - Connecting Capital to DeFi" />
       <Box
         css={{
           'top': 0,
@@ -213,7 +213,7 @@ export default function Home() {
                 Frax and mevETH Validators
               </Text>
               <Text size="4" css={{ 'lineHeight': '27px', '@bp2': { mb: '$6' } }}>
-                Manifold's new MEV Relay is being used by Frax and mevETH.
+                Manifold's new MEV Relay is being used by Frax and mevETH. OpenMEV Auction starts January 2023.
               </Text>
               <Box
                 css={{
@@ -233,7 +233,7 @@ export default function Home() {
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>OpenMEV enabled APY</Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
                     Validator rewards also include additional MEV rewards not available to the public mempool through
-                    our OpenMEV Block Construction Gateway.
+                    our OpenMEV Auction system.
                   </Text>
                 </Card>
               </Box>
@@ -249,7 +249,7 @@ export default function Home() {
                     color: '$blue11',
                   }}
                 >
-                  Rollup based, Scalable and Regulatory compliant
+                  Rollup based, Scalable and Secure
                 </Code>
               </Box>
               <Text size="8" css={{ fontWeight: 500, lineHeight: '40px', mb: '$4' }}>
@@ -275,7 +275,7 @@ export default function Home() {
                   css={{ p: '$3', mb: '$2', width: '100%' }}
                 >
                   <Text css={{ fontWeight: 500, lineHeight: '22px', mb: '$1' }}>
-                    Blockspace Futures provide additional hedge
+                    Blockspace Futures and Options
                   </Text>
                   <Text variant="gray" css={{ lineHeight: '22px' }}>
                     Blockspace futures reduce operational risks and provide an additional source of profits. Combined

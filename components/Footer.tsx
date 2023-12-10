@@ -70,8 +70,8 @@ export const Footer = () => {
                 '@bp2': { mt: '$5', ml: '0' },
               }}
             >
-              Copyright 2022 <br />
-              <Link href="https://manifoldfinance.com">Manifold Finance, Inc.</Link>.
+              Copyright 2022-2023 <br />
+              <Link href="https://manifoldfinance.com">Manifold Finance, Inc. All Rights Reserved</Link>.
             </Text>
           </Flex>
           <Box>
@@ -81,15 +81,15 @@ export const Footer = () => {
             <ul>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://docs.openmev.org" passHref>
-                    <Link variant="subtle">OpenMEV v1.0</Link>
+                  <NextLink href="https://github.com/manifoldfinance/legal/blob/master/active/disclaimer/CONTENT_DISCLAIMER.txt" passHref>
+                    <Link variant="subtle">Content Disclaimer</Link>
                   </NextLink>
                 </Text>
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://goerli.securerpc.com" passHref>
-                    <Link variant="subtle">Goerli Testnet</Link>
+                  <NextLink href="https://github.com/manifoldfinance/legal/blob/master/active/latest/privacy_policy-general.md" passHref>
+                    <Link variant="subtle">Privacy Policy</Link>
                   </NextLink>
                 </Text>
               </li>
@@ -137,8 +137,8 @@ export const Footer = () => {
               </li>
               <li>
                 <Text as="p" size="3" css={{ mt: '$3', lineHeight: '20px' }}>
-                  <NextLink href="https://github.com/manifoldfinance/support" passHref>
-                    <Link variant="subtle">Helpdesk</Link>
+                  <NextLink href="https://mev.io" passHref>
+                    <Link variant="subtle">MEV Protocol</Link>
                   </NextLink>
                 </Text>
               </li>
